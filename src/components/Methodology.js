@@ -60,7 +60,7 @@ export function Methodology({ result, polls, onBack, updated, source }) {
 
     <section>
       <h3>Pesquisas não confirmadas (†)</h3>
-      <p>Os dados iniciais foram revisados em ${longDate(updated)} contra reportagens publicadas. ${unconfirmed.length ? `${unconfirmed.length} pesquisas presidenciais não apareceram em nenhuma fonte aberta encontrada: ${names(unconfirmed)}. Elas continuam no site, marcadas com †, porque vieram de quem montou os dados, mas devem ser conferidas no registro do TSE.` : 'Todas as pesquisas foram encontradas em fontes abertas.'}</p>
+      <p>Os dados iniciais foram revisados em ${longDate(updated)} contra reportagens publicadas e o registro de pesquisas do TSE. ${unconfirmed.length ? `${unconfirmed.length} pesquisas presidenciais não apareceram em nenhuma fonte aberta encontrada: ${names(unconfirmed)}. Elas continuam no site, marcadas com †, porque vieram de quem montou os dados, mas devem ser conferidas no registro do TSE.` : 'Todas as pesquisas foram encontradas em fontes abertas.'}</p>
     </section>
 
     <section>

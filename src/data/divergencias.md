@@ -1,8 +1,8 @@
 # Divergências e lacunas dos dados
 
-Atualizado em 05/10/2026, na terceira rodada: a conferência do resultado com os arquivos oficiais do TSE. Este arquivo lista cada número que mudou em relação aos dados iniciais do briefing, o que foi confirmado e cada lacuna que continuou sem fonte.
+Atualizado em 05/10/2026, na terceira rodada: a conferência com os arquivos oficiais de resultado do TSE e com o registro de pesquisas do TSE. Este arquivo lista cada número que mudou em relação aos dados iniciais do briefing, o que foi confirmado e cada lacuna que continuou sem fonte.
 
-## 3ª rodada: resultado conferido com o TSE
+## 3ª rodada: conferência com o TSE
 
 ### Fonte
 
@@ -127,6 +127,24 @@ Nas UFs fora da tabela (MS, PA, RN, SE e SP), os números já estavam certos. Al
 - `apurado` passou a 100 em todas as UFs. As notas que só explicavam a origem dos números saíram do site.
 - Um teste de métrica usava o Crivella real (3,31): o caso calculado à mão foi refeito com 3,39.
 
+### Pesquisas presidenciais marcadas com †
+
+As seis estão no registro de pesquisas do TSE (conjunto "Pesquisas Eleitorais - 2026" do Portal de Dados Abertos, `https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip`, gerado em 04/10/2026) e foram encontradas na imprensa. **Todas foram confirmadas**: o † saiu do site e cada uma ganhou `fonte`. Nenhuma foi removida.
+
+| Pesquisa | Registro no TSE | Fonte dos números | O que mudou |
+| --- | --- | --- | --- |
+| Datafolha, 03/10 | BR-01708/2026; campo 2–3/10; 4.006 entrevistas | CartaCapital | Totais ganharam Caiado 4, Renan 3 e Cury 3; nv 7 (brancos e nulos 4 + indecisos 3); contratante Folha e Globo. Válidos (45 / 42 / 4 / 3 / 3 / 1) confirmados |
+| AtlasIntel, 03/10 | BR-00999/2026; campo 27/09–02/10; 4.945 entrevistas | Exame | nv 0,6 (brancos e nulos 0,3 + não sabem 0,3). Totais e válidos confirmados |
+| Quaest, 03/10 | BR-02197/2026; campo 2–3/10; 3.702 entrevistas | Brasil de Fato | Totais e válidos ganharam Cury, Renan e Caiado, com 3 cada; nv 13 (brancos, nulos e não votarão 10 + indecisos 3); contratante Globo |
+| Futura, 03/10 | BR-02431/2026, registrada pela 100% Cidades; 2.000 entrevistas | Brasil em Folhas | **Campo corrigido**: 2–3/10, não 25–29/09. Não é a mesma pesquisa de 30/09. Válidos ganharam Zema 0,8 |
+| Nexus/BTG, 17/08 | BR-03317/2026; campo 14–16/08; 2.003 entrevistas | Página da Nexus | Lula 41, Flávio 36, Caiado 5, Renan 4 e Zema 4 confirmados |
+| PoderData, 27/08 | BR-04974/2026; campo 23–26/08; 2.400 entrevistas | Poder360 | Todos os números confirmados, inclusive os menores e o nv 7 (brancos e nulos 5 + não sabem 2). Pablo Marçal (PRTB) tinha 3% e não chegou à urna |
+
+- **Quaest, 03/10:** os válidos (46 / 45) não são proporcionais aos totais (40 / 38 com 13% de nv: 38 ÷ 87 = 43,7). A Quaest calcula os válidos com um modelo de eleitor provável. Os dois ficaram como publicados, e o site usa os válidos divulgados.
+- **Datafolha, 03/10:** a CNN publicou o protocolo BR-03669/2026, com 2.002 entrevistas de 1º a 3/10. No registro do TSE, esse protocolo é o da Datafolha de 03/09 (campo 1º a 3/09, 2.002 entrevistas). Valem o BR-01708/2026 e a CartaCapital.
+- **Ainda sem fonte:** na Nexus/BTG de 17/08, Cury (1%) e brancos, nulos e indecisos (7%) vêm dos dados iniciais. A divulgação da Nexus não traz esses números. Eles ficaram, com nota no JSON, porque o nv entra no recálculo dos válidos.
+- Os registros também mostram que a série da Futura é registrada pela 100% Cidades Participações, e não com o nome Futura.
+
 ## 1ª e 2ª rodadas (imprensa)
 
 As seções abaixo descrevem as duas revisões feitas antes do acesso ao TSE. Os números de resultado citados nelas foram substituídos pelos da 3ª rodada e ficam aqui como histórico. As seções de pesquisas continuam valendo.
@@ -210,7 +228,7 @@ A lista passou de 22 para **44 pesquisas**.
   - "Ideia/Meio" → Ideia.
   - O contratante fica no campo `contratante`.
 
-**Sem confirmação em fonte aberta**, mantidas e marcadas com † no site:
+**Sem confirmação em fonte aberta** na 2ª rodada, marcadas com † (todas confirmadas na 3ª rodada; veja acima):
 
 - Datafolha de 03/10, AtlasIntel de 03/10 e Quaest de 03/10. São as finais do briefing. A busca não as encontrou, mas há indício da Datafolha final: uma manchete da CNN fala em "empate de 45% no 2º turno".
 - Futura de 03/10. Pode ser a mesma Futura de 30/09 (totais F42,2, L39,4), mas os números não batem exatamente.

@@ -12,8 +12,9 @@
    "Cury": 1
   },
   "nv": 7,
+  "fonte": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-17-de-agosto-de-2026/",
   "contratante": "BTG Pactual",
-  "confirmada": false
+  "obs": "Registro BR-03317/2026. A divulgação da Nexus confirma Lula 41, Flávio 36, Caiado 5, Renan 4 e Zema 4; Cury (1%) e brancos, nulos e indecisos (7%) vêm dos dados iniciais e não aparecem nela."
  },
  {
   "inst": "Datafolha",
@@ -75,9 +76,9 @@
    "Cury": 4
   },
   "nv": 7,
-  "fonte": "https://www.poder360.com.br/poderdata/poderdata-aya-augusto-cury-vai-de-4-para-10-no-1o-turno/",
+  "fonte": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-35-de-flavio-no-1o-turno/",
   "contratante": "Aya",
-  "confirmada": false
+  "obs": "Registro BR-04974/2026. Brancos e nulos 5%, não sabem 2%. Pablo Marçal (PRTB), com 3%, não chegou à urna."
  },
  {
   "inst": "Vox Brasil",
@@ -102,7 +103,7 @@
    "L": 43.4,
    "F": 33.7,
    "Caiado": 3.3,
-   "Zema": 1.0,
+   "Zema": 1,
    "Renan": 7.6,
    "Cury": 7.8
   },
@@ -230,7 +231,7 @@
    "Samara": 1,
    "Marçal": 1
   },
-  "nv": 1.0,
+  "nv": 1,
   "fonte": "https://jovempan.com.br/?p=289496",
   "contratante": "Bloomberg"
  },
@@ -510,7 +511,7 @@
    "L": 45.3,
    "F": 42.2,
    "Renan": 5.2,
-   "Cury": 2.0,
+   "Cury": 2,
    "Caiado": 1.8,
    "Zema": 0.9
   },
@@ -552,7 +553,7 @@
    "Cury": 3.8,
    "Renan": 3.2
   },
-  "nv": 5.0,
+  "nv": 5,
   "fonte": "https://timesbrasil.com.br/brasil/flavio-bolsonaro-sobe-a-422-e-lula-aparece-com-394-no-1o-turno-diz-futura/"
  },
  {
@@ -621,8 +622,10 @@
    "Cury": 2.1,
    "Caiado": 1.4
   },
+  "nv": 0.6,
+  "fonte": "https://exame.com/brasil/pesquisa-para-presidente-atlasintel-lula-tem-47-e-flavio-bolsonaro-441-dos-votos-validos/",
   "contratante": "Bloomberg",
-  "confirmada": false
+  "obs": "Registro BR-00999/2026; 4.945 entrevistas. Brancos e nulos 0,3%, não sabem 0,3%."
  },
  {
   "inst": "Datafolha",
@@ -630,7 +633,10 @@
   "campo": "2–3 out",
   "t": {
    "L": 42,
-   "F": 40
+   "F": 40,
+   "Caiado": 4,
+   "Renan": 3,
+   "Cury": 3
   },
   "v": {
    "L": 45,
@@ -640,22 +646,26 @@
    "Cury": 3,
    "Zema": 1
   },
-  "confirmada": false
+  "nv": 7,
+  "fonte": "https://www.cartacapital.com.br/politica/datafolha-lula-tem-45-e-flavio-bolsonaro-42-dos-votos-validos-em-1o-turno/",
+  "contratante": "Folha e Globo",
+  "obs": "Registro BR-01708/2026; 4.006 entrevistas. Brancos e nulos 4%, indecisos 3%. A CNN citou o protocolo BR-03669/2026, que é o da Datafolha de 03/09."
  },
  {
   "inst": "Futura",
   "divulgacao": "2026-10-03",
-  "campo": "25–29 set",
+  "campo": "2–3 out",
   "v": {
    "L": 42.6,
    "F": 44.8,
    "Cury": 4.1,
    "Caiado": 3.9,
-   "Renan": 2.8
+   "Renan": 2.8,
+   "Zema": 0.8
   },
+  "fonte": "https://www.brasilemfolhas.com.br/2026/10/flavio-bolsonaro-lidera-intencoes-de-voto-contra-lula-em-pesquisa-31cce/",
   "contratante": "100% Cidades",
-  "confirmada": false,
-  "obs": "Pode ser a mesma pesquisa da Futura de 30/09 (totais F42,2, L39,4), mas os números não batem exatamente."
+  "obs": "Registro BR-02431/2026 (registrada pela 100% Cidades); 2.000 entrevistas. É outra pesquisa, não a Futura de 30/09."
  },
  {
   "inst": "PoderData",
@@ -682,12 +692,21 @@
   "campo": "2–3 out",
   "t": {
    "L": 40,
-   "F": 38
+   "F": 38,
+   "Cury": 3,
+   "Renan": 3,
+   "Caiado": 3
   },
   "v": {
    "L": 46,
-   "F": 45
+   "F": 45,
+   "Cury": 3,
+   "Renan": 3,
+   "Caiado": 3
   },
-  "confirmada": false
+  "nv": 13,
+  "fonte": "https://www.brasildefato.com.br/2026/10/03/lula-tem-46-e-flavio-bolsonaro-45-dos-votos-validos-aponta-quaest/",
+  "contratante": "Globo",
+  "obs": "Registro BR-02197/2026; 3.702 entrevistas. Brancos, nulos e não votarão 10%, indecisos 3%. Os válidos usam o modelo de eleitor provável da Quaest e por isso não são proporcionais aos totais."
  }
 ]
