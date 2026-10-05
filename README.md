@@ -47,7 +47,7 @@ npm run build      # site estático em dist/
 npm run preview    # serve dist/ para conferência
 ```
 
-Não há backend nem chaves: tudo roda no navegador a partir dos JSON versionados.
+Não há backend próprio: o site roda no navegador. Ao abrir, ele lê os dados da tabela `pu26_datasets` no Supabase com a chave publicável (só leitura). Se o Supabase não responder em 5 s, usa a cópia dos JSON embutida no build.
 
 ### URLs
 
@@ -61,9 +61,28 @@ Não há backend nem chaves: tudo roda no navegador a partir dos JSON versionado
 
 Abrir uma UF ou um instituto cria uma entrada no histórico, então o voltar do navegador (ou `Esc`) sobe um nível.
 
+## Hospedagem: Vercel + Supabase
+
+| Peça | Onde | Para quê |
+| --- | --- | --- |
+| Site | Vercel, projeto `pesquisas-urnas-2026` | Hospeda o build estático |
+| Dados | Supabase (projeto lp-cliente-mib), tabela `pu26_datasets` | Os 4 JSON lidos ao vivo pelo site |
+| Código | Supabase, tabela `pu26_site_files` | Fonte que o build da Vercel baixa |
+
+As tabelas `pu26_*` têm RLS com leitura pública e nenhuma escrita pela API: alterações só pelo painel do Supabase ou pelo MCP.
+
+No build da Vercel, `npm run build:vercel` roda `scripts/bootstrap-supabase.mjs`. Ele:
+
+1. baixa os arquivos de `pu26_site_files`, conferindo o MD5 de cada um;
+2. grava os dados de `pu26_datasets` em `src/data/`, que viram a cópia embutida;
+3. gera a malha das UFs a partir do shapefile público;
+4. roda o `vite build`.
+
+Para corrigir um número, atualize a linha em `pu26_datasets`: o site passa a mostrar o valor novo na próxima visita, sem novo deploy. Para mudar o código, atualize `pu26_site_files` e faça um novo deploy na Vercel.
+
 ## De onde vêm os dados
 
-Todos os dados ficam em `src/data/`:
+Os dados também ficam versionados em `src/data/`:
 
 | Arquivo | Conteúdo |
 | --- | --- |
