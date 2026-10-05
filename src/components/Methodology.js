@@ -7,13 +7,11 @@ import { BackButton } from './ui.js';
 export const REPO = 'https://github.com/matheusmarquesr7-star/pesquisas-urnas-2026';
 
 const SOURCES = [
-  ['Resultado nacional para Presidente (100%)', 'https://www.gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/'],
-  ['Mapa de apuração da Exame (brancos, nulos e comparecimento com 99,79%)', 'https://exame.com/eleicoes/2026/apuracao/primeiro-turno/presidente/mapa-de-apuracao/'],
-  ['Metrópoles: Flávio vence em 15 UFs, Lula em 12', 'https://www.metropoles.com/brasil/eleicoes-2026-flavio-leva-1o-turno-em-15-estados-lula-em-12'],
-  ['Times Brasil: resultado para Presidente no Nordeste', 'https://timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/'],
+  ['TSE: resultado oficial para Presidente, Brasil (100% das seções)', 'https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json'],
+  ['TSE: resultado oficial para Senado, São Paulo (troque sp pela sigla da UF)', 'https://resultados.tse.jus.br/oficial/ele2026/6259/dados/sp/sp-c0005-e006259-u.json'],
+  ['TSE: painel de resultados', 'https://resultados.tse.jus.br/'],
   ['Rádio Senado: PL elege 19 senadores', 'https://www12.senado.leg.br/radio/1/noticia/2026/10/04/pl-elege-19-senadores-e-tera-a-maior-bancada-do-senado'],
   ['Agência Brasil: quem são os novos senadores', 'https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/veja-quem-sao-os-novos-senadores-e-como-fica-composicao-do-senado'],
-  ['TSE: resultados oficiais (para conferência)', 'https://resultados.tse.jus.br/'],
 ];
 
 const names = polls => polls.map(p => `${p.inst} (${shortDate(p.divulgacao)})`).join(', ');
@@ -32,7 +30,7 @@ export function Methodology({ result, polls, onBack, updated, source }) {
 
     <section>
       <h3>Votos válidos × votos totais</h3>
-      <p><b>Votos válidos</b> são os dados a candidatos, sem brancos e nulos. É assim que o TSE divulga o resultado, e é a base padrão do site. <b>Votos totais</b> incluem brancos, nulos e, nas pesquisas, os indecisos. Para comparar uma pesquisa em votos totais com as urnas, convertemos o resultado: válido × (1 − brancos e nulos ÷ 100). Brancos e nulos somaram ${pct(blank, 2)} do comparecimento (${pct(result.comparecimento.brancos_pct, 2)} + ${pct(result.comparecimento.nulos_pct, 2)}, com ${num(result.comparecimento.apurado_ref, 2)}% apurado). Ainda assim, a comparação em totais pende contra as pesquisas, porque elas têm indecisos e a urna não.</p>
+      <p><b>Votos válidos</b> são os dados a candidatos, sem brancos e nulos. É assim que o TSE divulga o resultado, e é a base padrão do site. <b>Votos totais</b> incluem brancos, nulos e, nas pesquisas, os indecisos. Para comparar uma pesquisa em votos totais com as urnas, convertemos o resultado: válido × (1 − brancos e nulos ÷ 100). Brancos e nulos somaram ${pct(blank, 2)} do comparecimento (${pct(result.comparecimento.brancos_pct, 2)} + ${pct(result.comparecimento.nulos_pct, 2)}, ${result.comparecimento.apurado_ref === 100 ? 'segundo o TSE' : `com ${num(result.comparecimento.apurado_ref, 2)}% apurado`}). Ainda assim, a comparação em totais pende contra as pesquisas, porque elas têm indecisos e a urna não.</p>
     </section>
 
     <section>
@@ -72,8 +70,8 @@ export function Methodology({ result, polls, onBack, updated, source }) {
 
     <section>
       <h3>Fontes e limitações</h3>
-      <p>Os números do TSE e do seuimposto.com não puderam ser lidos diretamente durante a coleta. O resultado foi conferido em veículos de imprensa que publicaram a apuração, e as divergências entre fontes, os dados parciais e as lacunas estão listados em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>.</p>
-      <p>Os dados ficam no Supabase, na tabela <code>pu26_datasets</code>, e o site os lê ao vivo: corrigir um número ali atualiza o site sem novo deploy. ${source === 'supabase' ? 'Esta visita está usando os dados ao vivo.' : 'Nesta visita o Supabase não respondeu, e o site usa a cópia dos dados embutida no último build.'} Quando o TSE publicar os arquivos finais, basta atualizar essa tabela.</p>
+      <p>O resultado vem dos arquivos oficiais do TSE, com 100% das seções totalizadas. As pesquisas foram conferidas em reportagens e no registro de pesquisas do TSE. O que mudou em cada revisão e o que ficou sem fonte está em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>.</p>
+      <p>Os dados ficam no Supabase, na tabela <code>pu26_datasets</code>, e o site os lê ao vivo: corrigir um número ali atualiza o site sem novo deploy. ${source === 'supabase' ? 'Esta visita está usando os dados ao vivo.' : 'Nesta visita o Supabase não respondeu, e o site usa a cópia dos dados embutida no último build.'}</p>
       <ul class="sources">${SOURCES.map(([label, url]) => html`<li key=${url}><a href=${url} target="_blank" rel="noopener">${label}</a></li>`)}</ul>
       <p class="note">Malha estadual: IBGE (via gis-dataset-brasil, licença DbCL), simplificada com mapshaper. Desenho da interface baseado no projeto open-apuracao-brazil (MIT), na linguagem visual do seuimposto.com. Código: <a href=${REPO} target="_blank" rel="noopener">${REPO.replace('https://', '')}</a>.</p>
     </section>

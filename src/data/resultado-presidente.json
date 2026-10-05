@@ -12,7 +12,7 @@
    "curto": "Flávio",
    "partido": "PL",
    "validos": 47.03,
-   "votos": 56102126
+   "votos": 56104503
   },
   {
    "id": "L",
@@ -20,7 +20,7 @@
    "curto": "Lula",
    "partido": "PT",
    "validos": 45.16,
-   "votos": 53866947
+   "votos": 53879538
   },
   {
    "id": "Cury",
@@ -28,7 +28,7 @@
    "curto": "Cury",
    "partido": "Avante",
    "validos": 2.89,
-   "votos": 3448364
+   "votos": 3448569
   },
   {
    "id": "Renan",
@@ -36,7 +36,7 @@
    "curto": "Renan Santos",
    "partido": "Missão",
    "validos": 2.24,
-   "votos": 2675790
+   "votos": 2675887
   },
   {
    "id": "Caiado",
@@ -44,8 +44,7 @@
    "curto": "Caiado",
    "partido": "PSD",
    "validos": 2.18,
-   "votos": 2602710,
-   "obs": "Votos com 99,79% apurado (Exame); o percentual é o final."
+   "votos": 2605148
   },
   {
    "id": "Zema",
@@ -53,103 +52,147 @@
    "curto": "Zema",
    "partido": "Novo",
    "validos": 0.27,
-   "votos": 326486,
-   "obs": "Votos finais segundo a CNN; percentual 0,27%."
+   "votos": 326488
   }
  ],
  "outros": {
-  "validos": 0.23,
-  "nomes": "Samara (UP), Hertz Dias (PSTU), Edmilson Costa (PCB), Rui Costa Pimenta (PCO) e outros"
+  "validos": 0.22,
+  "nomes": "Samara (UP), Hertz Dias (PSTU), Clariana Barao (DC), Edmilson Costa (PCB), Veterinário Wilson Grassi (Democrata) e Rui Costa Pimenta (PCO)"
  },
  "comparecimento": {
   "brancos_pct": 1.84,
   "nulos_pct": 2.93,
   "validos_pct": 95.23,
   "abstencao_pct": 21.08,
-  "comparecimento": 125020982,
-  "validos": 119057862,
-  "brancos": 2297528,
-  "nulos": 3665592,
-  "abstencao": 33378099,
-  "apurado_ref": 99.79,
-  "obs": "Brancos e nulos em % do comparecimento: 1,84% e 2,93%, mantidos com 100% apurado (Brasil61); votos absolutos com 99,79% (Exame). Abstenção final: 21,08%."
+  "comparecimento": 125275835,
+  "validos": 119300788,
+  "brancos": 2300798,
+  "nulos": 3674249,
+  "abstencao": 33469244,
+  "apurado_ref": 100,
+  "obs": "TSE, com 100% das seções totalizadas. Brancos e nulos em % do comparecimento. Os nulos incluem 5.246 nulos técnicos."
  },
  "ufs": {
   "AC": {
-   "L": 28.73,
    "F": 64.56,
+   "L": 28.73,
+   "Cury": 2.88,
+   "Renan": 1.7,
+   "Caiado": 1.83,
+   "Zema": 0.12,
    "votos": {
     "F": 302807,
     "L": 134770
    },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "agazetadoacre.com/2026/10/noticias/politica/flavio-bolsonaro-tem-6456-dos-votos-no-acre-e-abre-vantagem-de-168-mil-votos-sobre-lula/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-u.json"
   },
   "AL": {
-   "L": 54.73,
    "F": 40.45,
+   "L": 54.73,
+   "Cury": 2.33,
+   "Renan": 1.48,
+   "Caiado": 0.78,
+   "Zema": 0.06,
    "votos": {
-    "L": 995459,
-    "F": 735718
+    "F": 735718,
+    "L": 995459
    },
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "L",
-   "fonte": "https://www.gazetaweb.com/noticias/eleicoes/lula-vence-flavio-bolsonaro-em-alagoas-e-abre-vantagem-de-259-mil-votos-940283",
-   "obs": "A fonte não informa o % apurado; os votos (995.459 × 735.718) batem com a diferença de 259 mil citada."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/al/al-c0001-e006257-u.json"
   },
   "AM": {
-   "L": 48.2,
-   "F": 45.03,
+   "F": 45,
+   "L": 48.23,
+   "Cury": 3.57,
+   "Renan": 1.63,
+   "Caiado": 1.3,
+   "Zema": 0.08,
+   "votos": {
+    "F": 976764,
+    "L": 1046996
+   },
    "confianca": "alta",
    "vencedor": "L",
-   "apuracao": "99,94%",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-amazonas-lula-fica-em-primeiro-lugar-com-48/",
-   "obs": "Com ~95% apurado, Flávio aparecia mais perto (45,82 × 47,26). O 'AM Lula 63,95%' dos dados iniciais era do Maranhão."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/am/am-c0001-e006257-u.json"
   },
   "AP": {
-   "L": 45.71,
    "F": 45.67,
+   "L": 45.71,
+   "Cury": 4.1,
+   "Renan": 2.44,
+   "Caiado": 1.79,
+   "Zema": 0.07,
+   "votos": {
+    "F": 212278,
+    "L": 212503
+   },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "https://exame.com/brasil/resultado-da-eleicao-para-presidencia-no-amapa-lula-fica-em-primeiro-lugar/",
-   "obs": "Lula venceu por 225 votos.",
-   "apuracao": "100%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ap/ap-c0001-e006257-u.json",
+   "obs": "Lula venceu por 225 votos."
   },
   "BA": {
+   "F": 28.53,
    "L": 66.17,
-   "F": 28.54,
+   "Cury": 2.28,
+   "Renan": 1.37,
+   "Caiado": 1.43,
+   "Zema": 0.08,
+   "votos": {
+    "F": 2442585,
+    "L": 5664771
+   },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "https://exame.com/brasil/resultado-da-eleicao-para-presidente-na-bahia-lula-fica-em-primeiro-lugar/",
-   "obs": "O BNews, “com quase 100%”, dá 66,07 × 28,62.",
-   "apuracao": "99,98%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ba/ba-c0001-e006257-u.json"
   },
   "CE": {
-   "L": 63.28,
-   "F": 31.28,
+   "F": 31.27,
+   "L": 63.29,
+   "Cury": 2.5,
+   "Renan": 1.92,
+   "Caiado": 0.81,
+   "Zema": 0.08,
    "votos": {
-    "L": 3552535,
-    "F": 1756239
+    "F": 1756850,
+    "L": 3555263
    },
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "L",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ce/ce-c0001-e006257-u.json"
   },
   "DF": {
-   "L": 38.11,
    "F": 51.31,
+   "L": 38.11,
+   "Cury": 2.59,
+   "Renan": 2.64,
+   "Caiado": 4.8,
+   "Zema": 0.28,
    "votos": {
     "F": 909616,
     "L": 675627
    },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "brasildefato.com.br/2026/10/04/1o-turno-flavio-bolsonaro-vence-no-df-com-5131-dos-votos-no-df-e-lula-3811/ ; gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-u.json"
   },
   "ES": {
-   "L": 37.76,
    "F": 54.78,
+   "L": 37.76,
+   "Cury": 2.89,
+   "Renan": 2.36,
+   "Caiado": 1.74,
+   "Zema": 0.26,
    "votos": {
     "F": 1233194,
     "L": 850028
@@ -157,102 +200,155 @@
    "confianca": "alta",
    "vencedor": "F",
    "apuracao": "100%",
-   "fonte": "otempo.com.br/eleicoes/2026/analises/mapa-dos-votos/es"
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/es/es-c0001-e006257-u.json"
   },
   "GO": {
-   "L": 31.06,
    "F": 53.6,
+   "L": 31.06,
+   "Cury": 1.41,
+   "Renan": 1.41,
+   "Caiado": 12.33,
+   "Zema": 0.07,
    "votos": {
     "F": 2051888,
     "L": 1188880
    },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "otempo.com.br/eleicoes/2026/analises/mapa-dos-votos/go",
-   "obs": "Flávio venceu em 218 cidades e Lula em 28. Não achei o % de Caiado em GO; pela soma, os outros candidatos ficaram com cerca de 15%."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/go/go-c0001-e006257-u.json"
   },
   "MA": {
-   "L": 63.92,
-   "F": 30.96,
+   "F": 30.9,
+   "L": 63.99,
+   "Cury": 2.12,
+   "Renan": 1.51,
+   "Caiado": 1.25,
+   "Zema": 0.11,
+   "votos": {
+    "F": 1239040,
+    "L": 2566301
+   },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-maranhao-lula-fica-em-primeiro-lugar/",
-   "apuracao": "99,60%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ma/ma-c0001-e006257-u.json"
   },
   "MG": {
-   "L": 43.31,
-   "F": 48.25,
-   "confianca": "média",
+   "F": 48.24,
+   "L": 43.33,
+   "Cury": 3.42,
+   "Renan": 2.06,
+   "Caiado": 1.92,
+   "Zema": 0.82,
+   "votos": {
+    "F": 5777548,
+    "L": 5188936
+   },
+   "confianca": "alta",
    "vencedor": "F",
-   "fonte": "https://em.com.br/politica/platobr/2026/10/7514628-curva-a-direita-empurra-flavio-bolsonaro-no-segundo-turno-contra-lula.html",
-   "obs": "Fonte sem % apurado explícito."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/mg/mg-c0001-e006257-u.json"
   },
   "MS": {
-   "L": 34.68,
    "F": 58.6,
-   "confianca": "média",
+   "L": 34.68,
+   "Cury": 2.63,
+   "Renan": 2.14,
+   "Caiado": 1.56,
+   "Zema": 0.19,
+   "votos": {
+    "F": 873351,
+    "L": 516855
+   },
+   "confianca": "alta",
    "vencedor": "F",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-mato-grosso-do-sul-flavio-bolsonaro-fica-em-primeiro-lugar-com-5860/",
-   "obs": "Corrigido: o valor anterior (Lula 40,51%) somava 99,14% com Flávio e não deixava espaço aos demais. Fonte única (Exame, 100%).",
-   "apuracao": "100%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ms/ms-c0001-e006257-u.json"
   },
   "MT": {
-   "L": 29.18,
    "F": 65.15,
+   "L": 29.18,
+   "Cury": 2.01,
+   "Renan": 1.66,
+   "Caiado": 1.66,
+   "Zema": 0.12,
    "votos": {
     "F": 1298581,
     "L": 581681
    },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-mato-grosso-flavio-bolsonaro-pl-fica-em-primeiro-lugar/",
-   "apuracao": "100%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/mt/mt-c0001-e006257-u.json"
   },
   "PA": {
-   "L": 49.87,
-   "F": 44.53,
+   "F": 44.5,
+   "L": 49.91,
+   "Cury": 2.57,
+   "Renan": 1.73,
+   "Caiado": 1.07,
+   "Zema": 0.06,
+   "votos": {
+    "F": 2163957,
+    "L": 2427237
+   },
    "confianca": "alta",
    "vencedor": "L",
-   "apuracao": "99,81%",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-para-lula-fica-em-primeiro-lugar-com-4987/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pa/pa-c0001-e006257-u.json"
   },
   "PB": {
-   "L": 61.31,
    "F": 33.07,
+   "L": 61.31,
+   "Cury": 2.94,
+   "Renan": 1.68,
+   "Caiado": 0.78,
+   "Zema": 0.08,
    "votos": {
-    "L": 1540937,
-    "F": 831205
+    "F": 831377,
+    "L": 1541127
    },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/ (Lula 61,31% também em outro resumo de busca)",
-   "obs": "Em João Pessoa: Lula 46,50 x Flávio 45,67 (correio24horas)"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pb/pb-c0001-e006257-u.json"
   },
   "PE": {
-   "L": 63.45,
    "F": 31.03,
+   "L": 63.45,
+   "Cury": 2.46,
+   "Renan": 1.53,
+   "Caiado": 1.31,
+   "Zema": 0.11,
    "votos": {
-    "L": 3553971,
-    "F": 1738043
-   },
-   "confianca": "média",
-   "vencedor": "L",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/"
-  },
-  "PI": {
-   "L": 70.97,
-   "F": 24.09,
-   "votos": {
-    "L": 1520985
+    "F": 1738043,
+    "L": 3553971
    },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "metropoles.com/brasil/flavio-e-mais-votado-em-roraima-no-1-turno-lula-no-piaui (Lula 70,97%, 1.520.985); Flávio 24,09 = valor do usuário",
-   "obs": "Lula 70,97% (Metrópoles) × 70,99% (dados iniciais). Mantido o valor da fonte jornalística mais recente."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pe/pe-c0001-e006257-u.json"
+  },
+  "PI": {
+   "F": 24.09,
+   "L": 70.99,
+   "Cury": 2.22,
+   "Renan": 1.5,
+   "Caiado": 1.01,
+   "Zema": 0.06,
+   "votos": {
+    "F": 517028,
+    "L": 1523710
+   },
+   "confianca": "alta",
+   "vencedor": "L",
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pi/pi-c0001-e006257-u.json"
   },
   "PR": {
-   "L": 31.2,
    "F": 59.91,
+   "L": 31.2,
    "Cury": 3.11,
    "Renan": 2.69,
    "Caiado": 2.6,
@@ -264,93 +360,164 @@
    "confianca": "alta",
    "vencedor": "F",
    "apuracao": "100%",
-   "fonte": "band.com.br/politica/eleicoes/veja-o-resultado-completo-das-eleicoes-2026-no-parana ; exame.com/eleicoes/2026/apuracao/primeiro-turno/presidente/mapa-de-apuracao/?estado=pr"
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pr/pr-c0001-e006257-u.json"
   },
   "RJ": {
-   "L": 39.41,
    "F": 53.01,
+   "L": 39.41,
+   "Cury": 2.64,
+   "Renan": 2.26,
+   "Caiado": 2.13,
+   "Zema": 0.23,
+   "votos": {
+    "F": 4966844,
+    "L": 3693021
+   },
    "confianca": "alta",
    "vencedor": "F",
-   "apuracao": "99,97%",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-no-rio-de-janeiro-flavio-bolsonaro-fica-em-primeiro-lugar-com-5301/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rj/rj-c0001-e006257-u.json"
   },
   "RN": {
-   "L": 59.75,
    "F": 34.77,
+   "L": 59.75,
+   "Cury": 2.77,
+   "Renan": 1.7,
+   "Caiado": 0.79,
+   "Zema": 0.07,
    "votos": {
+    "F": 720493,
     "L": 1237963
    },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "Lula 59,75% / 1.237.963 em resumo de busca (Times Brasil/Metrópoles/Cajueira); Flávio 34,77 = valor do usuário"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rn/rn-c0001-e006257-u.json"
   },
   "RO": {
-   "L": 25.89,
    "F": 67.45,
-   "confianca": "alta",
-   "vencedor": "F",
-   "fonte": "Flávio 67,45% confirmado num resumo de busca (exame/otempo); Lula 25,89 = valor do usuário"
-  },
-  "RR": {
-   "L": 22.86,
-   "F": 71.06,
+   "L": 25.89,
+   "Cury": 2.61,
+   "Renan": 1.98,
+   "Caiado": 1.75,
+   "Zema": 0.14,
    "votos": {
-    "F": 231322
+    "F": 652988,
+    "L": 250667
    },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "metropoles.com/brasil/flavio-e-mais-votado-em-roraima-no-1-turno-lula-no-piaui (Flávio 71,06%, 231.322); Lula 22,86 = valor do usuário",
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ro/ro-c0001-e006257-u.json"
+  },
+  "RR": {
+   "F": 71.06,
+   "L": 22.86,
+   "Cury": 2.64,
+   "Renan": 2.03,
+   "Caiado": 1.12,
+   "Zema": 0.1,
+   "votos": {
+    "F": 231322,
+    "L": 74420
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rr/rr-c0001-e006257-u.json",
    "obs": "É o melhor resultado de Flávio no país."
   },
   "RS": {
-   "L": 35.73,
    "F": 55.64,
+   "L": 35.73,
+   "Cury": 3.04,
+   "Renan": 2.61,
+   "Caiado": 2.47,
+   "Zema": 0.3,
+   "votos": {
+    "F": 3573783,
+    "L": 2294759
+   },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "https://exame.com/brasil/eleicao-para-presidente-no-rio-grande-do-sul-flavio-bolsonaro-fica-em-primeiro-lugar-com-5564/",
-   "obs": "Flávio 55,64% (antes 55,54%).",
-   "apuracao": "100%"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rs/rs-c0001-e006257-u.json"
   },
   "SC": {
-   "L": 25.04,
    "F": 66.65,
+   "L": 25.04,
+   "Cury": 2.98,
+   "Renan": 2.95,
+   "Caiado": 1.78,
+   "Zema": 0.37,
+   "votos": {
+    "F": 3000020,
+    "L": 1127168
+   },
    "confianca": "alta",
    "vencedor": "F",
-   "fonte": "jornalrazao.com/politica/resultado-presidente-em-sc-2026-flavio-bolsonaro-lula-tse",
-   "obs": "Na parcial de 26,35% estava 62,66 x 28,68 (jornalrazao)"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/sc/sc-c0001-e006257-u.json"
   },
   "SE": {
-   "L": 62.75,
    "F": 30.63,
+   "L": 62.75,
+   "Cury": 2.85,
+   "Renan": 1.57,
+   "Caiado": 1.95,
+   "Zema": 0.08,
    "votos": {
+    "F": 417839,
     "L": 856019
    },
    "confianca": "alta",
    "vencedor": "L",
-   "fonte": "Lula 62,75% / 856.019 em resumo de busca (Times Brasil/Cajueira); Flávio 30,63 = valor do usuário"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/se/se-c0001-e006257-u.json"
   },
   "SP": {
-   "L": 38.2,
    "F": 51.93,
+   "L": 38.2,
+   "Cury": 3.59,
+   "Renan": 3.23,
+   "Caiado": 2.33,
+   "Zema": 0.38,
+   "votos": {
+    "F": 12922023,
+    "L": 9505413
+   },
    "confianca": "alta",
    "vencedor": "F",
-   "apuracao": "99,9%",
-   "fonte": "https://exame.com/brasil/eleicao-presidente-em-sao-paulo-flavio-bolsonaro-pl-fica-em-primeiro-lugar/"
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/sp/sp-c0001-e006257-u.json"
   },
   "TO": {
-   "L": 43.42,
    "F": 50.44,
+   "L": 43.42,
+   "Cury": 2.41,
+   "Renan": 1.4,
+   "Caiado": 2.17,
+   "Zema": 0.06,
    "votos": {
     "F": 469321,
     "L": 404009
    },
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "F",
-   "fonte": "resumo de busca que agregava metropoles.com/brasil/eleicoes-2026-flavio-leva-1o-turno-em-15-estados-lula-em-12 e gazetadopovo.com.br",
-   "obs": "Votos e % batem entre si. Em 2022 Lula tinha vencido TO."
+   "apuracao": "100%",
+   "fonte": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/to/to-c0001-e006257-u.json",
+   "obs": "Em 2022, Lula tinha vencido no Tocantins."
   }
  },
  "fontes": [
+  {
+   "nome": "TSE: resultado oficial para Presidente (Brasil, 100% das seções)",
+   "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json"
+  },
+  {
+   "nome": "TSE: resultados por UF (troque br pela sigla da UF)",
+   "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/"
+  },
   {
    "nome": "Resultado nacional (100%)",
    "url": "https://www.gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/"

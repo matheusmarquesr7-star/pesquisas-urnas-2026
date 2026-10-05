@@ -130,8 +130,8 @@ test('Senado: pesquisas em 200% são normalizadas para somar 100', () => {
 test('Senado: erro médio só na base VV, com candidatos de resultado conhecido', () => {
   const rj = senateResult.ufs.RJ;
   const datafolha = senatePolls.ufs.RJ.find(p => p.inst === 'Datafolha' && p.base === 'VV');
-  // Benedita 26 (20,22), Portinho 19 (26,77), Jordy 18 (24,56), Pedro Paulo 13 (11,95), Monica 9 (9,66), Crivella 6 (3,31)
-  const expected = (5.78 + 7.77 + 6.56 + 1.05 + 0.66 + 2.69) / 6;
+  // Benedita 26 (20,22), Portinho 19 (26,77), Jordy 18 (24,56), Pedro Paulo 13 (11,95), Monica 9 (9,66), Crivella 6 (3,39)
+  const expected = (5.78 + 7.77 + 6.56 + 1.05 + 0.66 + 2.61) / 6;
   close(senateMeanError(datafolha, rj), expected);
   assert.equal(senateMeanError({ ...datafolha, base: 'VT' }, rj), null);
 });

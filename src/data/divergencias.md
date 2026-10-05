@@ -1,15 +1,144 @@
 # Divergências e lacunas dos dados
 
-Atualizado em 05/10/2026, depois de uma segunda rodada de revisão. Este arquivo lista cada número que mudou em relação aos dados iniciais do briefing, o que foi confirmado e cada lacuna que continuou sem fonte.
+Atualizado em 05/10/2026, na terceira rodada: a conferência do resultado com os arquivos oficiais do TSE. Este arquivo lista cada número que mudou em relação aos dados iniciais do briefing, o que foi confirmado e cada lacuna que continuou sem fonte.
 
-## Como os dados foram conferidos
+## 3ª rodada: resultado conferido com o TSE
+
+### Fonte
+
+- Arquivos oficiais de resultado do TSE, lidos em 05/10/2026, com **100% das seções totalizadas** em todas as UFs:
+  - Presidente: eleição **6257**, `https://resultados.tse.jus.br/oficial/ele2026/6257/dados/{uf}/{uf}-c0001-e006257-u.json` (`br` = país, `zz` = exterior). Arquivos gerados em 05/10 às 02:59.
+  - Senado: eleição **6259**, `https://resultados.tse.jus.br/oficial/ele2026/6259/dados/{uf}/{uf}-c0005-e006259-u.json`. Totalização final marcada em todas as UFs; arquivos gerados entre 04/10, 20:23, e 05/10, 06:08.
+- Os códigos vêm do arquivo de configuração do TSE, `https://resultados.tse.jus.br/oficial/comum/config/ele-c.json` (pleito 3220, ciclo `ele2026`). Não foram deduzidos do padrão de 2022: o caminho `dados-simplificados/…-r.json` não existe mais, nem para 2022.
+- Percentuais: o valor de 2 casas que o próprio TSE publica (`pvap`), em votos válidos.
+- Pela regra do projeto, o TSE substitui qualquer número de imprensa. As tabelas abaixo comparam com a versão anterior do site.
+
+### Lacunas que ficaram fechadas
+
+| Lacuna | Antes | TSE (100%) |
+| --- | --- | --- |
+| MG, Senado, com 99,01% apurado | Domingos Sávio 24,29; Marília Campos 19,40; Aro 11,60; Aécio 4,02 | **24,21; 19,44; 11,63; 4,08**. Carlos Viana 17,46, Áurea Carolina 12,98 e Superman 9,24 confirmados |
+| PI, Senado, com 99,56% | Marcelo Castro 35,65; Júlio César 26,96; Tiago Junqueira 8,87 | **35,67; 26,98; 8,85**. Ciro Nogueira 24,68 confirmado |
+| MT, 3º e 4º lugares | Janaina Riva entre 14,19 e 14,48; Fávaro entre 11,35 e 11,42 | **Janaina Riva 14,53; Fávaro 11,50**. Os dois ficaram acima das faixas das parciais |
+| AP, 4º e 5º lugares | Acácio Favacho 14,87; Alliny Serrão 9,68 (parciais) | **Confirmados**: 14,87 e 9,68 |
+| RO, Mariana Carvalho | 11,63 ou 11,81 | **11,62**. Máximo 31,97 e Scheid 26,56 confirmados |
+| RJ, Crivella | 3,31 com 85,95% apurado | **3,39** |
+| CE e PE, Presidente, sem 100% | CE Flávio 31,28 × Lula 63,28; PE 31,03 × 63,45 | **CE 31,27 × 63,29**; PE confirmado |
+| Caiado, nacional | 2,18%, com votos de 99,79% | **2,18%, 2.605.148 votos** |
+
+### Revisões anteriores que estavam erradas
+
+- **RR, Senado:** os dados iniciais (Nicoletti 22,68, Teresa Surita 19,24) estavam certos. A "correção" da 1ª revisão para 22,89 / 19,22 veio de uma parcial. Também mudaram Helena da Asatur (17,23 → 17,50), Chico Rodrigues (13,38 → 13,43) e Hélio Negão (13,08 → 12,97).
+- **AL, Senado:** a "outra fonte" citada (28,87 / 28,20 / 22,25) estava mais perto do TSE (28,87 / 28,20 / 22,24) do que os números da Gazetaweb usados (28,82 / 28,16 / 22,32).
+- **CE, Senado:** o conjunto escolhido (Cid 30,86, Luizianne 28,72) era o mais distante. O TSE dá 31,22 / 29,05, perto dos 31,21 / 29,04 descartados.
+- **AC, Senado:** a nota dizia que os votos de Gladson Cameli foram "contados normalmente". No arquivo do TSE, eles aparecem como **anulados sub judice** (145.244 votos). Ele ficou em 3º, então as vagas não mudam. O TSE calcula os percentuais de todos com esses votos na base: em AC, os votos válidos somam 83,41%.
+- **PI, Presidente:** Lula tem 70,99%, o número dos dados iniciais. O 70,97% do Metrópoles era parcial.
+- **Presidente, "outros":** 0,22%, não 0,23%. São seis candidatos: Samara (UP), Hertz Dias (PSTU), Clariana Barao (DC), Edmilson Costa (PCB), Veterinário Wilson Grassi (Democrata) e Rui Costa Pimenta (PCO).
+
+### Presidente — nacional
+
+| Item | Antes | TSE |
+| --- | --- | --- |
+| Flávio Bolsonaro | 47,03%, 56.102.126 | 47,03%, **56.104.503** |
+| Lula | 45,16%, 53.866.947 | 45,16%, **53.879.538** |
+| Augusto Cury | 2,89%, 3.448.364 | 2,89%, **3.448.569** |
+| Renan Santos | 2,24%, 2.675.790 | 2,24%, **2.675.887** |
+| Ronaldo Caiado | 2,18%, 2.602.710 | 2,18%, **2.605.148** |
+| Romeu Zema | 0,27%, 326.486 | 0,27%, **326.488** |
+| Outros | 0,23% | **0,22%** |
+| Comparecimento | 125.020.982 | **125.275.835** |
+| Votos válidos | 119.057.862 | **119.300.788** |
+| Brancos | 2.297.528 (1,84%) | **2.300.798** (1,84%) |
+| Nulos | 3.665.592 (2,93%) | **3.674.249** (2,93%), com 5.246 nulos técnicos |
+| Abstenção | 33.378.099 (21,08%) | **33.469.244** (21,08%) |
+
+Os percentuais nacionais não mudaram. A distância Flávio − Lula continua +1,87 pp, e os erros das pesquisas também.
+
+### Presidente — UFs
+
+| UF | Antes (Flávio × Lula) | TSE |
+| --- | --- | --- |
+| AM | 45,03 × 48,20 | **45,00 × 48,23** |
+| BA | 28,54 × 66,17 | **28,53** × 66,17 |
+| CE | 31,28 × 63,28 | **31,27 × 63,29** |
+| MA | 30,96 × 63,92 | **30,90 × 63,99** |
+| MG | 48,25 × 43,31 | **48,24 × 43,33** |
+| PA | 44,53 × 49,87 | **44,50 × 49,91** |
+| PI | 24,09 × 70,97 | 24,09 × **70,99** |
+
+- As outras 20 UFs estavam certas.
+- Votos absolutos corrigidos em CE, PB e PI.
+- Todas as 27 UFs agora têm, do TSE: votos de Flávio e Lula, os percentuais de Cury, Renan, Caiado e Zema, apuração de 100% e confiança "alta". A fonte de cada UF é o arquivo do TSE.
+- O placar de 15 UFs para Flávio e 12 para Lula está confirmado. AP: Lula venceu por 225 votos (212.503 × 212.278).
+- Notas que só explicavam a origem dos números saíram do site. Ficaram as do AP, de RR (melhor resultado de Flávio) e do TO.
+
+### Senado
+
+Os **54 eleitos conferem** com o TSE, e a bancada continua PL 19. Mudaram percentuais e partidos:
+
+| UF | O que mudou |
+| --- | --- |
+| AC | Cameli 16,60 → 16,59 (anulados sub judice); Eduardo Velloso — → 10,87 (Solidariedade) |
+| AL | Lira 28,82 → 28,87; Marina JHC 28,16 → 28,20; Renan 22,32 → 22,24; Dr. Wanderley 10,92 → 10,91; Davi Davino Filho 8,91 → 8,92; Alexandre Fleming — → 0,79 (UP) |
+| AM | Braga 32,26 → 32,29; Plínio Valério 24,69 → 24,70; Alberto Neto 23,69 → 23,66; Wilson Lima 11,88 → 11,89; Professora Evany — → 5,75 (PSOL) |
+| AP | Capi — → 2,19 |
+| BA | Rui Costa 29,99 → 30,07; Jaques Wagner 27,56 → 27,65; Angelo Coronel 20,17 → 20,11; João Roma 20,05 → 19,97; Professora Delliana — → 1,49 (PSOL) |
+| CE | Cid 30,86 → 31,22; Luizianne 28,72 → 29,05; Capitão Wagner 21,01 → 20,70; Alcides Fernandes 18,62 → 18,28 |
+| DF | Leila 21,27 → 21,25; Erika Kokay 18,94 → 18,91 |
+| ES | Marcos do Val — → 4,17 (Avante); Rose de Freitas — → 4,08 (MDB) |
+| GO | Vanderlan 9,48 → 9,49 |
+| MA | Roseana 16,40 → 16,41; Cidônio Gonçalves — → 8,44 (PL); Hilton — → 6,42 (Mobiliza) |
+| MG | ver lacunas |
+| MT | Janaina Riva 14,42 → 14,53; Fávaro 11,42 → 11,50; Pedro Taques — → 6,28 (PSB) |
+| PB | João Azevêdo 32,51 → 32,50; Veneziano 22,75 → 22,76; André Gadelha 2,82 → 2,83 |
+| PE | Humberto Costa 27,16 → 27,19; Mendonça Filho 18,61 → 18,57; Eduardo da Fonte 13,83 → 13,84; Carlos Sant'Anna 7,52 → 7,50; Túlio Gadêlha 7,19 → 7,22 |
+| PI | ver lacunas |
+| PR | Karen Guerreiro — → 0,81 (Missão) |
+| RJ | Crivella 3,31 → 3,39 |
+| RO | Mariana Carvalho 11,81 → 11,62; Luciana Oliveira 5,52 → 5,40; Acir Gurgacz 4,08 → 4,06 |
+| RR | ver acima |
+| RS | Rigotto 3,65 → 3,67 |
+| SC | Amin 15,37 → 15,31; Décio Lima 10,27 → 10,22 |
+| TO | Paulo Mourão — → 7,85 (PT); Ronaldo Dimas — → 5,62 (Podemos); Vanderlei Luxemburgo — → 4,11 (Podemos); Professor Osvaldo — → 2,16 (PSOL) |
+
+Nas UFs fora da tabela (MS, PA, RN, SE e SP), os números já estavam certos. Algumas só ganharam candidatos, listados abaixo.
+
+- **Candidatos acrescentados** (todos os que tiveram 1% ou mais e não estavam nos dados):
+  - AC: Professor Inacio Moreira (PSOL) 2,25; Dr. Junior Feitosa (DC) 2,20.
+  - AM: Xuxa do Amazonas (Mobiliza) 1,22.
+  - DF: Sebastião Coelho (Novo) 2,09.
+  - ES: Callegari (DC) 1,24; Professor Fabian (PSOL) 1,06.
+  - GO: Isaura Lemos (PSB) 5,21; Cintia Dias (PSOL) 4,32.
+  - MA: Enilton Rodrigues (PSOL) 1,18.
+  - MS: Roberto Oshiro (Novo) 3,96.
+  - MT: Galvan (Avante) 4,73; Margareth Buzetti (PP) 1,83.
+  - RJ: Marcos Dias (Podemos) 1,22.
+  - RN: Tércio Tinôco (União) 2,85.
+  - RO: Neidinha (PSB) 1,42, com votos anulados sub judice; Luis Fernando (PSD) 1,33.
+  - RR: Regina Tio Ivo (Novo) 7,44; Pastor Isamar (União) 2,96; Bartô Macuxi (PSOL) 1,62.
+  - RS: Frederico Antunes (PSD) 1,95.
+  - SC: Afrânio Boppré (PSOL) 8,16; Lunelli (MDB) 5,99.
+  - SE: Eduardo Amorim (Republicanos) 9,55; Edvaldo (PDT) 8,04; Rodrigo Valadares (PL) 5,54; Iran Barbosa (PSOL) 3,36, com votos anulados sub judice; Coronel Rocha (PL) 1,73.
+  - Os nomes seguem a grafia de urna do TSE. Os demais, abaixo de 1%, entram na linha "Demais candidatos" do site.
+- **Confirmados pelo TSE:** Soraya Thronicke é do PSB; André Gadelha é do MDB, como Veneziano; Ciro Nogueira é do PP.
+- **PR, Deltan Dallagnol:** no arquivo do TSE, os votos dele estão como válidos. A situação judicial descrita abaixo continua.
+- **SP, Ricardo Salles:** não está no arquivo do TSE, porque desistiu antes da eleição. Continua nas pesquisas, com percentual `null`.
+- **Margens refeitas com os votos do TSE:** PA, Chicão sobre Éder Mauro por 16.641 votos (confirmado); RN, Zenaide Maia a 5.765 votos da vaga (confirmado); RR, Teresa Surita sobre Helena da Asatur por 10.618 votos (nota nova).
+- `apurado` passou a 100 em todas as UFs. As notas que só explicavam a origem dos números saíram do site.
+- Um teste de métrica usava o Crivella real (3,31): o caso calculado à mão foi refeito com 3,39.
+
+## 1ª e 2ª rodadas (imprensa)
+
+As seções abaixo descrevem as duas revisões feitas antes do acesso ao TSE. Os números de resultado citados nelas foram substituídos pelos da 3ª rodada e ficam aqui como histórico. As seções de pesquisas continuam valendo.
+
+### Como os dados foram conferidos
 
 - **seuimposto.com, resultados.tse.jus.br e servicodados.ibge.gov.br não puderam ser acessados**: a política de rede do ambiente de coleta bloqueou esses domínios (HTTP 403 no proxy), inclusive via WebFetch. Não foi possível ler o bundle do seuimposto nem os JSON do TSE.
 - **Fontes usadas:** reportagens de apuração e de pesquisas, lidas por resultados de busca. Entre elas, Exame, Gazeta do Povo, Metrópoles, Poder360, CNN, Times Brasil, Money Times, Jornal Opção, O Povo, Rádio Senado e jornais locais. As páginas não puderam ser abertas por inteiro; cada número vem do trecho exibido pelo buscador, com a URL registrada no campo `fonte` dos JSON.
 - **Prioridade aplicada:** valor declarado como 100% apurado > maior percentual apurado disponível > conjunto coerente com os votos absolutos > dado do briefing.
-- **Pendência principal:** quando o acesso ao TSE for liberado, conferir todos os números com os arquivos oficiais. Pela regra do projeto, o TSE vence qualquer outra fonte.
+- **Pendência principal (resolvida na 3ª rodada):** conferir todos os números com os arquivos oficiais do TSE, que vence qualquer outra fonte.
 
-## Presidente — resultado
+### Presidente — resultado
 
 | Item | Briefing | Agora | Fonte / motivo |
 | --- | --- | --- | --- |
@@ -38,7 +167,7 @@ Atualizado em 05/10/2026, depois de uma segunda rodada de revisão. Este arquivo
   - O total de votos válidos a 100% não apareceu explícito.
 - **Contagem de UFs:** 15 para Flávio e 12 para Lula, confirmada. A Gazeta do Povo chegou a publicar 16 × 11, antes das viradas de Lula no AM e no AP.
 
-## Presidente — pesquisas
+### Presidente — pesquisas
 
 A lista passou de 22 para **44 pesquisas**.
 
@@ -95,7 +224,7 @@ A lista passou de 22 para **44 pesquisas**.
 - Paraná Pesquisas nacional: a última é de mar/2026.
 - Não verificados: Vox Brasil em setembro, Palver e Futura/Apex.
 
-## Senado — resultado
+### Senado — resultado
 
 | UF | Briefing | Agora | Motivo |
 | --- | --- | --- | --- |
@@ -147,7 +276,7 @@ A lista passou de 22 para **44 pesquisas**.
 
 **Partido a conferir:** PB, André Gadelha veio como MDB, o mesmo partido de Veneziano.
 
-## Senado — pesquisas
+### Senado — pesquisas
 
 A coleta passou de 57 levantamentos em 13 UFs no briefing para **129 em 27 UFs**. **Todas as UFs agora têm pesquisa.**
 

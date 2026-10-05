@@ -92,7 +92,14 @@ Os dados também ficam versionados em `src/data/`:
 | `pesquisas-senado.json` | 129 levantamentos nas 27 UFs, com base `VV`, `VT`, `200` ou `n/e` |
 | `divergencias.md` | Tudo o que mudou em relação aos dados iniciais e o que ficou sem fonte |
 
-O TSE e o seuimposto.com não puderam ser acessados durante a coleta: os domínios estavam bloqueados pela rede do ambiente. Por isso os números foram conferidos em reportagens de apuração e de pesquisas, numa revisão em duas rodadas. A revisão corrigiu datas e números do briefing, acrescentou 23 rodadas presidenciais e 72 levantamentos de Senado, e marcou com † as pesquisas não encontradas em fonte aberta. Os detalhes estão em [`src/data/divergencias.md`](src/data/divergencias.md).
+O resultado vem dos arquivos oficiais do TSE, com 100% das seções totalizadas:
+
+- Presidente: eleição 6257, `https://resultados.tse.jus.br/oficial/ele2026/6257/dados/{uf}/{uf}-c0001-e006257-u.json` (`br` para o país);
+- Senado: eleição 6259, `https://resultados.tse.jus.br/oficial/ele2026/6259/dados/{uf}/{uf}-c0005-e006259-u.json`.
+
+Os códigos saem de `https://resultados.tse.jus.br/oficial/comum/config/ele-c.json` (pleito 3220, `ele2026`). O caminho `dados-simplificados/…-r.json` de 2022 não existe mais.
+
+Na coleta original, o TSE e o seuimposto.com estavam bloqueados pela rede do ambiente. Por isso houve duas rodadas de revisão em reportagens antes da conferência com o TSE. As pesquisas continuam conferidas em reportagens e no registro de pesquisas do TSE. Os detalhes estão em [`src/data/divergencias.md`](src/data/divergencias.md).
 
 ### Como atualizar
 
