@@ -65,20 +65,20 @@ Abrir uma UF ou um instituto cria uma entrada no histórico, então o voltar do 
 
 | Peça | Onde | Para quê |
 | --- | --- | --- |
-| Site | Vercel, projeto `pesquisas-urnas-2026` | Hospeda o build estático |
-| Dados | Supabase (projeto lp-cliente-mib), tabela `pu26_datasets` | Os 4 JSON lidos ao vivo pelo site |
-| Código | Supabase, tabela `pu26_site_files` | Fonte que o build da Vercel baixa |
+| Código e dados | GitHub, [`matheusmarquesr7-star/pesquisas-urnas-2026`](https://github.com/matheusmarquesr7-star/pesquisas-urnas-2026) | Fonte da verdade |
+| Site | Vercel, projeto `pesquisas-urnas-2026`, ligado ao repositório | Cada push na `main` gera um deploy com `npm run build` |
+| Dados ao vivo | Supabase (projeto lp-cliente-mib), tabela `pu26_datasets` | Espelho dos 4 JSON, lido pelo site ao abrir |
 
-As tabelas `pu26_*` têm RLS com leitura pública e nenhuma escrita pela API: alterações só pelo painel do Supabase ou pelo MCP.
+O build é o `vite build` puro, a partir do commit. Não depende de rede: os JSON de `src/data/` viram a cópia embutida e a malha já está versionada.
 
-No build da Vercel, `npm run build:vercel` roda `scripts/bootstrap-supabase.mjs`. Ele:
+A tabela `pu26_datasets` tem RLS com leitura pública e nenhuma escrita pela API. Alterações só pelo painel do Supabase ou pelo MCP.
 
-1. baixa os arquivos de `pu26_site_files`, conferindo o MD5 de cada um;
-2. grava os dados de `pu26_datasets` em `src/data/`, que viram a cópia embutida;
-3. gera a malha das UFs a partir do shapefile público;
-4. roda o `vite build`.
+Para corrigir um número:
 
-Para corrigir um número, atualize a linha em `pu26_datasets`: o site passa a mostrar o valor novo na próxima visita, sem novo deploy. Para mudar o código, atualize `pu26_site_files` e faça um novo deploy na Vercel.
+1. edite o JSON em `src/data/`, rode `npm test` e `npm run build` e faça o commit;
+2. faça o push: a Vercel publica a nova cópia embutida;
+3. rode `npm run datasets -- --sql` e execute o SQL impresso no Supabase. O site ao vivo muda na próxima visita;
+4. confira com `npm run datasets`, que compara o MD5 de cada JSON com o do banco e falha se algum divergir.
 
 ## De onde vêm os dados
 
@@ -139,6 +139,7 @@ src/
   data/               JSON versionados, meta (UFs, blocos), divergencias.md
   styles/             tokens, base, layout, components, map, charts, tables
 scripts/build-map.sh  gera a malha das UFs
+scripts/datasets.mjs  confere src/data com o Supabase e gera o SQL de atualização
 tests/                métricas (casos calculados à mão) e integridade dos dados
 ```
 

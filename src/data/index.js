@@ -1,5 +1,5 @@
 // Dados do site: lidos ao vivo do Supabase (tabela pu26_datasets) e, se ele não responder,
-// da cópia embutida no build (os mesmos JSON de src/data, baixados do Supabase no build da Vercel).
+// da cópia embutida no build (os JSON de src/data, versionados no git).
 import presidentResultFile from './resultado-presidente.json';
 import presidentPollsFile from './pesquisas-presidente.json';
 import senateResultFile from './resultado-senado.json';
