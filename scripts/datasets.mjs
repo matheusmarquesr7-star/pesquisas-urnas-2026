@@ -28,10 +28,11 @@ for (const name of DATASETS) {
 if (process.argv.includes('--sql')) {
   for (const { name, text, local } of stale) {
     if (text.includes('$pu26$')) throw new Error(`${name}: o texto contém o delimitador $pu26$`);
-    console.log(`insert into pu26_datasets (name, data, md5, updated_at) values ('${name}', $pu26$${text}$pu26$::json, '${local}', now())
-  on conflict (name) do update set data = excluded.data, md5 = excluded.md5, updated_at = excluded.updated_at;`);
+    // md5 é coluna gerada (md5(data::text)): o banco calcula; a conferência compara com o MD5 local.
+    console.log(`insert into pu26_datasets (name, data, updated_at) values ('${name}', $pu26$${text}$pu26$::json, now())
+  on conflict (name) do update set data = excluded.data, updated_at = excluded.updated_at;
+select name, md5, md5 = '${local}' as confere from pu26_datasets where name = '${name}';`);
   }
-  if (stale.length) console.log(`select name, md5, md5(data::text) = md5 as confere from pu26_datasets order by name;`);
 } else if (stale.length) {
   process.exitCode = 1;
 }
