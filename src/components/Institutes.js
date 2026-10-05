@@ -4,7 +4,7 @@ import { num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { stateName, UFS } from '../data/meta.js';
 import { statusColor } from '../map/colors.js';
 import { leadText } from './GapChart.js';
-import { BackButton, BaseBadge, DuplaBadge, InlineBar, OrderBadge, SectionHead } from './ui.js';
+import { BackButton, BaseBadge, DuplaBadge, InlineBar, OrderBadge, SectionHead, Unconfirmed } from './ui.js';
 
 const STATUS = acertos => ['bad', 'warn', 'good'][acertos];
 
@@ -104,7 +104,7 @@ export function InstituteDetail({ stat, rows, onBack, onState }) {
     <section class="panel-section">
       <${SectionHead} title="Presidente"/>
       ${mine.length ? html`<ul class="poll-list">${mine.map(r => html`<li key=${r.id}>
-        <time>${shortDate(r.date)}${r.poll.aprox ? ' ≈' : ''}</time>
+        <time>${shortDate(r.date)}${r.poll.aprox ? ' ≈' : ''}<${Unconfirmed} poll=${r.poll}/></time>
         <span>F ${num(r.shares.F)} · L ${num(r.shares.L)}<small>${leadText(r.distancia)}</small></span>
         <${OrderBadge} value=${r.ordem}/>
         <b title="Erro na distância">${num(r.erroDistancia, 2)}</b>

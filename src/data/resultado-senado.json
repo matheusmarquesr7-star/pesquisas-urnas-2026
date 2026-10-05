@@ -46,9 +46,10 @@
     ]
    ],
    "obs": [
-    "Uma fonte cita os votos de Gladson Cameli (3º) como “anulados sub judice”. Confirmar no TSE."
+    "Gladson Cameli disputou sub judice; os votos dele foram contados normalmente (3º lugar). Como ficou fora das vagas, a pendência não muda o resultado."
    ],
    "fontes": [
+    "https://ac24horas.com/2026/10/04/gladson-fica-em-terceiro-e-perde-vaga-no-senado-apos-liderar-pesquisas-em-campanha/",
     "https://www.metropoles.com/brasil/eleitos-senadores-acre",
     "https://agazetadoacre.com/2026/10/noticias/politica/mara-rocha-desbanca-gladson-cameli-e-garante-a-segunda-vaga-para-o-senado-no-acre-com-mais-de-150-mil-votos/",
     "https://jovempan.com.br/politica/marcio-bittar-e-mara-rocha-sao-eleitos-senadores-pelo-acre/",
@@ -62,31 +63,31 @@
     [
      "Arthur Lira",
      "PP",
-     28.87,
+     28.82,
      true
     ],
     [
      "Marina JHC",
      "PSDB",
-     28.2,
+     28.16,
      true
     ],
     [
      "Renan Calheiros",
      "MDB",
-     22.25,
+     22.32,
+     false
+    ],
+    [
+     "Dr. Wanderley",
+     "MDB",
+     10.92,
      false
     ],
     [
      "Davi Davino Filho",
      "Republicanos",
-     7.81,
-     false
-    ],
-    [
-     "Dr. Wanderley",
-     null,
-     null,
+     8.91,
      false
     ],
     [
@@ -97,9 +98,10 @@
     ]
    ],
    "obs": [
-    "4º lugar de Davi Davino Filho não confirmado explicitamente pelas fontes."
+    "Valores da Gazetaweb, coerentes com os votos absolutos (Lira 929.940, Marina 908.644, Renan 720.135, Dr. Wanderley 352.378, Davi Davino 287.325). Outra fonte deu 28,87/28,20/22,25 e Davi Davino com 7,81. Dr. Wanderley foi o 4º."
    ],
    "fontes": [
+    "https://www.gazetaweb.com/noticias/eleicoes/veja-a-votacao-dos-candidatos-ao-senado-por-alagoas-em-2026-940265",
     "https://oantagonista.com.br/brasil/renan-calheiros-e-derrotado-em-alagoas-lira-e-eleito-senador/",
     "https://movimentoeconomico.com.br/estados/alagoas/2026/10/04/arthur-lira-pp-e-marina-candia-psdb-sao-eleitos-para-o-senado-em-alagoas/",
     "https://www.cartacapital.com.br/politica/lira-e-marina-jhc-levam-as-duas-vagas-por-alagoas-e-tiram-renan-calheiros-do-senado/",
@@ -176,13 +178,13 @@
     [
      "Acácio Favacho",
      "MDB",
-     null,
+     14.87,
      false
     ],
     [
-     "Aliny Serrão",
+     "Alliny Serrão",
      "União",
-     null,
+     9.68,
      false
     ],
     [
@@ -193,9 +195,10 @@
     ]
    ],
    "obs": [
-    "4º colocado não encontrado nas fontes acessíveis."
+    "Acácio Favacho (4º) e Alliny Serrão vêm de uma apuração parcial (a mesma fonte dava Rayssa 29,90 e Lucas 24,17)."
    ],
    "fontes": [
+    "https://exame.com/brasil/resultado-das-eleicoes-para-senador-do-amapa-2026-rayssa-furlan-e-lucas-barreto-sao-eleitos/",
     "https://www.otempo.com.br/eleicoes/2026/senadores/2026/10/4/eleicoes-2026-veja-quem-lidera-a-disputa-para-senador-no-amapa",
     "https://ochefaodanoticia.com.br/colunas/eleicoes-2026/randolfe-perde-reeleicao-no-amapa-e-deixa-o-senado-apos-16-anos/",
     "https://gazetabrasil.com.br/brasil/2026/10/04/rayssa-furlan-e-lucas-barreto-sao-eleitos-senadores-pelo-amapa-randolfe-fica-de-fora/",
@@ -229,6 +232,12 @@
      "PL",
      20.05,
      false
+    ],
+    [
+     "Professora Delliana",
+     null,
+     null,
+     false
     ]
    ],
    "obs": [],
@@ -241,41 +250,41 @@
     [
      "Cid Gomes",
      "PSB",
-     31.04,
+     30.86,
      true
     ],
     [
      "Luizianne Lins",
      "Rede",
-     28.87,
+     28.72,
      true
     ],
     [
      "Capitão Wagner",
      "União",
-     20.87,
+     21.01,
      false
     ],
     [
      "Alcides Fernandes",
      "PL",
-     18.42,
+     18.62,
      false
     ]
    ],
    "obs": [
-    "Fontes divergem: O Povo 31,04/28,87; SRZD 31,13/28,97; lista nacional 31,21/29,04. Nenhuma fonte acessível declarou 100% apurado. Confirmar no TSE."
+    "Valores com votos absolutos (Cid 2.764.444, Luizianne 2.572.786), coerentes entre si e provavelmente os mais recentes. Outras fontes trouxeram 31,04/28,87 (O Povo), 31,13/28,97 (SRZD) e 31,21/29,04 em etapas anteriores da apuração. Confirmar no TSE."
    ],
    "fontes": [
+    "https://exame.com/brasil/resultado-senador-do-ceara-2026-cid-gomes-psb-e-luizianne-lins-rede-sao-eleitos/",
     "https://diariodopoder.com.br/brasil-e-regioes/lsf-brasil/cid-e-luizianne-levam-vagas-do-ceara-no-senado-capitao-wagner-fica-de-fora",
     "https://timesbrasil.com.br/eleicoes-2026/decisao-2029-cid-gomes-psb-e-luizianne-rede-sao-eleitos-senadores-pelo-ceara/",
-    "https://exame.com/brasil/resultado-senador-do-ceara-2026-cid-gomes-psb-e-luizianne-lins-rede-sao-eleitos/",
     "https://www12.senado.leg.br/noticias/materias/2026/10/04/cid-gomes-e-luizianne-sao-eleitos-senadores-pelo-ceara"
    ]
   },
   "DF": {
    "nome": "Distrito Federal",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Michelle Bolsonaro",
@@ -292,29 +301,27 @@
     [
      "Leila do Vôlei",
      "PDT",
-     21.25,
+     21.27,
      false
     ],
     [
      "Erika Kokay",
      "PT",
-     18.97,
+     18.94,
      false
     ]
    ],
-   "obs": [
-    "Leila do Vôlei 21,25% é o final (antes 21,31% parcial). Erika Kokay 18,97% ainda é parcial."
-   ],
+   "obs": [],
    "fontes": [
-    "https://www.band.com.br/politica/eleicoes/michelle-bolsonaro-e-bia-kicis-sao-eleitos-senadoras-pelo-distrito-federal",
     "https://exame.com/brasil/resultado-no-df-michelle-bolsonaro-e-bia-kicis-sao-eleitas-para-o-senado/",
+    "https://www.band.com.br/politica/eleicoes/michelle-bolsonaro-e-bia-kicis-sao-eleitos-senadoras-pelo-distrito-federal",
     "https://ndmais.com.br/politica/eleicoes-2026-distrito-federal-resultado-senadores-eleitos/",
     "https://www.metropoles.com/distrito-federal/michelle-bolsonaro-e-bia-kicis-sao-eleitas-senadoras-pelo-df"
    ]
   },
   "ES": {
    "nome": "Espírito Santo",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Renato Casagrande",
@@ -369,7 +376,7 @@
   },
   "GO": {
    "nome": "Goiás",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Gustavo Gayer",
@@ -449,6 +456,18 @@
      "PT",
      9.75,
      false
+    ],
+    [
+     "Cidônio Gonçalves",
+     null,
+     null,
+     false
+    ],
+    [
+     "Hilton",
+     null,
+     null,
+     false
     ]
    ],
    "obs": [
@@ -518,7 +537,7 @@
   },
   "MS": {
    "nome": "Mato Grosso do Sul",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Reinaldo Azambuja",
@@ -582,10 +601,16 @@
      "PSD",
      11.42,
      false
+    ],
+    [
+     "Pedro Taques",
+     null,
+     null,
+     false
     ]
    ],
    "obs": [
-    "3º e 4º lugares não consolidados: Janaina Riva aparece entre 14,19% e 14,42%; Carlos Fávaro com valor parcial."
+    "3º e 4º lugares sem número de 100%: Janaina Riva entre 14,19% (97% apurado) e 14,48%; Carlos Fávaro 11,35–11,42%."
    ],
    "fontes": [
     "https://ndmais.com.br/politica/eleicoes-2026-mato-grosso-resultado-senadores-eleitos/",
@@ -596,7 +621,7 @@
   },
   "PA": {
    "nome": "Pará",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Helder Barbalho",
@@ -641,18 +666,18 @@
   },
   "PB": {
    "nome": "Paraíba",
-   "apurado": null,
+   "apurado": 99.89,
    "c": [
     [
      "João Azevêdo",
      "PSB",
-     32.5,
+     32.51,
      true
     ],
     [
      "Veneziano Vital do Rêgo",
      "MDB",
-     22.76,
+     22.75,
      true
     ],
     [
@@ -676,16 +701,20 @@
     [
      "André Gadelha",
      "MDB",
-     2.83,
+     2.82,
      false
     ]
    ],
-   "obs": [],
-   "fontes": []
+   "obs": [
+    "Partido de André Gadelha veio como MDB na fonte, o mesmo de Veneziano; conferir."
+   ],
+   "fontes": [
+    "https://revistaoeste.com/politica/joao-azevedo-e-veneziano-vital-do-rego-sao-eleitos-senadores-pela-paraiba/"
+   ]
   },
   "PE": {
    "nome": "Pernambuco",
-   "apurado": null,
+   "apurado": 99.6,
    "c": [
     [
      "Humberto Costa",
@@ -712,22 +741,23 @@
      false
     ],
     [
-     "Túlio Gadêlha",
-     "PSD",
-     null,
+     "Carlos Sant'Anna",
+     "Novo",
+     7.52,
      false
     ],
     [
-     "Carlos Sant'anna",
-     "Novo",
-     null,
+     "Túlio Gadêlha",
+     "PSD",
+     7.19,
      false
     ]
    ],
    "obs": [
-    "5º lugar não resolvido entre Túlio Gadêlha (PSD) e Carlos Sant'anna (Novo); percentuais deles não encontrados."
+    "Valores com 99,6% apurado. Carlos Sant'Anna (Novo) ficou em 5º, à frente de Túlio Gadêlha (PSD)."
    ],
    "fontes": [
+    "https://jamildo.com/politica/humberto-costa-e-marilia-arraes-sao-eleitos-senadores-de-pernambuco-na-eleicao-de-2026.html",
     "https://www.metropoles.com/brasil/eleitos-senadores-pernambuco",
     "https://www.metropoles.com/eleicoes/2026/apuracao/senador/pe",
     "https://www.gazetadopovo.com.br/eleicoes/2026/pernambuco/lista-dos-senadores-eleitos-em-pernambuco-nas-eleicoes-2026/"
@@ -779,12 +809,12 @@
   },
   "PR": {
    "nome": "Paraná",
-   "apurado": 99.98,
+   "apurado": 100,
    "c": [
     [
      "Filipe Barros",
      "PL",
-     27.26,
+     27.25,
      true
     ],
     [
@@ -816,13 +846,19 @@
      "PSD",
      6.39,
      false
+    ],
+    [
+     "Karen Guerreiro",
+     null,
+     null,
+     false
     ]
    ],
    "obs": [
-    "Deltan Dallagnol concorreu com registro “deferido com recurso”. Em 03/10 um ministro do TSE anulou seus votos; em 04/10 a presidência do TSE suspendeu a decisão. O mandato depende do julgamento no plenário do TSE.",
-    "Valores com 99,98% das seções apuradas."
+    "Deltan Dallagnol concorreu com registro “deferido com recurso”. Em 03/10 o relator no TSE negou o registro; em 04/10 a presidência do TSE suspendeu a decisão. Os votos foram contados como válidos, mas a validade depende do julgamento do plenário."
    ],
    "fontes": [
+    "https://exame.com/eleicoes/2026/apuracao/primeiro-turno/senador/pr/parana/",
     "https://exame.com/brasil/resultado-senador-do-parana-2026-filipe-barros-pl-e-deltan-dallagnol-novo-sao-eleitos/",
     "https://www.congressoemfoco.com.br/amp/noticia/122880/filipe-barros-e-deltan-dallagnol-sao-eleitos-senadores-pelo-parana",
     "https://www.opovo.com.br/noticias/politica/2026/10/04/kassio-reverte-decisao-contra-deltan-e-determina-que-nome-apareca-como-deferido-com-recurso.html",
@@ -865,17 +901,19 @@
     ],
     [
      "Marcelo Crivella",
-     null,
-     null,
+     "Republicanos",
+     3.31,
      false
     ]
    ],
-   "obs": [],
+   "obs": [
+    "Marcelo Crivella: 3,31% com 85,95% das seções apuradas (parcial)."
+   ],
    "fontes": []
   },
   "RN": {
    "nome": "Rio Grande do Norte",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Styvenson Valentim",
@@ -904,7 +942,7 @@
     [
      "Rafael Motta",
      "PDT",
-     null,
+     14.16,
      false
     ]
    ],
@@ -912,6 +950,7 @@
     "Valores de 100% (os dados iniciais, 29,29/17,76, eram parciais). Zenaide Maia ficou a 5.765 votos da vaga."
    ],
    "fontes": [
+    "https://ndmais.com.br/politica/eleitos-senado-rio-grande-do-norte/",
     "https://exame.com/brasil/resultado-senador-no-rio-grande-do-norte-2026-styvenson-e-samanda-de-lula-sao-eleitos/",
     "https://www12.senado.leg.br/radio/1/noticia/2026/10/05/styvenson-valentim-e-reeleito-e-samanda-de-lula-conquista-vaga-no-senado-pelo-rn",
     "https://sbtnews.sbt.com.br/noticia/politica/rn-styvenson-e-samanda-de-lula-sao-eleitos-senadores",
@@ -945,10 +984,22 @@
      "Republicanos",
      11.81,
      false
+    ],
+    [
+     "Luciana Oliveira",
+     "PT",
+     5.52,
+     false
+    ],
+    [
+     "Acir Gurgacz",
+     "PDT",
+     4.08,
+     false
     ]
    ],
    "obs": [
-    "Mariana Carvalho com ~98% apurado."
+    "Mariana Carvalho com 11,81% numa fonte e 11,63% em outra. Outra fonte, sem % apurado, dá Máximo 31,77, Scheid 26,24 e Sílvia 17,14; mantidos os de 100% (4.698 seções). Luciana Oliveira e Acir Gurgacz vêm dessa segunda fonte."
    ],
    "fontes": [
     "https://www.brasilemfolhas.com.br/2026/10/pl-elege-dois-senadores-em-rondonia-com-100-das-urnas-apuradas/",
@@ -959,7 +1010,7 @@
   },
   "RR": {
    "nome": "Roraima",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Nicoletti",
@@ -1081,7 +1132,7 @@
   },
   "SE": {
    "nome": "Sergipe",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Rogério Carvalho",
@@ -1145,26 +1196,29 @@
      false
     ],
     [
-     "Ricardo Salles",
-     null,
-     null,
+     "Soninha Francine",
+     "Cidadania",
+     0.38,
      false
     ],
     [
-     "Soninha Francine",
-     null,
+     "Ricardo Salles",
+     "Novo",
      null,
      false
     ]
    ],
-   "obs": [],
+   "obs": [
+    "Ricardo Salles (Novo) anunciou a desistência em 28/09; aparece nas pesquisas anteriores, sem percentual nas urnas."
+   ],
    "fontes": [
+    "https://www.gazetadopovo.com.br/eleicoes/2026/sao-paulo-2026/lista-dos-senadores-eleitos-em-sao-paulo-nas-eleicoes-2026/",
     "https://www.tre-sp.jus.br/comunicacao/noticias/2026/Outubro/eleicoes-2026-guilherme-derrite-pp-e-andre-do-prado-pl-sao-eleitos-senadores-por-sao-paulo"
    ]
   },
   "TO": {
    "nome": "Tocantins",
-   "apurado": null,
+   "apurado": 100,
    "c": [
     [
      "Eduardo Gomes",
@@ -1188,6 +1242,30 @@
      "Gaguim",
      "União",
      15.45,
+     false
+    ],
+    [
+     "Paulo Mourão",
+     null,
+     null,
+     false
+    ],
+    [
+     "Vanderlei Luxemburgo",
+     null,
+     null,
+     false
+    ],
+    [
+     "Ronaldo Dimas",
+     null,
+     null,
+     false
+    ],
+    [
+     "Professor Osvaldo",
+     null,
+     null,
      false
     ]
    ],

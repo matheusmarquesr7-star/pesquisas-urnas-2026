@@ -140,3 +140,10 @@
 .data-table small.inline {
   display: inline;
 }
+
+.unconfirmed {
+  margin-left: 2px;
+  color: var(--warn-text);
+  font-weight: 600;
+  cursor: help;
+}

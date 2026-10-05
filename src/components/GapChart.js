@@ -108,7 +108,7 @@ export function GapChart({ rows, urna, highlight: requested, onHighlight, descri
         ${dated.map((row, index) => {
           const tone = row.distancia > 0 ? 'blue' : row.distancia < 0 ? 'red' : 'other';
           const dim = highlight && row.inst !== highlight;
-          const label = `${row.inst}, ${shortDate(row.date)}${row.poll.aprox ? ' (data aproximada)' : ''}: ${leadText(row.distancia)}; erro de ${pp(row.erroDistancia, 2)} em relação às urnas.`;
+          const label = `${row.inst}, ${shortDate(row.date)}${row.poll.aprox ? ' (data aproximada)' : ''}${row.poll.confirmada === false ? ' (não confirmada)' : ''}: ${leadText(row.distancia)}; erro de ${pp(row.erroDistancia, 2)} em relação às urnas.`;
           return html`<g key=${row.id} class=${'gap-point tone-' + tone + (dim ? ' is-dim' : '') + (finalRows.has(row) ? ' is-final' : '') + (focus === row ? ' is-active' : '')}
             ref=${el => { pointRefs.current[index] = el; }} tabindex=${index === roving ? 0 : -1} role="button" aria-label=${label}
             aria-pressed=${highlight === row.inst}
@@ -121,13 +121,14 @@ export function GapChart({ rows, urna, highlight: requested, onHighlight, descri
         })}
       </svg>
       ${focus && html`<div class="chart-tooltip" style=${{ left: tipLeft + 'px', top: tipTop + 'px' }} role="status">
-        <strong>${focus.inst}${finalRows.has(focus) && html`<em class="tag">final</em>`}</strong>
+        <strong>${focus.inst}${focus.poll.confirmada === false ? ' †' : ''}${finalRows.has(focus) && html`<em class="tag">final</em>`}</strong>
         <span class="muted">Divulgada ${shortDate(focus.date)}${focus.poll.aprox ? ' (≈ aproximada)' : ''} · campo ${focus.poll.campo ?? 'n/e'}</span>
         <p><i class="line-key tone-blue"></i><b>${pct(focus.shares.F)}</b> Flávio</p>
         <p><i class="line-key tone-red"></i><b>${pct(focus.shares.L)}</b> Lula</p>
         <p>Distância: <b>${leadText(focus.distancia)}</b></p>
         <p>Erro na distância: <b>${pp(focus.erroDistancia, 2)}</b></p>
         ${focus.recalculado && html`<span class="muted">* válidos recalculados a partir dos totais</span>`}
+        ${focus.poll.confirmada === false && html`<span class="muted">† não encontrada em fonte aberta na revisão</span>`}
       </div>`}`;
   }
 

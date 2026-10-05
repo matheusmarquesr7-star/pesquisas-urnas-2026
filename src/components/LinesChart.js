@@ -88,7 +88,7 @@ export function LinesChart({ rows, urna, base }) {
         <strong>${shortDate(isoFromDay(hoverDay))}</strong>
         ${SERIES.map(key => html`<p key=${key}><i class=${'line-key tone-' + CANDIDATES[key].tone}></i><b>${focusAvg[key] != null ? pct(focusAvg[key]) : '–'}</b> ${CANDIDATES[key].short} · média 10 dias</p>`)}
         ${pollsThatDay.length
-          ? pollsThatDay.map(r => html`<span key=${r.id} class="muted">${r.inst}: Flávio ${pct(r.shares.F)} · Lula ${pct(r.shares.L)}</span>`)
+          ? pollsThatDay.map(r => html`<span key=${r.id} class="muted">${r.inst}${r.poll.confirmada === false ? ' †' : ''}: Flávio ${pct(r.shares.F)} · Lula ${pct(r.shares.L)}</span>`)
           : html`<span class="muted">Nenhuma pesquisa divulgada neste dia</span>`}
       </div>`}`;
   }

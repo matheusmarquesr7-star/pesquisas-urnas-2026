@@ -68,6 +68,11 @@ export function OrderBadge({ value }) {
   return html`<span class=${'badge is-' + look[0]}><${Icon} name=${look[1]} size=${12}/>${look[2]}</span>`;
 }
 
+/** Marca de pesquisa que veio dos dados iniciais e não foi encontrada em fonte aberta. */
+export const Unconfirmed = ({ poll }) => poll?.confirmada === false
+  ? html`<sup class="unconfirmed" title="Pesquisa dos dados iniciais não encontrada em fonte aberta durante a revisão">†</sup>`
+  : null;
+
 export const Swatch = ({ tone }) => html`<i class=${'swatch tone-' + tone} aria-hidden="true"></i>`;
 
 export function PartyTag({ party }) {

@@ -33,9 +33,9 @@ test('validos() usa v quando divulgado e recalcula a partir de t e nv quando nã
   close(validos(nexus).F, 36 * 100 / 93);
   assert.equal(recalculado(nexus), true);
 
-  const atlasSemNv = find('AtlasIntel', '2026-09-10');
-  assert.equal(validos(atlasSemNv), null);
-  assert.equal(recalculado(atlasSemNv), false);
+  const semNv = find('Nexus/BTG', '2026-09-08'); // só votos totais, sem brancos/nulos/indecisos
+  assert.equal(validos(semNv), null);
+  assert.equal(recalculado(semNv), false);
 });
 
 test('Datafolha final → erro na distância 4,87 pp (caso calculado à mão)', () => {
@@ -46,10 +46,10 @@ test('Datafolha final → erro na distância 4,87 pp (caso calculado à mão)', 
 });
 
 test('Gerp e Futura puseram Flávio à frente: ordem certa e erros pequenos', () => {
-  const gerp = validos(find('Gerp', '2026-10-02')); // F 46, L 44 → +2
+  const gerp = validos(find('Gerp', '2026-09-29')); // F 44, L 42 → +2
   close(erroDistancia(gerp, urna), 0.13);
   assert.equal(ordem(gerp, urna), 'certa');
-  const futura = validos(find('Futura/100% Cidades', '2026-10-03')); // +2,2
+  const futura = validos(find('Futura', '2026-10-03')); // +2,2
   close(erroDistancia(futura, urna), 0.33);
 });
 
@@ -65,10 +65,10 @@ test('presidentRows descarta pesquisas sem dados na base e ranking ordena pelo e
   const rows = presidentRows(presidentPolls, presidentResult, 'validos');
   const withValid = presidentPolls.filter(p => validos(p)?.F != null && validos(p)?.L != null);
   assert.equal(rows.length, withValid.length);
-  assert.ok(!rows.some(r => r.inst === 'AtlasIntel' && r.date === '2026-09-10'), 'AtlasIntel de 10/set não tem válidos');
+  assert.ok(!rows.some(r => r.inst === 'Nexus/BTG' && r.date === '2026-09-08'), 'Nexus de 08/set não tem válidos');
   const totals = presidentRows(presidentPolls, presidentResult, 'totais');
   assert.equal(totals.length, presidentPolls.filter(p => p.t?.F != null && p.t?.L != null).length);
-  assert.ok(!totals.some(r => r.inst === 'Gerp'), 'Gerp só divulgou válidos');
+  assert.ok(!totals.some(r => r.inst === 'Futura' && r.date === '2026-10-03'), 'Futura de 03/10 só divulgou válidos');
 
   const ranked = ranking(rows);
   assert.equal(new Set(ranked.map(r => r.inst)).size, ranked.length, 'uma linha por instituto');
@@ -79,7 +79,7 @@ test('presidentRows descarta pesquisas sem dados na base e ranking ordena pelo e
 test('pesquisas finais: última de cada instituto na semana da eleição, e a média delas', () => {
   const rows = presidentRows(presidentPolls, presidentResult, 'validos');
   const final = finais(rows);
-  for (const name of ['AtlasIntel', 'Datafolha', 'Futura/100% Cidades', 'Gerp', 'Quaest']) assert.ok(final.some(r => r.inst === name), name);
+  for (const name of ['AtlasIntel', 'Datafolha', 'Futura', 'Gerp', 'Quaest']) assert.ok(final.some(r => r.inst === name), name);
   assert.ok(final.every(r => r.date >= '2026-09-27'));
   assert.equal(new Set(final.map(r => r.inst)).size, final.length);
   const media = mediaFinais(rows);
@@ -130,8 +130,8 @@ test('Senado: pesquisas em 200% são normalizadas para somar 100', () => {
 test('Senado: erro médio só na base VV, com candidatos de resultado conhecido', () => {
   const rj = senateResult.ufs.RJ;
   const datafolha = senatePolls.ufs.RJ.find(p => p.inst === 'Datafolha' && p.base === 'VV');
-  // Benedita 26 (20,22), Portinho 19 (26,77), Jordy 18 (24,56), Pedro Paulo 13 (11,95), Monica 9 (9,66); Crivella sem resultado
-  const expected = (5.78 + 7.77 + 6.56 + 1.05 + 0.66) / 5;
+  // Benedita 26 (20,22), Portinho 19 (26,77), Jordy 18 (24,56), Pedro Paulo 13 (11,95), Monica 9 (9,66), Crivella 6 (3,31)
+  const expected = (5.78 + 7.77 + 6.56 + 1.05 + 0.66 + 2.69) / 6;
   close(senateMeanError(datafolha, rj), expected);
   assert.equal(senateMeanError({ ...datafolha, base: 'VT' }, rj), null);
 });
@@ -141,8 +141,11 @@ test('Senado: a última pesquisa de cada instituto prefere VV na mesma data', ()
   const datafolha = latest.find(p => p.inst === 'Datafolha');
   assert.equal(datafolha.div, '2026-10-03');
   assert.equal(datafolha.base, 'VV');
-  const pa = senateLatest(senatePolls.ufs.PA).find(p => p.inst === 'AtlasIntel');
-  assert.equal(pa.final, true, 'AtlasIntel PA sem data, marcada como final');
+  // Pesquisa sem data marcada como `final` conta como a mais recente do instituto.
+  const polls = [{ inst: 'X', div: '2026-10-01', base: 'VV', x: {} }, { inst: 'X', div: null, final: true, base: 'VV', x: {} }];
+  assert.equal(senateLatest(polls)[0].final, true);
+  const rj = senateLatest(senatePolls.ufs.RJ).find(p => p.inst === 'Prefab');
+  assert.equal(rj.div, null, 'Prefab sem data continua sendo a única do instituto');
 });
 
 test('vagas por partido somam 54 e o PL elegeu 19', () => {

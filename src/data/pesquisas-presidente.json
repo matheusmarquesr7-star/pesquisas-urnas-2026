@@ -1,24 +1,693 @@
 [
- {"inst":"Nexus/BTG","divulgacao":"2026-08-17","campo":"14–16 ago","t":{"L":41,"F":36,"Caiado":5,"Zema":4,"Renan":4,"Cury":1},"nv":7},
- {"inst":"Datafolha","divulgacao":"2026-08-21","campo":"18–20 ago","t":{"L":39,"F":33,"Caiado":5,"Zema":3,"Renan":4,"Cury":2},"nv":10},
- {"inst":"Nexus/BTG","divulgacao":"2026-08-24","campo":"21–23 ago","t":{"L":41,"F":37,"Caiado":5,"Zema":3,"Renan":3,"Cury":2},"nv":8},
- {"inst":"Indexa","divulgacao":"2026-08-26","campo":"20–23 ago","t":{"L":39,"F":34,"Caiado":5,"Zema":1,"Renan":4,"Cury":1},"nv":16},
- {"inst":"PoderData","divulgacao":"2026-08-27","campo":"23–26 ago","t":{"L":38,"F":35,"Caiado":4,"Zema":2,"Renan":4,"Cury":4},"nv":7},
- {"inst":"Vox Brasil","divulgacao":"2026-08-29","aprox":true,"campo":"25–27 ago","t":{"L":37.1,"F":34.8,"Caiado":5,"Zema":2.8,"Renan":3.3,"Cury":2.6},"nv":10.3},
- {"inst":"AtlasIntel","divulgacao":"2026-08-31","campo":"25–30 ago","t":{"L":43.4,"F":33.7,"Caiado":3.3,"Zema":1.0,"Renan":7.6,"Cury":7.8},"nv":0.3},
- {"inst":"Nexus/BTG","divulgacao":"2026-08-31","campo":"28–30 ago","t":{"L":39,"F":33,"Caiado":5,"Zema":1,"Renan":3,"Cury":11},"nv":6,"obs":"Cury com 11% destoa das outras rodadas da Nexus (1–2%). Mantido como na fonte; confirmar."},
- {"inst":"Quaest","divulgacao":"2026-09-03","aprox":true,"campo":"30 ago–1 set","t":{"L":37,"F":29},"nv":18,"obs":"Candidatos menores omitidos: colunas suspeitas na fonte."},
- {"inst":"Quaest","divulgacao":"2026-09-08","aprox":true,"campo":"3–6 set","t":{"L":36,"F":29},"nv":18,"obs":"Candidatos menores omitidos: colunas suspeitas na fonte."},
- {"inst":"AtlasIntel","divulgacao":"2026-09-10","campo":"set","t":{"L":43,"F":37.4},"obs":"Sem brancos/nulos/indecisos divulgados: válidos não recalculáveis."},
- {"inst":"Quaest","divulgacao":"2026-09-15","aprox":true,"campo":"10–13 set","t":{"L":36,"F":31},"nv":17,"obs":"Candidatos menores omitidos: colunas suspeitas na fonte."},
- {"inst":"AtlasIntel","divulgacao":"2026-09-17","campo":"11–16 set","t":{"L":44.1,"F":41.7},"v":{"L":45,"F":42.6,"Renan":5.2,"Cury":3.5,"Caiado":1.7,"Zema":1.1}},
- {"inst":"Quaest","divulgacao":"2026-09-22","aprox":true,"campo":"17–20 set","t":{"L":37,"F":33},"nv":15,"obs":"Candidatos menores omitidos: colunas suspeitas na fonte."},
- {"inst":"Datafolha","divulgacao":"2026-09-24","campo":"set","t":{"L":40,"F":36},"v":{"L":43,"F":39}},
- {"inst":"AtlasIntel","divulgacao":"2026-09-29","campo":"set","t":{"L":45.3,"F":42.2},"v":{"L":46.2,"F":43.1,"Renan":5.3,"Cury":2.1,"Caiado":1.8}},
- {"inst":"Datafolha","divulgacao":"2026-10-01","campo":"28 set–1 out","t":{"L":42,"F":38},"v":{"L":45,"F":40}},
- {"inst":"Gerp","divulgacao":"2026-10-02","aprox":true,"campo":"n/e","v":{"L":44,"F":46}},
- {"inst":"Futura/100% Cidades","divulgacao":"2026-10-03","campo":"25–29 set","v":{"L":42.6,"F":44.8,"Cury":4.1,"Caiado":3.9,"Renan":2.8}},
- {"inst":"Datafolha","divulgacao":"2026-10-03","campo":"2–3 out","final":true,"t":{"L":42,"F":40},"v":{"L":45,"F":42,"Caiado":4,"Renan":3,"Cury":3,"Zema":1}},
- {"inst":"AtlasIntel","divulgacao":"2026-10-03","campo":"27 set–2 out","final":true,"t":{"L":46.7,"F":43.8,"Renan":4.6,"Cury":2.1,"Caiado":1.4},"v":{"L":47,"F":44.1,"Renan":4.6,"Cury":2.1,"Caiado":1.4}},
- {"inst":"Quaest","divulgacao":"2026-10-03","campo":"2–3 out","final":true,"t":{"L":40,"F":38},"v":{"L":46,"F":45}}
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-08-17",
+  "campo": "14–16 ago",
+  "t": {
+   "L": 41,
+   "F": 36,
+   "Caiado": 5,
+   "Zema": 4,
+   "Renan": 4,
+   "Cury": 1
+  },
+  "nv": 7,
+  "contratante": "BTG Pactual",
+  "confirmada": false
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-08-21",
+  "campo": "18–20 ago",
+  "t": {
+   "L": 39,
+   "F": 33,
+   "Caiado": 5,
+   "Zema": 3,
+   "Renan": 4,
+   "Cury": 2
+  },
+  "nv": 10,
+  "fonte": "https://mais.opovo.com.br/jornal/politica/2026/08/22/pesquisa-datafolha-lula-tem-39-e-flavio-bolsonaro-33.html"
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-08-24",
+  "campo": "21–23 ago",
+  "t": {
+   "L": 41,
+   "F": 37,
+   "Caiado": 5,
+   "Zema": 3,
+   "Renan": 3,
+   "Cury": 2
+  },
+  "nv": 8,
+  "fonte": "https://www.congressoemfoco.com.br/noticia/121786/btg-nexus-lula-tem-39--flavio-33-e-cury-salta-para-11",
+  "contratante": "BTG Pactual"
+ },
+ {
+  "inst": "Indexa",
+  "divulgacao": "2026-08-26",
+  "campo": "20–23 ago",
+  "t": {
+   "L": 39,
+   "F": 34,
+   "Caiado": 5,
+   "Zema": 1,
+   "Renan": 4,
+   "Cury": 1
+  },
+  "nv": 16,
+  "fonte": "https://www.bnewssaopaulo.com.br/noticias/politica/indexabroadcast-lula-avanca-no-1-turno-com-39-contra-34-de-flavio.html",
+  "contratante": "Broadcast"
+ },
+ {
+  "inst": "PoderData",
+  "divulgacao": "2026-08-27",
+  "campo": "23–26 ago",
+  "t": {
+   "L": 38,
+   "F": 35,
+   "Caiado": 4,
+   "Zema": 2,
+   "Renan": 4,
+   "Cury": 4
+  },
+  "nv": 7,
+  "fonte": "https://www.poder360.com.br/poderdata/poderdata-aya-augusto-cury-vai-de-4-para-10-no-1o-turno/",
+  "contratante": "Aya",
+  "confirmada": false
+ },
+ {
+  "inst": "Vox Brasil",
+  "divulgacao": "2026-08-29",
+  "campo": "25–27 ago",
+  "t": {
+   "L": 37.1,
+   "F": 34.8,
+   "Caiado": 5,
+   "Zema": 2.8,
+   "Renan": 3.3,
+   "Cury": 2.6
+  },
+  "nv": 10.3,
+  "fonte": "https://static.poder360.com.br/uploads/2026/08/RELATORIO-VOX-BRASIL-NACIONAL-6-29-08-2026-1.pdf"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-08-31",
+  "campo": "25–30 ago",
+  "t": {
+   "L": 43.4,
+   "F": 33.7,
+   "Caiado": 3.3,
+   "Zema": 1.0,
+   "Renan": 7.6,
+   "Cury": 7.8
+  },
+  "nv": 0.3,
+  "fonte": "https://www.congressoemfoco.com.br/noticia/121788/atlas-bloomberg-lula-abre-9-7-pontos-sobre-flavio-e-cury-chega-a-7-8",
+  "contratante": "Bloomberg",
+  "obs": "Brancos, nulos e indecisos (0,3) não confirmados."
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-08-31",
+  "campo": "28–30 ago",
+  "t": {
+   "L": 39,
+   "F": 33,
+   "Caiado": 5,
+   "Zema": 1,
+   "Renan": 3,
+   "Cury": 11
+  },
+  "nv": 6,
+  "fonte": "https://www.congressoemfoco.com.br/noticia/121786/btg-nexus-lula-tem-39--flavio-33-e-cury-salta-para-11",
+  "contratante": "BTG Pactual",
+  "obs": "Cury com 11% confere: a fonte destaca “Cury salta para 11”."
+ },
+ {
+  "inst": "Real Time Big Data",
+  "divulgacao": "2026-09-01",
+  "campo": "27–31 ago",
+  "t": {
+   "L": 38,
+   "F": 30,
+   "Cury": 11,
+   "Renan": 7,
+   "Caiado": 4,
+   "Zema": 2
+  },
+  "nv": 5,
+  "fonte": "https://diariodocomercio.com.br/politica/lula-flavio-pesquisa-votos/"
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-09-02",
+  "campo": "30 ago–1 set",
+  "t": {
+   "L": 37,
+   "F": 29,
+   "Cury": 10,
+   "Renan": 3,
+   "Caiado": 1,
+   "Zema": 1,
+   "Samara": 1,
+   "Marçal": 1
+  },
+  "nv": 18,
+  "fonte": "https://www.correiodamanha.com.br/politica/2026/09/316142-quaest-lula-lidera-com-37-flavio-tem-29-e-cury-chega-a-10.html"
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-09-03",
+  "campo": "1–3 set",
+  "t": {
+   "L": 38,
+   "F": 33,
+   "Cury": 8,
+   "Caiado": 4,
+   "Renan": 3,
+   "Zema": 2
+  },
+  "nv": 9,
+  "fonte": "https://www.moneytimes.com.br/datafolha-3-de-setembro-gaep/"
+ },
+ {
+  "inst": "Futura",
+  "divulgacao": "2026-09-03",
+  "campo": "27 ago–1 set",
+  "t": {
+   "L": 38.7,
+   "F": 33.6,
+   "Cury": 9.9
+  },
+  "fonte": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-387-das-intencoes-de-voto-contra-336-de-flavio/",
+  "contratante": "100% Cidades"
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-09-07",
+  "campo": "3–6 set",
+  "t": {
+   "L": 36,
+   "F": 29,
+   "Cury": 8,
+   "Renan": 3,
+   "Caiado": 3,
+   "Zema": 2
+  },
+  "nv": 18,
+  "fonte": "https://www.jornalopcao.com.br/ultimas-noticias/quaest-lula-marca-36-flavio-29-cury-8-e-caiado-3-na-corrida-presidencial-865814/"
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-09-08",
+  "campo": "4–7 set",
+  "t": {
+   "L": 39,
+   "F": 35,
+   "Cury": 9,
+   "Caiado": 4,
+   "Renan": 4
+  },
+  "fonte": "https://www.moneytimes.com.br/pesquisa-nexus-8-de-setembro-gaep/",
+  "contratante": "BTG Pactual"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-09-10",
+  "campo": "4–9 set",
+  "t": {
+   "L": 43,
+   "F": 37.4,
+   "Cury": 6.6,
+   "Renan": 6.5,
+   "Zema": 2.1,
+   "Caiado": 1.1,
+   "Samara": 1,
+   "Marçal": 1
+  },
+  "nv": 1.0,
+  "fonte": "https://jovempan.com.br/?p=289496",
+  "contratante": "Bloomberg"
+ },
+ {
+  "inst": "PoderData",
+  "divulgacao": "2026-09-10",
+  "aprox": true,
+  "campo": "6–9 set",
+  "t": {
+   "L": 38,
+   "F": 36,
+   "Cury": 10,
+   "Renan": 3,
+   "Caiado": 2,
+   "Marçal": 2,
+   "Zema": 1
+  },
+  "nv": 4,
+  "fonte": "https://www.poder360.com.br/poderdata/poderdata-aya-lula-tem-38-contra-36-de-flavio-no-1o-turno/",
+  "contratante": "Aya"
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-09-11",
+  "campo": "8–10 set",
+  "t": {
+   "L": 39,
+   "F": 35,
+   "Cury": 6,
+   "Caiado": 4,
+   "Renan": 3,
+   "Zema": 2
+  },
+  "nv": 10,
+  "fonte": "https://diariodonordeste.verdesmares.com.br/pontopoder/pesquisa-datafolha-lula-tem-39-de-intencao-de-voto-no-1-turno-e-flavio-bolsonaro-35-1.3790986"
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-09-14",
+  "t": {
+   "L": 42,
+   "F": 37,
+   "Cury": 6,
+   "Caiado": 5,
+   "Renan": 2,
+   "Zema": 1,
+   "Samara": 1
+  },
+  "fonte": "https://m.imirante.com/noticias/brasil/2026/09/14/ipolitica-pesquisa-btgnexus-mostra-lula-com-42-e-flavio-com-37-no-primeiro-turno",
+  "contratante": "BTG Pactual"
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-09-14",
+  "campo": "10–13 set",
+  "t": {
+   "L": 36,
+   "F": 31,
+   "Cury": 7,
+   "Renan": 4,
+   "Caiado": 4,
+   "Zema": 1
+  },
+  "nv": 17,
+  "fonte": "https://www.dgabc.com.br/Noticia/4346762/quaest-aponta-lula-com-36-e-flavio-bolsonaro-com-31-no-1-turno"
+ },
+ {
+  "inst": "CNT/MDA",
+  "divulgacao": "2026-09-15",
+  "campo": "9–13 set",
+  "t": {
+   "L": 40.6,
+   "F": 30.4,
+   "Cury": 6,
+   "Caiado": 3,
+   "Renan": 2.7,
+   "Zema": 1
+  },
+  "fonte": "https://www.moneytimes.com.br/pesquisa-cnt-mda-15-de-setembro-gaep/",
+  "contratante": "CNT"
+ },
+ {
+  "inst": "Futura",
+  "divulgacao": "2026-09-16",
+  "aprox": true,
+  "campo": "11–15 set",
+  "t": {
+   "L": 38.3,
+   "F": 37.7,
+   "Cury": 6.5,
+   "Caiado": 4.5,
+   "Renan": 3.4,
+   "Zema": 1
+  },
+  "fonte": "https://www.cnnbrasil.com.br/eleicoes/futura-lula-tem-383-no-1o-turno-flavio-377/"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-09-17",
+  "campo": "11–16 set",
+  "t": {
+   "L": 44.1,
+   "F": 41.7
+  },
+  "v": {
+   "L": 45,
+   "F": 42.6,
+   "Renan": 5.2,
+   "Cury": 3.5,
+   "Caiado": 1.7,
+   "Zema": 1.1
+  },
+  "fonte": "https://tribunadosertao.com.br/politica/2026/09/17/980459-no-1o-turno-lula-tem-441-e-flavio-tem-417-mostra-pesquisa-atlasbloomberg",
+  "contratante": "Bloomberg"
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-09-17",
+  "campo": "15–17 set",
+  "t": {
+   "L": 39,
+   "F": 36,
+   "Cury": 6,
+   "Caiado": 4,
+   "Renan": 3,
+   "Zema": 2,
+   "Samara": 1,
+   "Rui Costa Pimenta": 1
+  },
+  "nv": 9,
+  "fonte": "https://www.moneytimes.com.br/pesquisa-datafolha-17-de-setembro-de-2026-gaep/"
+ },
+ {
+  "inst": "PoderData",
+  "divulgacao": "2026-09-17",
+  "campo": "13–16 set",
+  "t": {
+   "L": 37,
+   "F": 36,
+   "Cury": 8,
+   "Renan": 3,
+   "Caiado": 3,
+   "Zema": 1
+  },
+  "nv": 6,
+  "fonte": "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-lula-tem-37-no-1o-turno-flavio-36-e-cury-8/",
+  "contratante": "Aya"
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-09-21",
+  "t": {
+   "L": 40,
+   "F": 37
+  },
+  "fonte": "https://www.moneytimes.com.br/pesquisa-btg-pactual-nexus-21-de-setembro-gaep/",
+  "contratante": "BTG Pactual",
+  "obs": "Só Flávio e Lula da estimulada confirmados."
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-09-21",
+  "campo": "17–20 set",
+  "t": {
+   "L": 37,
+   "F": 33,
+   "Cury": 6,
+   "Caiado": 4,
+   "Renan": 3
+  },
+  "nv": 15,
+  "fonte": "https://www.diariodepernambuco.com.br/politica/2026/09/11724530-no-1-turno-lula-tem-37-dos-votos-totais-flavio-33-cury-6-caiado-4-aponta-quaest.html"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-09-23",
+  "t": {
+   "L": 45.8,
+   "F": 43.4
+  },
+  "fonte": "https://www.dgabc.com.br/Noticia/4348544/atlas-bloomberg-lula-tem-47-7-e-flavio-bolsonaro-registra-474-no-2-turno",
+  "contratante": "Bloomberg"
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-09-24",
+  "t": {
+   "L": 40,
+   "F": 36,
+   "Cury": 5,
+   "Caiado": 4,
+   "Renan": 3,
+   "Zema": 1,
+   "Samara": 1
+  },
+  "v": {
+   "L": 43,
+   "F": 39
+  },
+  "nv": 7,
+  "fonte": "https://www.moneytimes.com.br/pesquisa-datafolha-24-de-setembro-gaep/"
+ },
+ {
+  "inst": "Futura",
+  "divulgacao": "2026-09-24",
+  "aprox": true,
+  "campo": "19–23 set",
+  "t": {
+   "L": 38.4,
+   "F": 40.4
+  },
+  "fonte": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-404-e-lula-384-no-1o-turno-diz-futura/"
+ },
+ {
+  "inst": "PoderData",
+  "divulgacao": "2026-09-24",
+  "aprox": true,
+  "campo": "20–23 set",
+  "v": {
+   "L": 43,
+   "F": 42,
+   "Cury": 6,
+   "Renan": 3,
+   "Caiado": 2
+  },
+  "fonte": "https://www.poder360.com.br/poderdata/em-votos-validos-lula-tem-43-contra-42-de-flavio-no-1o-turno/",
+  "contratante": "Aya"
+ },
+ {
+  "inst": "Real Time Big Data",
+  "divulgacao": "2026-09-24",
+  "campo": "19–23 set",
+  "t": {
+   "L": 41,
+   "F": 37,
+   "Cury": 6,
+   "Renan": 6,
+   "Caiado": 2,
+   "Zema": 1
+  },
+  "nv": 6,
+  "fonte": "https://www.brasildefato.com.br/2026/09/24/real-time-big-data-lula-tem-41-e-flavio-bolsonaro-soma-37-no-primeiro-turno/"
+ },
+ {
+  "inst": "Nexus/BTG",
+  "divulgacao": "2026-09-28",
+  "t": {
+   "L": 42,
+   "F": 37,
+   "Caiado": 5,
+   "Renan": 2,
+   "Zema": 1
+  },
+  "fonte": "https://moneytimes.com.br/pesquisa-btg-pactual-nexus-28-de-setembro-gaep/",
+  "contratante": "BTG Pactual"
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-09-28",
+  "campo": "24–27 set",
+  "t": {
+   "L": 39,
+   "F": 34,
+   "Cury": 4,
+   "Caiado": 4,
+   "Renan": 3,
+   "Zema": 1
+  },
+  "nv": 15,
+  "fonte": "https://www.jornalopcao.com.br/ultimas-noticias/quaest-lula-tem-39-flavio-34-e-caiado-aparece-com-4-872864/"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-09-29",
+  "campo": "23–28 set",
+  "t": {
+   "L": 45.3,
+   "F": 42.2,
+   "Renan": 5.2,
+   "Cury": 2.0,
+   "Caiado": 1.8,
+   "Zema": 0.9
+  },
+  "v": {
+   "L": 46.2,
+   "F": 43.1,
+   "Renan": 5.3,
+   "Cury": 2.1,
+   "Caiado": 1.8
+  },
+  "fonte": "https://ncnews.com.br/?p=54590",
+  "contratante": "Bloomberg"
+ },
+ {
+  "inst": "Gerp",
+  "divulgacao": "2026-09-29",
+  "campo": "24–28 set",
+  "t": {
+   "F": 37,
+   "L": 34,
+   "Cury": 6,
+   "Caiado": 5,
+   "Renan": 4
+  },
+  "v": {
+   "F": 44,
+   "L": 42
+  },
+  "fonte": "https://www.tribunapr.com.br/eleicoes/2026/pesquisa-gerp-flavio-bolsonaro-lula-2026/",
+  "obs": "Os votos totais (F37, L34) e os válidos (F44, L42) divulgados não são proporcionais entre si; o site usa os válidos."
+ },
+ {
+  "inst": "Futura",
+  "divulgacao": "2026-09-30",
+  "t": {
+   "F": 42.2,
+   "L": 39.4,
+   "Caiado": 4,
+   "Cury": 3.8,
+   "Renan": 3.2
+  },
+  "nv": 5.0,
+  "fonte": "https://timesbrasil.com.br/brasil/flavio-bolsonaro-sobe-a-422-e-lula-aparece-com-394-no-1o-turno-diz-futura/"
+ },
+ {
+  "inst": "Ideia",
+  "divulgacao": "2026-09-30",
+  "aprox": true,
+  "campo": "25–28 set",
+  "t": {
+   "L": 39.4,
+   "F": 38.4
+  },
+  "fonte": "https://investidor10.com.br/noticias/meio-ideia-lula-e-flavio-bolsonaro-empatam-no-1-e-2-turno-122520/",
+  "contratante": "Meio"
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-10-01",
+  "campo": "28 set–1 out",
+  "t": {
+   "L": 42,
+   "F": 38,
+   "Cury": 4,
+   "Caiado": 3,
+   "Renan": 3
+  },
+  "v": {
+   "L": 45,
+   "F": 40
+  },
+  "nv": 7,
+  "fonte": "https://ncnews.com.br/2026/10/01/datafolha-lula-tem-42-e-flavio-bolsonaro-38-no-1o-turno/"
+ },
+ {
+  "inst": "Real Time Big Data",
+  "divulgacao": "2026-10-01",
+  "campo": "26–30 set",
+  "t": {
+   "L": 43,
+   "F": 39,
+   "Renan": 4,
+   "Cury": 3,
+   "Caiado": 3,
+   "Zema": 1
+  },
+  "v": {
+   "L": 46,
+   "F": 41
+  },
+  "fonte": "https://www.correiodamanha.com.br/politica/2026/10/323650-pesquisa-mostra-lula-com-43-e-flavio-bolsonaro-com-39.html"
+ },
+ {
+  "inst": "AtlasIntel",
+  "divulgacao": "2026-10-03",
+  "campo": "27 set–2 out",
+  "t": {
+   "L": 46.7,
+   "F": 43.8,
+   "Renan": 4.6,
+   "Cury": 2.1,
+   "Caiado": 1.4
+  },
+  "v": {
+   "L": 47,
+   "F": 44.1,
+   "Renan": 4.6,
+   "Cury": 2.1,
+   "Caiado": 1.4
+  },
+  "contratante": "Bloomberg",
+  "confirmada": false
+ },
+ {
+  "inst": "Datafolha",
+  "divulgacao": "2026-10-03",
+  "campo": "2–3 out",
+  "t": {
+   "L": 42,
+   "F": 40
+  },
+  "v": {
+   "L": 45,
+   "F": 42,
+   "Caiado": 4,
+   "Renan": 3,
+   "Cury": 3,
+   "Zema": 1
+  },
+  "confirmada": false
+ },
+ {
+  "inst": "Futura",
+  "divulgacao": "2026-10-03",
+  "campo": "25–29 set",
+  "v": {
+   "L": 42.6,
+   "F": 44.8,
+   "Cury": 4.1,
+   "Caiado": 3.9,
+   "Renan": 2.8
+  },
+  "contratante": "100% Cidades",
+  "confirmada": false,
+  "obs": "Pode ser a mesma pesquisa da Futura de 30/09 (totais F42,2, L39,4), mas os números não batem exatamente."
+ },
+ {
+  "inst": "PoderData",
+  "divulgacao": "2026-10-03",
+  "aprox": true,
+  "campo": "30 set–2 out",
+  "t": {
+   "L": 42,
+   "F": 41
+  },
+  "v": {
+   "L": 45,
+   "F": 43,
+   "Cury": 4,
+   "Renan": 3,
+   "Caiado": 3
+  },
+  "fonte": "https://www.poder360.com.br/poderdata/na-vespera-do-1o-turno-lula-tem-45-e-flavio-43-dos-votos-validos/",
+  "contratante": "Aya"
+ },
+ {
+  "inst": "Quaest",
+  "divulgacao": "2026-10-03",
+  "campo": "2–3 out",
+  "t": {
+   "L": 40,
+   "F": 38
+  },
+  "v": {
+   "L": 46,
+   "F": 45
+  },
+  "confirmada": false
+ }
 ]

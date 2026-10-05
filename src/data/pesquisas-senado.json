@@ -309,7 +309,7 @@
      "Rayssa Furlan": 30,
      "Randolfe Rodrigues": 20,
      "Lucas Barreto": 20,
-     "Aliny Serrão": 13,
+     "Alliny Serrão": 13,
      "Acácio Favacho": 11
     }
    },
@@ -325,7 +325,7 @@
      "Rayssa Furlan": 25.3,
      "Randolfe Rodrigues": 19.9,
      "Lucas Barreto": 19.7,
-     "Aliny Serrão": 14.6,
+     "Alliny Serrão": 14.6,
      "Acácio Favacho": 12.4,
      "Capi": 3.1
     }
@@ -355,9 +355,39 @@
      "Angelo Coronel": 21.9,
      "João Roma": 21.2
     }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Rui Costa": 33,
+     "Jaques Wagner": 30,
+     "Angelo Coronel": 18,
+     "João Roma": 17,
+     "Professora Delliana": 1
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-bahia-outubro-2026/",
+    "obs": "2.004 entrevistas, margem 2 p.p."
    }
   ],
   "CE": [
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-18",
+    "aprox": true,
+    "campo": "n/e",
+    "base": "n/e",
+    "x": {
+     "Cid Gomes": 26,
+     "Luizianne Lins": 21,
+     "Alcides Fernandes": 20,
+     "Capitão Wagner": 20
+    },
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/real-time-big-data-disputa-pelo-senado-no-ce-tem-empate-entre-candidatos/",
+    "obs": "A data de divulgação é inferida: a mesma rodada da RTBD para governador saiu no O Povo em 18/09 (https://www.opovo.com.br/noticias/politica/eleicoes/2026/09/18/pesquisa-realtime-big-data-traz-elmano-47-e-ciro-gomes-42.html). Pode ser outra rodada de setembro."
+   },
    {
     "inst": "AtlasIntel",
     "div": "2026-09-30",
@@ -411,7 +441,8 @@
      "Bia Kicis": 24,
      "Leila do Vôlei": 21,
      "Erika Kokay": 18
-    }
+    },
+    "fonte": "https://exame.com/brasil/pesquisa-para-o-senado-no-df-veja-quem-esta-na-frente-no-datafolha-e-quaest/"
    },
    {
     "inst": "Quaest",
@@ -433,7 +464,8 @@
      "Leila do Vôlei": 27,
      "Bia Kicis": 24,
      "Erika Kokay": 17
-    }
+    },
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/quaest-senado-df-michelle-tem-31-dos-votos-validos-leila-27-bia-24/"
    }
   ],
   "ES": [
@@ -539,6 +571,39 @@
      "André Fufuca": 15,
      "Lahesio Bonfim": 12
     }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "VV",
+    "x": {
+     "Lahesio Bonfim": 21.7,
+     "Eliziane Gama": 19.1,
+     "André Fufuca": 15.4,
+     "Weverton Rocha": 13.3,
+     "Cidônio Gonçalves": 12.6,
+     "Roseana Sarney": 11.8
+    },
+    "fonte": "https://marrapa.com/2026/10/03/lahesio-bonfim-e-eliziane-gama-lideram-disputa-pelo-senado-aponta-atlasintel/",
+    "obs": "1.200 entrevistas, reg. MA-05988/2026. 1º voto: Lahesio 24,3; Eliziane 19,5; Fufuca 16,9; Roseana 13,7; Weverton 12,2; Cidônio 8,3. 2º voto: Lahesio 16,7; Eliziane 16,6; Cidônio 15,5; Weverton 13; Fufuca 12,2; Roseana 8,6."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Roseana Sarney": 25,
+     "André Fufuca": 23,
+     "Lahesio Bonfim": 18,
+     "Eliziane Gama": 16,
+     "Weverton Rocha": 12,
+     "Cidônio Gonçalves": 4,
+     "Hilton": 2
+    },
+    "fonte": "https://www.blogrobertomoreira.com/2026/10/quaest-para-o-senado-no-maranhao-votos.html",
+    "obs": "TV Mirante; 2.004 entrevistas, margem 2 p.p., reg. MA-00831/2026. Também em https://imirante.com/noticias/sao-luis/2026/10/03/ipolitica-quaesttv-mirante-roseana-e-fufuca-lideram-para-o-senado . O nome 'Hilton' está como aparece na fonte."
    }
   ],
   "MG": [
@@ -598,7 +663,8 @@
      "Áurea Carolina": 9,
      "Marcelo Aro": 9,
      "Marco Antônio Superman": 4
-    }
+    },
+    "fonte": "https://www.metropoles.com/minas-gerais/o-que-dizem-as-pesquisas-finais-para-o-senado-em-minas"
    },
    {
     "inst": "Quaest",
@@ -623,10 +689,39 @@
      "Marcelo Aro": 10,
      "Marco Antônio Superman": 9,
      "Áurea Carolina": 6
-    }
+    },
+    "fonte": "https://www.itatiaia.com.br/politica/eleicoes/pesquisas/quaest-disputa-por-senado-em-mg-tem-savio-com-24-marilia-e-viana-com-18-aecio-17-e-aro-10/"
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-10-03",
+    "campo": "2026-09-28 a 2026-10-02",
+    "base": "n/e",
+    "x": {
+     "Domingos Sávio": 20,
+     "Carlos Viana": 20,
+     "Marília Campos": 19,
+     "Aécio Neves": 9,
+     "Marcelo Aro": 9
+    },
+    "fonte": "https://www.itatiaia.com.br/politica/eleicoes/pesquisas/real-time-big-data-senado-em-mg-domingos-savio-e-viana-tem-20-marilia-19-aecio-e-aro-9/",
+    "obs": "2.000 entrevistas. Também em https://www.em.com.br/politica/2026/10/7513769-real-time-savio-e-viana-tem-20-na-disputa-pelo-senado-em-minas.html"
    }
   ],
   "MS": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-09-03",
+    "aprox": true,
+    "campo": "n/e",
+    "base": "n/e",
+    "x": {
+     "Capitão Contar": 27.7,
+     "Reinaldo Azambuja": 24.0
+    },
+    "fonte": "https://static.poder360.com.br/uploads/2026/09/PesquisaAtlasMatoGrossodo-Sul03092026.pdf",
+    "obs": "'Intenções consolidadas'. A associação desses valores ao PDF de 03/09 vem do resumo de busca e não foi verificada no PDF. Soraya e Vander não apareceram na fonte."
+   },
    {
     "inst": "IPEMS",
     "div": "2026-09-10",
@@ -652,11 +747,51 @@
      "Capitão Contar": 20.2,
      "Vander Loubet": 18.3
     }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-10",
+    "aprox": true,
+    "campo": "2026-09-05 a 2026-09-09",
+    "base": "n/e",
+    "x": {
+     "Reinaldo Azambuja": 32
+    },
+    "parcial": true,
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-mato-grosso-do-sul-setembro-2026/",
+    "obs": "1.600 entrevistas. Só o valor de Azambuja apareceu na fonte, com Azambuja e Contar à frente. Data de divulgação é estimada."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Capitão Contar": 35,
+     "Reinaldo Azambuja": 32,
+     "Soraya Thronicke": 16,
+     "Vander Loubet": 10
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-mato-grosso-do-sul-outubro-2026/",
+    "obs": "1.800 entrevistas, margem 2 p.p. Também em https://investigams.com.br/2026/10/03/quaest-reinaldo-e-contar-empatam-em-primeiro-e-soraya-aparece-em-terceiro-para-o-senado/"
    }
   ],
   "PA": [
    {
-    "inst": "Futura/100% Cidades",
+    "inst": "Real Time Big Data",
+    "div": "2026-09-15",
+    "base": "n/e",
+    "x": {
+     "Helder Barbalho": 36,
+     "Delegado Éder Mauro": 16,
+     "Chicão": 13,
+     "Zequinha Marinho": 13
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governo-senado-para-setembro-2026/",
+    "obs": "Os dados iniciais traziam Chicão com 16 e sem data; a fonte dá 13 e divulgação em 15/09."
+   },
+   {
+    "inst": "Futura",
     "div": "2026-10-01",
     "base": "200",
     "x": {
@@ -665,7 +800,21 @@
      "Chicão": 35.2,
      "Zequinha Marinho": 27.3,
      "Celso Sabino": 12.5
-    }
+    },
+    "obs": "Divulgada como Futura/100% Cidades."
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Helder Barbalho": 27.1,
+     "Delegado Éder Mauro": 21.2,
+     "Chicão": 18.9,
+     "Zequinha Marinho": 18.2,
+     "Celso Sabino": 9.9
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-governador-senador-para-outubro-2026/"
    },
    {
     "inst": "Quaest",
@@ -689,29 +838,8 @@
      "Chicão": 20,
      "Zequinha Marinho": 17,
      "Celso Sabino": 8
-    }
-   },
-   {
-    "inst": "AtlasIntel",
-    "div": null,
-    "final": true,
-    "base": "VV",
-    "x": {
-     "Helder Barbalho": 27.1,
-     "Delegado Éder Mauro": 21.2,
-     "Chicão": 18.9,
-     "Zequinha Marinho": 18.2
-    }
-   },
-   {
-    "inst": "Real Time Big Data",
-    "div": null,
-    "base": "n/e",
-    "x": {
-     "Helder Barbalho": 36,
-     "Delegado Éder Mauro": 16,
-     "Chicão": 16
-    }
+    },
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/quaest-senado-pa-helder-28-eder-24-chicao-20-zequinha-17/"
    }
   ],
   "PE": [
@@ -745,8 +873,9 @@
      "Mendonça Filho": 16,
      "Eduardo da Fonte": 14,
      "Túlio Gadêlha": 6,
-     "Carlos Sant'anna": 3
-    }
+     "Carlos Sant'Anna": 3
+    },
+    "fonte": "https://www.cbnrecife.com/blogdoelielson/2026/10/03/datafolha-para-o-senado-em-pernambuco-votos-validos-marilia-29-humberto-29-mendonca-16-eduardo-14/"
    },
    {
     "inst": "Quaest",
@@ -770,8 +899,9 @@
      "Mendonça Filho": 18,
      "Eduardo da Fonte": 15,
      "Túlio Gadêlha": 9,
-     "Carlos Sant'anna": 1
-    }
+     "Carlos Sant'Anna": 1
+    },
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/quaest-senado-pe-marilia-30-humberto-27-mendonca-18-eduardo-15/"
    }
   ],
   "PI": [
@@ -787,6 +917,46 @@
      "Ciro Nogueira": 13.3
     },
     "obs": "Contratante: MeioNorte."
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "VV",
+    "x": {
+     "Marcelo Castro": 32.7,
+     "Júlio César": 28.2,
+     "Ciro Nogueira": 19.1,
+     "Tiago Junqueira": 13.8
+    },
+    "fonte": "https://www.metropoles.com/brasil/senado-no-piaui-castro-tem-327-e-julio-cesar-282-na-disputa-diz-atlas",
+    "obs": "Atlas/Meio Norte; 1.230 entrevistas; reg. PI-03386/2026. Consolidado reduzido a 100% (tratado como VV; a soma dos 4 é 93,8). Também em https://brasilnocentro.com.br/marcelo-castro-mdb-tem-327-julio-cesar-psd-282-e-ciro-nogueira-pp-191-para-o-senado-no-piaui-diz-pesquisa/"
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "campo": "2026-10-01 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Marcelo Castro": 28,
+     "Ciro Nogueira": 26,
+     "Júlio César": 25
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-governador-senador-piaui-outubro-2026/",
+    "obs": "TV Rádio Clube; 1.564 entrevistas; margem 2 p.p. Votos totais: Marcelo 19, Ciro 18, Júlio 17. Tiago Junqueira não apareceu na fonte. Também em https://portalclubenews.com/2026/10/03/marcelo-castro-ciro-nogueira-e-julio-cesar-estao-tecnicamente-empatados-na-disputa-ao-senado-no-piaui/"
+   },
+   {
+    "inst": "Instituto GP1",
+    "div": "2026-10-03",
+    "campo": "n/e",
+    "base": "n/e",
+    "x": {
+     "Marcelo Castro": 17.8,
+     "Júlio César": 15.5,
+     "Ciro Nogueira": 14.6
+    },
+    "fonte": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/3/marcelo-castro-tem-178-julio-cesar-155-e-ciro-nogueira-146-diz-instituto-gp1-633043.html",
+    "obs": "Base não especificada (provavelmente o total de um único voto ou consolidado com indecisos)."
    }
   ],
   "PR": [
@@ -812,6 +982,23 @@
      "Filipe Barros": 23.6,
      "Gleisi Hoffmann": 19
     }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Filipe Barros": 25,
+     "Alexandre Curi": 21,
+     "Deltan Dallagnol": 21,
+     "Gleisi Hoffmann": 15,
+     "Dr. Rosinha": 10,
+     "Cristina Graeml": 7,
+     "Karen Guerreiro": 1
+    },
+    "fonte": "https://www.band.com.br/politica/eleicoes/ultima-pesquisa-para-senador-no-parana-veja-os-numeros-da-quaest",
+    "obs": "2.005 entrevistas, reg. PR-05119/2026. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-senador-parana-outubro-2026/"
    }
   ],
   "RJ": [
@@ -831,10 +1018,16 @@
     "inst": "AtlasIntel",
     "div": "2026-10-03",
     "base": "VV",
-    "parcial": true,
     "x": {
-     "Carlos Jordy": 24.8
-    }
+     "Carlos Jordy": 24.8,
+     "Benedita da Silva": 23.5,
+     "Carlos Portinho": 22.8,
+     "Monica Benicio": 12.5,
+     "Pedro Paulo": 10.8,
+     "Marcelo Crivella": 2.2
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-governador-senador-rio-de-janeiro-outubro-2026/",
+    "aprox": true
    },
    {
     "inst": "Datafolha",
@@ -847,7 +1040,9 @@
      "Pedro Paulo": 13,
      "Monica Benicio": 9,
      "Marcelo Crivella": 6
-    }
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-governador-senador-rio-de-janeiro-outubro-2026-2/",
+    "obs": "Outra fonte traz Carlos Jordy 19 (aqui 18), Carlos Portinho 18 (aqui 19)."
    },
    {
     "inst": "Quaest",
@@ -860,7 +1055,8 @@
      "Pedro Paulo": 10,
      "Marcelo Crivella": 9,
      "Monica Benicio": 6
-    }
+    },
+    "fonte": "https://exame.com/brasil/eleicoes-2026-quem-lidera-as-ultimas-pesquisas-para-o-senado-em-sp-rj-mg-pe-e-df/"
    },
    {
     "inst": "Prefab",
@@ -898,6 +1094,21 @@
     }
    },
    {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Styvenson Valentim": 27,
+     "Coronel Hélio": 20,
+     "Samanda de Lula": 18,
+     "Zenaide Maia": 17,
+     "Rafael Motta": 12
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-rio-grande-do-norte-outubro-2026/",
+    "obs": "1.800 entrevistas. A RTBD de setembro (https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-rio-grande-do-norte-setembro-2026/) teve empate técnico entre Styvenson, Samanda, Zenaide e Rafael Motta, mas os números não foram obtidos."
+   },
+   {
     "inst": "Consult",
     "div": null,
     "base": "n/e",
@@ -927,6 +1138,33 @@
     }
    },
    {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "n/e",
+    "x": {
+     "Teresa Surita": 22.5,
+     "Nicoletti": 21.0
+    },
+    "fonte": "https://www.brasilemfolhas.com.br/2026/10/surita-e-nicoletti-lideram-corrida-ao-senado-em-roraima/",
+    "obs": "800 entrevistas. Os demais candidatos não apareceram na fonte."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Nicoletti": 26,
+     "Teresa Surita": 25,
+     "Helena da Asatur": 19,
+     "Chico Rodrigues": 15,
+     "Hélio Negão": 9
+    },
+    "fonte": "https://ncnews.com.br/2026/10/03/quaest-nicoletti-tem-26-e-teresa-surita-25-dos-votos-validos-em-rr/",
+    "obs": "1.800 entrevistas, margem 2 p.p. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-roraima-outubro-2026/"
+   },
+   {
     "inst": "Census",
     "aprox": true,
     "campo": "n/e (posterior a 09/09)",
@@ -944,6 +1182,21 @@
    }
   ],
   "RS": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "VV",
+    "x": {
+     "Marcel van Hattem": 25.3,
+     "Sanderson": 24.9,
+     "Manuela d'Ávila": 21.5,
+     "Paulo Pimenta": 21.1
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-governador-senador-rio-grande-do-sul-outubro-2026/",
+    "obs": "1.800 entrevistas, margem 2 p.p. Consolidado Atlas reduzido a 100% (tratado como VV). Data de divulgação é estimada."
+   },
    {
     "inst": "Neokemp",
     "div": "2026-10-03",
@@ -979,6 +1232,20 @@
      "Carol de Toni": 12,
      "Décio Lima": 9
     }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-17",
+    "aprox": true,
+    "campo": "2026-09-12 a 2026-09-16",
+    "base": "n/e",
+    "x": {
+     "Carol de Toni": 24,
+     "Carlos Bolsonaro": 20,
+     "Esperidião Amin": 20
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-senador-santa-catarina-setembro-2026/",
+    "obs": "7% de indecisos ou ausentes. Data de divulgação é estimada."
    },
    {
     "inst": "Paraná Pesquisas",
@@ -1019,7 +1286,8 @@
      "Carol de Toni": 28.6,
      "Carlos Bolsonaro": 18.1,
      "Esperidião Amin": 18.0
-    }
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-senador-santa-catarina-outubro-2026/"
    },
    {
     "inst": "Quaest",
@@ -1039,10 +1307,40 @@
      "Carol de Toni": 30,
      "Carlos Bolsonaro": 24,
      "Esperidião Amin": 20
-    }
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-senador-santa-catarina-outubro-2026/"
    }
   ],
   "SE": [
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-04",
+    "aprox": true,
+    "campo": "2026-08-31 a 2026-09-03",
+    "base": "n/e",
+    "x": {
+     "Delegado André David": 18,
+     "André Moura": 12,
+     "Delegado Alessandro": 10,
+     "Rogério Carvalho": 9
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senador-sergipe-setembro-2026/",
+    "obs": "Data de divulgação é estimada. Não está confirmado qual das duas URLs da Gazeta (setembro-2026 ou setembro-2026-2) corresponde a esta rodada."
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-22",
+    "aprox": true,
+    "campo": "2026-09-17 a 2026-09-21",
+    "base": "n/e",
+    "x": {
+     "Delegado André David": 18,
+     "Delegado Alessandro": 14,
+     "Rogério Carvalho": 12
+    },
+    "fonte": "https://www.metropoles.com/brasil/real-time-big-data-pesquisa-senado-sergipe",
+    "obs": "O valor de André Moura não apareceu na fonte. Data de divulgação é estimada."
+   },
    {
     "inst": "Quaest",
     "div": "2026-09-27",
@@ -1055,6 +1353,35 @@
      "André Moura": 9,
      "Delegado Alessandro": 8
     }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "n/e",
+    "x": {
+     "Rogério Carvalho": 23.7,
+     "Delegado André David": 15.7,
+     "Delegado Alessandro": 13.2,
+     "André Moura": 7.4
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-governador-senador-sergipe-outubro-2026/",
+    "obs": "A base não foi explicitada (a soma dos 4 é 60%, o que sugere total com indecisos ou muitos outros nomes). Data de divulgação é estimada."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Delegado André David": 20,
+     "Rogério Carvalho": 19,
+     "André Moura": 17,
+     "Delegado Alessandro": 17
+    },
+    "fonte": "https://fanf1.com.br/2026/10/03/quaest-para-o-senado-andre-david-e-rogerio-carvalho-lideram-pesquisa-de-votos-validos/",
+    "obs": "1.800 entrevistas, margem 2 p.p. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-sergipe-outubro-2026/"
    }
   ],
   "SP": [
@@ -1127,7 +1454,22 @@
     }
    },
    {
-    "inst": "Futura/100% Cidades",
+    "inst": "Datafolha",
+    "div": "2026-10-01",
+    "aprox": true,
+    "campo": "2026-09-28 a 2026-10-01",
+    "base": "n/e",
+    "x": {
+     "Marina Silva": 16,
+     "André do Prado": 15,
+     "Simone Tebet": 15,
+     "Guilherme Derrite": 14
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-senador-sao-paulo-outubro-2026/",
+    "obs": "Cenário estimulado; provavelmente votos totais. Data de divulgação é estimada."
+   },
+   {
+    "inst": "Futura",
     "div": "2026-10-02",
     "base": "200",
     "x": {
@@ -1135,7 +1477,9 @@
      "Marina Silva": 36.2,
      "Simone Tebet": 35.5,
      "André do Prado": 32.8
-    }
+    },
+    "obs": "Divulgada como Futura/100% Cidades.",
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/futura-senado-sp-derrite-408-marina-362-tebet-355-andre-328/"
    },
    {
     "inst": "AtlasIntel",
@@ -1166,7 +1510,8 @@
      "André do Prado": 22,
      "Marina Silva": 21,
      "Simone Tebet": 20
-    }
+    },
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/datafolha-sp-derrite-tem-22-do-prado-22-marina-21-e-tebet-20/"
    },
    {
     "inst": "Quaest",
@@ -1188,7 +1533,8 @@
      "André do Prado": 23,
      "Marina Silva": 22,
      "Simone Tebet": 22
-    }
+    },
+    "fonte": "https://www.metropoles.com/sao-paulo/quaest-para-senado-sp-3-10-2"
    }
   ],
   "TO": [
@@ -1202,6 +1548,200 @@
      "Eduardo Gomes": 35.1,
      "Alexandre Guimarães": 21.6
     }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-10-02",
+    "campo": "2026-09-28 a 2026-10-01",
+    "base": "n/e",
+    "x": {
+     "Eduardo Gomes": 24,
+     "Alexandre Guimarães": 17,
+     "Gaguim": 17,
+     "Paulo Mourão": 11,
+     "Vanderlei Luxemburgo": 10,
+     "Ronaldo Dimas": 8,
+     "Eli Borges": 8,
+     "Professor Osvaldo": 1
+    },
+    "fonte": "https://www.cartacapital.com.br/politica/eduardo-gomes-lidera-a-disputa-pelo-senado-em-tocantins-indica-real-time/",
+    "obs": "1.600 entrevistas, margem 2 p.p., reg. TO-00779/2026. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senador-tocantins-outubro-2026/"
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Eduardo Gomes": 25,
+     "Gaguim": 21,
+     "Alexandre Guimarães": 17,
+     "Eli Borges": 11
+    },
+    "fonte": "https://tocantins.jornalopcao.com.br/noticias/eduardo-gomes-chega-a-25-dos-votos-validos-e-lidera-disputa-pelo-senado-no-tocantins-aponta-quaest-601291/",
+    "obs": "TV Anhanguera; 1.800 entrevistas; reg. TO-01946/2026."
+   }
+  ],
+  "MT": [
+   {
+    "inst": "Quaest",
+    "div": "2026-08-25",
+    "campo": "2026-08-21 a 2026-08-24",
+    "base": "VT",
+    "x": {
+     "Mauro Mendes": 24,
+     "Janaina Riva": 18,
+     "Zé Medeiros": 6,
+     "Carlos Fávaro": 5
+    },
+    "fonte": "https://sbtnews.sbt.com.br/noticia/politica/quaest-mt-fagundes-tem-27-e-pivetta-23-no-1-turno",
+    "obs": "Consolidado Quaest (média de 1º e 2º voto, com indecisos): Mauro 1º voto 36 / 2º 12; Janaina 1º 19 / 2º 17. 804 entrevistas, reg. MT-04846/2026. Valores de Zé Medeiros e Fávaro vieram de resumo de busca."
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-03",
+    "campo": "2026-08-29 a 2026-09-03",
+    "base": "n/e",
+    "x": {
+     "Mauro Mendes": 27,
+     "Janaina Riva": 26,
+     "Carlos Fávaro": 14,
+     "Zé Medeiros": 13,
+     "Pedro Taques": 13
+    },
+    "fonte": "https://static.poder360.com.br/uploads/2026/09/pesquisa-governo-senado-mato-grosso-3set-realtime.pdf",
+    "obs": "1.600 entrevistas, margem 2 p.p. Também em https://www.cartacapital.com.br/?p=637002 e https://www.poder360.com.br/poder-eleicoes/mauro-mendes-e-janaina-riva-lideram-corrida-ao-senado-por-mt/ . Fim de campo citado como 02/09 em uma fonte e 03/09 em outra."
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "2026-09-27 a 2026-10-02",
+    "base": "VV",
+    "x": {
+     "Zé Medeiros": 26.8,
+     "Mauro Mendes": 25.3,
+     "Carlos Fávaro": 14.0,
+     "Janaina Riva": 10.2,
+     "Pedro Taques": 9.3
+    },
+    "fonte": "https://primeirahora.com.br/pesquisa-atlas-coloca-ze-medeiros-como-lider-isolado-na-disputa-ao-senado-em-mato-grosso/",
+    "obs": "Consolidado 1º+2º voto 'reduzido a 100%' (método AtlasIntel; tratado como VV). 1.200 entrevistas, margem 3 p.p. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/atlasintel-governo-senado-mato-grosso-outubro-2026/ . Data de divulgação é estimada (fim do campo em 02/10)."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Mauro Mendes": 37,
+     "Janaina Riva": 23,
+     "Zé Medeiros": 17,
+     "Carlos Fávaro": 9,
+     "Pedro Taques": 9
+    },
+    "fonte": "https://www.midiajur.com.br/eleicoes-2026/mauro-lidera-com-37-dos-votos-validos-janaina-tem-23-e-medeiros-17/87652",
+    "obs": "Contratada pela Rede Matogrossense de Comunicação (RMC); 1.800 entrevistas, margem 2 p.p. Também em https://www.midianews.com.br/politica/mauro-tem-37-janaina-23-e-medeiros-17-aponta-quaest/530519"
+   }
+  ],
+  "PB": [
+   {
+    "inst": "Quaest",
+    "div": "2026-09-22",
+    "campo": "n/e",
+    "base": "VT",
+    "x": {
+     "João Azevêdo": 28,
+     "Veneziano Vital do Rêgo": 18,
+     "Nabor Wanderley": 12,
+     "Marcelo Queiroga": 7
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-paraiba-setembro-2026/",
+    "obs": "2ª rodada da Quaest na PB, contratada pelas TVs Cabo Branco e Paraíba. Consolidado total (com indecisos). Queiroga aparece com 7% num resumo e 6% em outro (6% pode ser da 1ª rodada: João 27, Veneziano 17, Nabor 9, Queiroga 6, Major Fábio 5, com data não confirmada). Ver também https://ground.news/ar"
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-10-02",
+    "aprox": true,
+    "campo": "2026-09-28 a 2026-10-01",
+    "base": "n/e",
+    "x": {
+     "João Azevêdo": 31,
+     "Veneziano Vital do Rêgo": 24,
+     "Marcelo Queiroga": 16,
+     "Nabor Wanderley": 16
+    },
+    "fonte": "https://www.cartacapital.com.br/politica/azevedo-lidera-disputa-pelo-senado-na-paraiba-mostra-pesquisa/",
+    "obs": "1.600 entrevistas, margem 2 p.p., reg. PB-01003/2026. Também em https://pt.wikipedia.org/wiki/Pesquisas_eleitorais_para_a_elei%C3%A7%C3%A3o_estadual_de_2026_na_Para%C3%ADba . Data de divulgação é estimada."
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "João Azevêdo": 35,
+     "Veneziano Vital do Rêgo": 25,
+     "Nabor Wanderley": 20,
+     "Marcelo Queiroga": 15
+    },
+    "fonte": "https://cbnparaiba.com.br/quaest-para-senado-na-paraiba-votos-validos-joao-35-veneziano-25-nabor-20-queiroga15",
+    "obs": "1.800 entrevistas, margem 2 p.p.; TV Cabo Branco/TV Paraíba. O valor de Major Fábio não apareceu nas fontes. Também em https://wscom.com.br/politica/2026/10/03/quaest-aponta-joao-azevedo-e-veneziano-senado/"
+   }
+  ],
+  "RO": [
+   {
+    "inst": "Quaest",
+    "div": "2026-09-24",
+    "campo": "n/e",
+    "base": "VT",
+    "x": {
+     "Fernando Máximo": 18,
+     "Sílvia Cristina": 16,
+     "Mariana Carvalho": 11
+    },
+    "fonte": "https://www.rondoniaovivo.com/noticia/eleicoes2026/2026/09/24/eleicoes-2026-quaest-mostra-maximo-e-silvia-cristina-a-frente-na-disputa-ao-senado-em-ro.html",
+    "obs": "Consolidado total (presumido VT, padrão das rodadas pré-finais da Quaest). O valor de Bruno Scheid não foi obtido (cota de buscas esgotada). Também em https://www.rolnews.com.br/noticia/quaest-para-o-senado-em-rondonia-fernando-maximo-tem-18-silvia-cristina-16-mariana-carvalho-11"
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-30",
+    "campo": "2026-09-25 a 2026-09-29",
+    "base": "n/e",
+    "x": {
+     "Fernando Máximo": 22,
+     "Sílvia Cristina": 17,
+     "Bruno Scheid": 14,
+     "Mariana Carvalho": 14
+    },
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-rondonia-setembro-2026/",
+    "obs": "1.600 entrevistas. Também em https://www.poder360.com.br/poder-eleicoes-2026/dr-fernando-maximo-lidera-disputa-ao-senado-por-ro-diz-pesquisa/"
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03",
+    "base": "VV",
+    "x": {
+     "Fernando Máximo": 28,
+     "Bruno Scheid": 23,
+     "Sílvia Cristina": 21,
+     "Mariana Carvalho": 16
+    },
+    "fonte": "https://www.rolnews.com.br/noticia/quaest-para-o-senado-em-rondonia-fernando-maximo-tem-28-bruno-sheid-23-silvia-cristina-21",
+    "obs": "1º voto: Máximo 27, Sílvia 19; 2º voto: Scheid 18, Máximo 14. Também em https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-governador-senador-rondonia-outubro-2026/"
+   },
+   {
+    "inst": "Veritá",
+    "div": "2026-10-03",
+    "campo": "2026-09-28 a 2026-10-02",
+    "base": "200",
+    "x": {
+     "Bruno Scheid": 53.1
+    },
+    "parcial": true,
+    "fonte": "https://www.rondoniaovivo.com/noticia/politica/2026/10/03/senado-pesquisa-verita-mostra-bruno-scheid-com-531pct-dos-votos-validos-na-reta-final.html",
+    "obs": "Soma de 1º+2º voto em votos válidos. 1.220 entrevistas. Votos válidos por voto: 1º voto: Bruno Scheid 39,9; Fernando Máximo 18,6; Luciana Oliveira 11; Sílvia Cristina 9,9; Acir Gurgacz 9,1. 2º voto: Fernando Máximo 35,6; Sílvia Cristina 16,9; Acir Gurgacz 13,4; Bruno Scheid 13,2; Mariana Carvalho 11"
    }
   ]
  }

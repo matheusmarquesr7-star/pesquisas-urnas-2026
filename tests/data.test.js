@@ -31,6 +31,8 @@ test('Presidente: toda pesquisa tem instituto, data, campo e números válidos',
     assert.ok(poll.inst, 'instituto');
     assert.match(poll.divulgacao, ISO, `${poll.inst}: data de divulgação`);
     assert.ok(poll.t || poll.v, `${poll.inst} ${poll.divulgacao}: sem números`);
+    assert.ok(poll.confirmada === undefined || poll.confirmada === false, `${poll.inst}: confirmada só existe como false`);
+    assert.ok(poll.fonte || poll.confirmada === false || poll.divulgacao < '2026-09-01', `${poll.inst} ${poll.divulgacao}: sem fonte e sem marca de não confirmada`);
     for (const shares of [poll.t, poll.v].filter(Boolean)) {
       assert.ok(shares.F != null && shares.L != null, `${poll.inst}: precisa de Flávio e Lula`);
       const sum = Object.values(shares).reduce((s, v) => s + v, 0) + (shares === poll.t ? poll.nv ?? 0 : 0);

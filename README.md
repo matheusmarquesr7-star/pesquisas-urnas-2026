@@ -68,12 +68,12 @@ Todos os dados ficam em `src/data/`:
 | Arquivo | Conteúdo |
 | --- | --- |
 | `resultado-presidente.json` | Resultado nacional (100%), brancos/nulos e as 27 UFs, com fonte e grau de confiança |
-| `pesquisas-presidente.json` | 22 pesquisas nacionais (`t` = votos totais, `v` = válidos, `nv` = brancos + nulos + indecisos, `aprox` = data estimada) |
+| `pesquisas-presidente.json` | 44 pesquisas nacionais (`t` = votos totais, `v` = válidos, `nv` = brancos + nulos + indecisos, `aprox` = data estimada, `confirmada: false` = não encontrada em fonte aberta, marcada com † no site) |
 | `resultado-senado.json` | Candidatos por UF: `[nome, partido, % válidos, eleito]`, observações e fontes |
-| `pesquisas-senado.json` | 94 levantamentos em 24 UFs, com base `VV`, `VT`, `200` ou `n/e` |
+| `pesquisas-senado.json` | 129 levantamentos nas 27 UFs, com base `VV`, `VT`, `200` ou `n/e` |
 | `divergencias.md` | Tudo o que mudou em relação aos dados iniciais e o que ficou sem fonte |
 
-O TSE e o seuimposto.com não puderam ser acessados durante a coleta: os domínios estavam bloqueados pela rede do ambiente. Por isso os números foram conferidos em reportagens de apuração. Os detalhes estão em [`src/data/divergencias.md`](src/data/divergencias.md).
+O TSE e o seuimposto.com não puderam ser acessados durante a coleta: os domínios estavam bloqueados pela rede do ambiente. Por isso os números foram conferidos em reportagens de apuração e de pesquisas, numa revisão em duas rodadas. A revisão corrigiu datas e números do briefing, acrescentou 23 rodadas presidenciais e 72 levantamentos de Senado, e marcou com † as pesquisas não encontradas em fonte aberta. Os detalhes estão em [`src/data/divergencias.md`](src/data/divergencias.md).
 
 ### Como atualizar
 

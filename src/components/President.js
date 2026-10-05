@@ -7,7 +7,7 @@ import { inkOn, marginColor } from '../map/colors.js';
 import { GapChart, leadText } from './GapChart.js';
 import { LinesChart } from './LinesChart.js';
 import { Icon } from './Icon.js';
-import { Avatar, BackButton, DuelBar, InlineBar, OrderBadge, SectionHead } from './ui.js';
+import { Avatar, BackButton, DuelBar, InlineBar, OrderBadge, SectionHead, Unconfirmed } from './ui.js';
 
 const baseLabel = base => base === 'totais' ? 'votos totais' : 'votos válidos';
 const list = names => names.length > 1 ? `${names.slice(0, -1).join(', ')} e ${names.at(-1)}` : names[0] ?? '';
@@ -121,7 +121,7 @@ export function RankingTable({ rank }) {
         </tr></thead>
         <tbody>${rank.map((row, i) => html`<tr key=${row.inst} class=${row.date < FINAL_WEEK ? 'is-stale' : ''}>
           <td class="num muted">${i + 1}</td>
-          <th scope="row"><span class="cell-title">${row.inst}</span><small>${shortDate(row.date)}${row.poll.aprox ? ' ≈' : ''}${row.date < FINAL_WEEK ? ' · antiga' : ''}</small></th>
+          <th scope="row"><span class="cell-title">${row.inst}<${Unconfirmed} poll=${row.poll}/></span><small>${shortDate(row.date)}${row.poll.aprox ? ' ≈' : ''}${row.date < FINAL_WEEK ? ' · antiga' : ''}</small></th>
           <td class="num">${num(row.shares.F)}${row.recalculado && html`<sup>*</sup>`}</td>
           <td class="num">${num(row.shares.L)}${row.recalculado && html`<sup>*</sup>`}</td>
           <td class="num nowrap">${leadText(row.distancia)}</td>
@@ -131,7 +131,7 @@ export function RankingTable({ rank }) {
         </tr>`)}</tbody>
       </table>
     </div>
-    <p class="note">Erros em pontos percentuais. Distância = Flávio − Lula. Linhas esmaecidas: o instituto não divulgou pesquisa na semana da eleição. * válidos recalculados a partir dos votos totais.</p>
+    <p class="note">Erros em pontos percentuais. Distância = Flávio − Lula. Linhas esmaecidas: a última pesquisa do instituto nesta base é anterior à semana da eleição. * válidos recalculados a partir dos votos totais. † pesquisa dos dados iniciais não encontrada em fonte aberta.</p>
   </section>`;
 }
 
@@ -153,7 +153,7 @@ export function PollTable({ rows, excluded, base }) {
         </tr></thead>
         <tbody>${sorted.map(row => html`<tr key=${row.id}>
           <td class="nowrap">${shortDate(row.date)}${row.poll.aprox && html`<span title="Data de divulgação aproximada (fim do campo + 2 dias)"> ≈</span>`}</td>
-          <th scope="row"><span class="cell-title">${row.inst}</span><small>campo ${row.poll.campo ?? 'n/e'}</small></th>
+          <th scope="row"><span class="cell-title">${row.inst}<${Unconfirmed} poll=${row.poll}/></span><small>campo ${row.poll.campo ?? 'n/e'}${row.poll.contratante ? ` · ${row.poll.contratante}` : ''}</small></th>
           <td class="num">${cell(row, 'F')}</td><td class="num">${cell(row, 'L')}</td>
           ${MINOR.map(key => html`<td key=${key} class="num">${cell(row, key)}</td>`)}
           ${base === 'totais' && html`<td class="num">${row.poll.nv != null ? num(row.poll.nv) : html`<span class="muted">–</span>`}</td>`}
@@ -162,7 +162,7 @@ export function PollTable({ rows, excluded, base }) {
         </tr>`)}</tbody>
       </table>
     </div>
-    <p class="note">* válidos recalculados: v = t × 100 / (100 − brancos, nulos e indecisos). ≈ data de divulgação aproximada.
+    <p class="note">* válidos recalculados: v = t × 100 / (100 − brancos, nulos e indecisos). ≈ data de divulgação aproximada. † pesquisa dos dados iniciais não encontrada em fonte aberta.
       ${excluded.length > 0 && html` Fora desta base: ${excluded.map(p => `${p.inst} (${shortDate(p.divulgacao)})`).join(', ')}${base === 'totais' ? ', que só divulgaram votos válidos.' : ', sem brancos/nulos divulgados para recalcular.'}`}</p>
   </section>`;
 }

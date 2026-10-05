@@ -24,6 +24,7 @@ export function Methodology({ result, polls, onBack, updated }) {
   const noValid = polls.filter(p => !validos(p));
   const noTotal = polls.filter(p => !totais(p));
   const gap = leadText(distancia(resultShares(result)), 2);
+  const unconfirmed = polls.filter(p => p.confirmada === false);
   return html`<article class="methodology" aria-labelledby="metodologia-titulo">
     <div class="methodology-nav"><${BackButton} to="o painel" onClick=${onBack}/></div>
     <h2 id="metodologia-titulo">Como o site compara pesquisas e urnas</h2>
@@ -57,6 +58,11 @@ export function Methodology({ result, polls, onBack, updated }) {
       <p>Em cada UF, duas vagas. Pegamos os dois primeiros da pesquisa e contamos quantos foram eleitos: 2/2 (verde), 1/2 (amarelo) ou 0/2 (vermelho). Quando só o líder foi divulgado, a pesquisa não é avaliável (cinza). Se o 2º e o 3º empatam, os empatados que foram eleitos ocupam a vaga restante, e o selo ganha um *. No resumo, vale a última pesquisa de cada instituto em cada UF; na mesma data, preferimos a versão em votos válidos.</p>
       <p>As bases variam: <b>VV</b> (1º + 2º voto reescalados a 100%) é comparável ao resultado; <b>VT</b> (votos totais) inclui indecisos; <b>Soma 200%</b> soma as menções, já que cada eleitor cita dois nomes. Para exibir as de 200% junto das demais, dividimos cada valor pela soma dos nomes listados e multiplicamos por 100 (“normalizado”). Só a base VV entra no erro médio e no ranking de erro do Senado. As outras aparecem nas tabelas com o selo da base.</p>
       <p>Cores do mapa: esquerda e centro-esquerda (PT, PSB, PDT, Rede, PSOL) em vermelho; direita (PL, Novo, PP, Republicanos, União) em azul; centro (MDB, PSD, PSDB, Podemos) em bege. Cada metade da UF é uma vaga.</p>
+    </section>
+
+    <section>
+      <h3>Pesquisas não confirmadas (†)</h3>
+      <p>Os dados iniciais foram revisados em ${longDate(updated)} contra reportagens publicadas. ${unconfirmed.length ? `${unconfirmed.length} pesquisas presidenciais não apareceram em nenhuma fonte aberta encontrada: ${names(unconfirmed)}. Elas continuam no site, marcadas com †, porque vieram de quem montou os dados, mas devem ser conferidas no registro do TSE.` : 'Todas as pesquisas foram encontradas em fontes abertas.'}</p>
     </section>
 
     <section>

@@ -53,8 +53,8 @@
    "curto": "Zema",
    "partido": "Novo",
    "validos": 0.27,
-   "votos": 326134,
-   "obs": "Percentual e votos com 99,79% apurado (Exame)."
+   "votos": 326486,
+   "obs": "Votos finais segundo a CNN; percentual 0,27%."
   }
  ],
  "outros": {
@@ -65,14 +65,14 @@
   "brancos_pct": 1.84,
   "nulos_pct": 2.93,
   "validos_pct": 95.23,
-  "abstencao_pct": 21.07,
+  "abstencao_pct": 21.08,
   "comparecimento": 125020982,
   "validos": 119057862,
   "brancos": 2297528,
   "nulos": 3665592,
   "abstencao": 33378099,
   "apurado_ref": 99.79,
-  "obs": "Brancos e nulos em % do comparecimento, com 99,79% das seções apuradas (Exame, 04/10 22h04). Nenhuma fonte acessível publicou os números de 100%."
+  "obs": "Brancos e nulos em % do comparecimento: 1,84% e 2,93%, mantidos com 100% apurado (Brasil61); votos absolutos com 99,79% (Exame). Abstenção final: 21,08%."
  },
  "ufs": {
   "AC": {
@@ -88,43 +88,42 @@
   },
   "AL": {
    "L": 54.73,
-   "F": null,
+   "F": 40.45,
    "votos": {
-    "L": 995459
+    "L": 995459,
+    "F": 735718
    },
    "confianca": "média",
    "vencedor": "L",
-   "fonte": "resumo de busca que agregava metropoles.com e cajueira.substack.com ('piso de Lula no NE: Alagoas 54,73%, 995.459 votos')",
-   "obs": "Em Maceió, Flávio teve 52,37% e Lula 41,08% (correio24horas.com.br), a única capital do NE vencida por Flávio"
+   "fonte": "https://www.gazetaweb.com/noticias/eleicoes/lula-vence-flavio-bolsonaro-em-alagoas-e-abre-vantagem-de-259-mil-votos-940283",
+   "obs": "A fonte não informa o % apurado; os votos (995.459 × 735.718) batem com a diferença de 259 mil citada."
   },
   "AM": {
-   "L": 47.26,
-   "F": 45.82,
-   "confianca": "baixa",
+   "L": 48.2,
+   "F": 45.03,
+   "confianca": "alta",
    "vencedor": "L",
-   "apuracao": "parcial: 7.756 de 8.157 seções (~95%)",
-   "fonte": "amazonas1.com.br/lula-ultrapassa-flavio-bolsonaro-e-assume-lideranca-na-apuracao-no-amazonas/",
-   "obs": "Parcial com ~95% das seções (amazonas1.com.br). O valor 'AM Lula 63,95%' dos dados iniciais era do Maranhão."
+   "apuracao": "99,94%",
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-amazonas-lula-fica-em-primeiro-lugar-com-48/",
+   "obs": "Com ~95% apurado, Flávio aparecia mais perto (45,82 × 47,26). O 'AM Lula 63,95%' dos dados iniciais era do Maranhão."
   },
   "AP": {
    "L": 45.71,
    "F": 45.67,
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "L",
-   "fonte": "exame.com/brasil/resultado-da-eleicao-para-presidencia-no-amapa-lula-fica-em-primeiro-lugar/",
-   "obs": "Diferença de só 225 votos. O resumo da busca misturou um artigo da CNN de 2022 sobre o Amapá, então vale reconferir."
+   "fonte": "https://exame.com/brasil/resultado-da-eleicao-para-presidencia-no-amapa-lula-fica-em-primeiro-lugar/",
+   "obs": "Lula venceu por 225 votos.",
+   "apuracao": "100%"
   },
   "BA": {
-   "L": 66.12,
-   "F": 28.58,
-   "votos": {
-    "L": 5641207,
-    "F": 2438241
-   },
-   "confianca": "média",
+   "L": 66.17,
+   "F": 28.54,
+   "confianca": "alta",
    "vencedor": "L",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/ ; correio24horas.com.br ('Lula recebe 66% dos votos no estado')",
-   "obs": "Matéria publicada com 98,36% apurado no país; o % da UF pode ter mudado alguns centésimos"
+   "fonte": "https://exame.com/brasil/resultado-da-eleicao-para-presidente-na-bahia-lula-fica-em-primeiro-lugar/",
+   "obs": "O BNews, “com quase 100%”, dá 66,07 × 28,62.",
+   "apuracao": "99,98%"
   },
   "CE": {
    "L": 63.28,
@@ -173,33 +172,29 @@
    "obs": "Flávio venceu em 218 cidades e Lula em 28. Não achei o % de Caiado em GO; pela soma, os outros candidatos ficaram com cerca de 15%."
   },
   "MA": {
-   "L": 63.95,
-   "F": 30.93,
-   "votos": {
-    "L": 2561100,
-    "F": 1238495
-   },
-   "confianca": "média",
+   "L": 63.92,
+   "F": 30.96,
+   "confianca": "alta",
    "vencedor": "L",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/",
-   "obs": "Um resumo do portalamazonia.com (Amazônia Legal) traz 63,98% x 30,90% para um estado não identificado, que provavelmente é o MA com apuração mais avançada"
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-maranhao-lula-fica-em-primeiro-lugar/",
+   "apuracao": "99,60%"
   },
   "MG": {
-   "L": 43.32,
-   "F": 48.24,
+   "L": 43.31,
+   "F": 48.25,
    "confianca": "média",
    "vencedor": "F",
-   "apuracao": "parcial (valores do usuário, não reverificados)",
-   "fonte": "parcial informada pelo usuário; gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/ ('com 99,85% das seções de MG, Flávio à frente por 592,3 mil votos')",
-   "obs": "Em BH: Flávio 48,32% x Lula 41,36% (em.com.br). Em 2022 Lula tinha vencido MG."
+   "fonte": "https://em.com.br/politica/platobr/2026/10/7514628-curva-a-direita-empurra-flavio-bolsonaro-no-segundo-turno-contra-lula.html",
+   "obs": "Fonte sem % apurado explícito."
   },
   "MS": {
-   "L": 40.51,
-   "F": 58.63,
-   "confianca": "baixa",
+   "L": 34.68,
+   "F": 58.6,
+   "confianca": "média",
    "vencedor": "F",
-   "fonte": "midiamax.com.br/politica/2026/lista-confira-percentual-votos-lula-flavio-bolsonaro-tiveram-cada-cidade-ms/",
-   "obs": "Suspeito: Flávio + Lula somam 99,14%, deixando menos de 1% aos demais candidatos (no país eles tiveram ~7,8%). Pode ser percentual só entre os dois. Vencedor e margem aproximada mantidos."
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-mato-grosso-do-sul-flavio-bolsonaro-fica-em-primeiro-lugar-com-5860/",
+   "obs": "Corrigido: o valor anterior (Lula 40,51%) somava 99,14% com Flávio e não deixava espaço aos demais. Fonte única (Exame, 100%).",
+   "apuracao": "100%"
   },
   "MT": {
    "L": 29.18,
@@ -208,18 +203,18 @@
     "F": 1298581,
     "L": 581681
    },
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "F",
-   "fonte": "resumo de busca que agregava metropoles.com (15x12), ndmais.com.br (apuração MT) e gazetadopovo.com.br; URL exata incerta",
-   "obs": "Os votos e os percentuais batem entre si (válidos ~1,99 mi)"
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-mato-grosso-flavio-bolsonaro-pl-fica-em-primeiro-lugar/",
+   "apuracao": "100%"
   },
   "PA": {
-   "L": 49.9,
-   "F": 44.5,
-   "confianca": "média",
+   "L": 49.87,
+   "F": 44.53,
+   "confianca": "alta",
    "vencedor": "L",
-   "apuracao": "parcial (valores do usuário, não reverificados)",
-   "fonte": "parcial informada pelo usuário"
+   "apuracao": "99,81%",
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-para-lula-fica-em-primeiro-lugar-com-4987/"
   },
   "PB": {
    "L": 61.31,
@@ -274,10 +269,10 @@
   "RJ": {
    "L": 39.41,
    "F": 53.01,
-   "confianca": "média",
+   "confianca": "alta",
    "vencedor": "F",
-   "apuracao": "parcial (valores do usuário, não reverificados)",
-   "fonte": "parcial informada pelo usuário"
+   "apuracao": "99,97%",
+   "fonte": "https://exame.com/brasil/eleicao-presidente-no-rio-de-janeiro-flavio-bolsonaro-fica-em-primeiro-lugar-com-5301/"
   },
   "RN": {
    "L": 59.75,
@@ -309,11 +304,12 @@
   },
   "RS": {
    "L": 35.73,
-   "F": 55.54,
-   "confianca": "média",
+   "F": 55.64,
+   "confianca": "alta",
    "vencedor": "F",
-   "fonte": "gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/ (também citado num resumo de ndmais.com.br)",
-   "obs": "Apuração quase completa ('com quase 100% das urnas')"
+   "fonte": "https://exame.com/brasil/eleicao-para-presidente-no-rio-grande-do-sul-flavio-bolsonaro-fica-em-primeiro-lugar-com-5564/",
+   "obs": "Flávio 55,64% (antes 55,54%).",
+   "apuracao": "100%"
   },
   "SC": {
    "L": 25.04,
@@ -335,12 +331,11 @@
   },
   "SP": {
    "L": 38.2,
-   "F": 51.92,
-   "confianca": "baixa",
+   "F": 51.93,
+   "confianca": "alta",
    "vencedor": "F",
-   "apuracao": "parcial (% apurado não informado pela fonte)",
-   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-em-sao-paulo/ ; parcial com 49,31%: exame.com/...mapa-de-apuracao/?estado=sp (Flávio 53,60 x Lula 36,65; brancos 2,35%, nulos 3,41%, abstenção 22,34%)",
-   "obs": "Não achei o resultado final de SP. Os números vinham convergindo (53,60/36,65 com 49% apurado e depois 51,92/38,20)."
+   "apuracao": "99,9%",
+   "fonte": "https://exame.com/brasil/eleicao-presidente-em-sao-paulo-flavio-bolsonaro-pl-fica-em-primeiro-lugar/"
   },
   "TO": {
    "L": 43.42,
