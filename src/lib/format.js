@@ -41,7 +41,7 @@ export function longDate(iso) {
 /** '1 pesquisa' / '2 pesquisas'. */
 export const plural = (n, one, many) => `${int(n)} ${n === 1 ? one : many}`;
 
-export const normalize = text => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+export const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 export const slug = text => normalize(text).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
