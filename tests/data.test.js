@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { UFS } from '../src/data/meta.js';
-import { presidentPolls, presidentResult, senatePolls, senateResult, topology } from './load.js';
+import { presidentPolls, presidentResult, senatePolls, senateResult } from './load.js';
 
 const ISO = /^2026-\d{2}-\d{2}$/;
 const BASES = ['VV', 'VT', '200', 'n/e'];
@@ -90,7 +90,3 @@ test('Senado: toda pesquisa tem instituto, data (ou null explícito) e base vál
   }
 });
 
-test('Mapa: TopoJSON tem as 27 UFs, identificadas pela sigla', () => {
-  const ids = topology.objects.estados.geometries.map(g => g.id).sort();
-  assert.deepEqual(ids, [...UFS].sort());
-});

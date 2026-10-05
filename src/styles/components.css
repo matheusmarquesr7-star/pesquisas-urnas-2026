@@ -379,7 +379,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Cabeçalho do mapa e legenda */
+/* Cabeçalho da coluna de gráficos */
 
 .stage-head {
   display: flex;
@@ -389,14 +389,6 @@
   gap: var(--space-2) var(--space-4);
   min-height: 32px;
   margin-bottom: var(--space-2);
-}
-
-.stage-place {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2) var(--space-3);
-  min-width: 0;
 }
 
 .stage-title {
@@ -410,51 +402,6 @@
   color: var(--ink-3);
   font-weight: 400;
   letter-spacing: 0;
-}
-
-.map-modes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.legend {
-  margin-top: var(--space-2);
-  font-size: var(--text-sm);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-1) var(--space-4);
-  color: var(--ink-2);
-  font-variant-numeric: tabular-nums;
-}
-
-.legend-side,
-.legend-scale {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-
-.legend-side b {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.legend-scale {
-  color: var(--ink-3);
-}
-
-.legend-ramp {
-  display: inline-flex;
-  gap: 2px;
-}
-
-.legend-ramp i {
-  width: 12px;
-  height: 10px;
-  border-radius: 2px;
 }
 
 /* Coluna de análise */
@@ -990,12 +937,6 @@ button.place-row:focus-visible {
   display: flex;
   align-items: center;
   gap: var(--space-1);
-}
-
-@media (max-width: 1199px) {
-  .stage-hint {
-    display: none;
-  }
 }
 
 @media (max-width: 1199px) {

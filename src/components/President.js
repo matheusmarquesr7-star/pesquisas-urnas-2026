@@ -3,7 +3,7 @@ import { html } from '../lib/html.js';
 import { int, num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { FINAL_WEEK, distancia } from '../lib/metrics.js';
 import { CANDIDATES, MINOR, STATES, stateName, UFS } from '../data/meta.js';
-import { inkOn, marginColor } from '../map/colors.js';
+import { inkOn, marginColor } from '../lib/colors.js';
 import { GapChart, leadText } from './GapChart.js';
 import { LinesChart } from './LinesChart.js';
 import { Icon } from './Icon.js';
@@ -278,11 +278,3 @@ export function PresidentSide({ result, route, theme }) {
     </section>`;
 }
 
-export function PresidentLegend({ theme }) {
-  const ramp = hue => [2, 10, 20, 40].map(m => marginColor(theme, hue, m));
-  return html`<div class="legend">
-    <span class="legend-side"><i class="swatch tone-blue"></i><b>Flávio</b> venceu</span>
-    <span class="legend-side"><i class="swatch tone-red"></i><b>Lula</b> venceu</span>
-    <span class="legend-scale">${['blue', 'red'].map(hue => html`<span key=${hue} class="legend-ramp">${ramp(hue).map(c => html`<i key=${c} style=${{ background: c }}></i>`)}</span>`)}vantagem: até 5 · 15 · 30 · mais pontos</span>
-  </div>`;
-}

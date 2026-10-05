@@ -7,7 +7,7 @@ Site estático que compara as principais pesquisas eleitorais com o resultado re
 - o erro de cada pesquisa em relação ao resultado;
 - um ranking de institutos, de quem mais acertou a quem mais errou.
 
-A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiroms/open-apuracao-brazil) (MIT), que reproduz a linguagem visual do [seuimposto.com](https://seuimposto.com): tema escuro `#0F0E0D`, fonte Geist, mapa em Canvas 2D, três colunas no desktop e a URL como fonte da verdade.
+A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiroms/open-apuracao-brazil) (MIT), que reproduz a linguagem visual do [seuimposto.com](https://seuimposto.com): tema escuro `#0F0E0D`, fonte Geist, três colunas no desktop e a URL como fonte da verdade. No lugar do mapa, a coluna da esquerda mostra gráficos de pesquisa × urna.
 
 ## O que tem
 
@@ -16,9 +16,10 @@ A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiro
   - Resumo dos erros.
   - Gráfico da distância Flávio − Lula ao longo da campanha: a linha das urnas e o traço de erro de cada pesquisa, com destaque por instituto e navegação por teclado.
   - Gráfico de linhas com média móvel de 10 dias.
-  - Ranking da véspera, tabela completa e mapa por UF.
+  - Ranking da véspera, tabela completa e resultado por UF.
+  - Pesquisas × urnas: quanto cada candidato teve a mais ou a menos nas pesquisas finais e a distância que cada instituto previu, contra a linha das urnas.
 - **Senado**
-  - Mapa com cada UF dividida nas duas vagas, colorida pelo bloco do partido.
+  - Pesquisas × urnas: dispersão com cada candidato medido (pesquisa contra urna, com a diagonal do acerto exato), acerto da dupla por UF e, com uma UF aberta, a média das pesquisas × urna de cada candidato.
   - Vagas por partido, recalculadas dos eleitos.
   - Acerto da dupla por instituto, maiores erros e viés por partido.
   - Detalhe de cada UF:
@@ -27,13 +28,13 @@ A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiro
     - selo "acertou a dupla?";
     - minigráficos de evolução;
     - notas de divergência e sub judice.
-- **Institutos:** tabela que junta Presidente e Senado, destaques calculados a partir dos dados e mapa de onde cada instituto acertou.
+- **Institutos:** tabela que junta Presidente e Senado, destaques calculados a partir dos dados e, para o instituto escolhido, a última pesquisa presidencial × urna e as medições dele no Senado.
 - **Metodologia:** votos válidos × totais, recálculo dos válidos, normalização das pesquisas em 200%, datas aproximadas e fontes.
 - **Controles:**
   - Seletor de base (válidos ou totais).
   - Busca por UF ou instituto (tecla `/`).
   - Tema claro e escuro.
-  - Layout em 3 colunas a partir de 1440px, mapa com abas entre 1000 e 1439px e gaveta no celular.
+  - Layout em 3 colunas a partir de 1440px, 2 colunas com abas entre 1000 e 1439px e gaveta no celular.
 
 ## Como rodar
 
@@ -69,7 +70,7 @@ Abrir uma UF ou um instituto cria uma entrada no histórico, então o voltar do 
 | Site | Vercel, projeto `pesquisas-urnas-2026`, ligado ao repositório | Cada push na `main` gera um deploy com `npm run build` |
 | Dados ao vivo | Supabase (projeto lp-cliente-mib), tabela `pu26_datasets` | Espelho dos 4 JSON, lido pelo site ao abrir |
 
-O build é o `vite build` puro, a partir do commit. Não depende de rede: os JSON de `src/data/` viram a cópia embutida e a malha já está versionada.
+O build é o `vite build` puro, a partir do commit. Não depende de rede: os JSON de `src/data/` viram a cópia embutida.
 
 A tabela `pu26_datasets` tem RLS com leitura pública e nenhuma escrita pela API. Alterações só pelo painel do Supabase ou pelo MCP.
 
@@ -109,14 +110,6 @@ Na coleta original, o TSE e o seuimposto.com estavam bloqueados pela rede do amb
 
 Todos os números do site (rankings, médias, destaques) são calculados em `src/lib/metrics.js` a partir dos JSON. Nada é escrito à mão.
 
-### Mapa
-
-`public/data/brasil-uf.topo.json` (37 KB) é gerado por `scripts/build-map.sh` com o mapshaper. O script projeta em Albers equivalente e simplifica a malha. A versão publicada usa a malha estadual do IBGE redistribuída em [gis-dataset-brasil](https://github.com/fititnt/gis-dataset-brasil) (licença DbCL). Para usar a malha oficial mais recente, baixe `BR_UF_2024.zip` no [IBGE](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais.html) e rode:
-
-```sh
-sh scripts/build-map.sh BR_UF_2024.shp SIGLA_UF
-```
-
 ## Regras de cálculo
 
 Implementadas e testadas em `src/lib/metrics.js` (`tests/metrics.test.js`):
@@ -136,25 +129,23 @@ Implementadas e testadas em `src/lib/metrics.js` (`tests/metrics.test.js`):
 ```
 index.html            página única; aplica o tema antes da primeira pintura
 src/
-  main.js             carrega a malha e monta o app
+  main.js             carrega os dados e monta o app
   App.js              rota, layouts e composição das telas
-  components/         TopBar, President, Senate, Institutes, GapChart, LinesChart,
-                      SearchDialog, Methodology, ui (selos, avatares, barras), Icon
+  components/         TopBar, President, Senate, Institutes, Compare (pesquisas × urnas),
+                      GapChart, LinesChart, SearchDialog, Methodology, ui (selos, avatares, barras), Icon
   hooks/              useRoute (URL), useTheme, useHotkey, useMediaQuery, useWidth
-  map/                BrazilMap (canvas), geography (TopoJSON → Path2D), colors
-  lib/                metrics (regras de cálculo), format (pt-BR), html (htm)
+  lib/                metrics (regras de cálculo), format (pt-BR), colors (etiquetas de UF), html (htm)
   data/               JSON versionados, meta (UFs, blocos), divergencias.md
   styles/             tokens, base, layout, components, map, charts, tables
-scripts/build-map.sh  gera a malha das UFs
 scripts/datasets.mjs  confere src/data com o Supabase e gera o SQL de atualização
 tests/                métricas (casos calculados à mão) e integridade dos dados
 ```
 
-Stack: Preact + [htm](https://github.com/developit/htm) (sem JSX), CSS puro, Canvas 2D, Vite e testes com o executor nativo do Node.
+Stack: Preact + [htm](https://github.com/developit/htm) (sem JSX), CSS puro, gráficos em SVG e HTML, Vite e testes com o executor nativo do Node.
 
 ## Créditos e licença
 
 - Código sob a licença MIT (veja `LICENSE`). A base de interface é de Bruno Pinheiro ([open-apuracao-brazil](https://github.com/bpinheiroms/open-apuracao-brazil)).
 - Nenhum ativo proprietário do seuimposto.com foi copiado. Os retratos viraram círculos com iniciais, e a malha e as zonas eleitorais de lá foram removidas.
+- O mapa das UFs saiu em 05/10/2026, trocado pelos gráficos de pesquisa × urna. A malha estadual do IBGE (via gis-dataset-brasil) e o mapshaper deixaram de ser usados.
 - Fonte [Geist](https://vercel.com/font), da Vercel, sob a SIL Open Font License.
-- Malha estadual: IBGE, via gis-dataset-brasil (DbCL).

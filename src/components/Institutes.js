@@ -2,7 +2,6 @@ import { useState } from 'preact/hooks';
 import { html } from '../lib/html.js';
 import { num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { stateName, UFS } from '../data/meta.js';
-import { statusColor } from '../map/colors.js';
 import { leadText } from './GapChart.js';
 import { BackButton, BaseBadge, DuplaBadge, InlineBar, OrderBadge, SectionHead, Unconfirmed } from './ui.js';
 
@@ -128,7 +127,7 @@ export function InstitutesSide({ stats, selected, rows, onSelect, onBack, onStat
   const sorted = [...stats].sort((a, b) => a.inst.localeCompare(b.inst, 'pt-BR'));
   return html`<section class="panel-section">
     <${SectionHead} title="Escolha um instituto"><span class="section-count">${stats.length}</span><//>
-    <p class="note">O mapa mostra, em cada UF, se a última pesquisa de Senado do instituto acertou a dupla eleita.</p>
+    <p class="note">Ao escolher um instituto, os gráficos à esquerda destacam as pesquisas dele e o que as urnas deram.</p>
     <ul class="place-list">${sorted.map(s => html`<li key=${s.inst}>
       <button class="place-row inst-row" onClick=${() => onSelect(s.inst)}>
         <span class="place-name"><strong>${s.inst}</strong><small>${s.presidente} pres. · ${s.senado} Senado${s.ufs ? ` · ${plural(s.ufs, 'UF', 'UFs')}` : ''}</small></span>
@@ -136,38 +135,6 @@ export function InstitutesSide({ stats, selected, rows, onSelect, onBack, onStat
       </button>
     </li>`)}</ul>
   </section>`;
-}
-
-/* ---------------------------------------------------------------- Mapa */
-
-/** Sem instituto escolhido: verde se todos acertaram a dupla, vermelho se nenhum, amarelo se misto. */
-export const institutesPaint = (checks, selected, theme) => uf => {
-  const list = checks.filter(c => c.uf === uf && c.dupla.avaliavel && (!selected || c.inst === selected));
-  if (!list.length) return null;
-  if (selected) return { fill: statusColor(theme, STATUS(list[0].dupla.acertos)) };
-  const perfect = list.filter(c => c.dupla.acertos === 2).length;
-  return { fill: statusColor(theme, perfect === list.length ? 'good' : perfect === 0 ? 'bad' : 'warn') };
-};
-
-export const institutesLabel = (checks, selected) => uf => {
-  const list = checks.filter(c => c.uf === uf && c.dupla.avaliavel && (!selected || c.inst === selected));
-  const perfect = list.filter(c => c.dupla.acertos === 2).length;
-  const value = !list.length ? null : selected ? `${list[0].dupla.acertos}/2` : `${perfect}/${list.length}`;
-  return { value, aria: `${stateName(uf)}: ${!list.length ? 'sem checagem' : selected ? `${list[0].dupla.acertos} de 2 eleitos acertados` : `${perfect} de ${list.length} institutos acertaram a dupla`}` };
-};
-
-export const institutesTooltip = (checks, selected) => uf => {
-  const list = checks.filter(c => c.uf === uf && (!selected || c.inst === selected));
-  return { title: stateName(uf), lines: list.length ? list.map(c => `${c.inst}: ${c.dupla.avaliavel ? c.dupla.acertos + '/2' : 'só líder'}`) : ['Sem pesquisas reunidas'] };
-};
-
-export function InstitutesLegend({ selected }) {
-  return html`<div class="legend">
-    <span class="legend-side"><i class="swatch is-good"></i>${selected ? 'Acertou 2/2' : 'Todos acertaram a dupla'}</span>
-    <span class="legend-side"><i class="swatch is-warn"></i>${selected ? 'Acertou 1/2' : 'Resultado misto'}</span>
-    <span class="legend-side"><i class="swatch is-bad"></i>${selected ? 'Errou os dois' : 'Ninguém acertou a dupla'}</span>
-    <span class="legend-scale">sem cor: sem pesquisa avaliável${selected ? ` de ${selected}` : ''}</span>
-  </div>`;
 }
 
 export const coverage = checks => UFS.filter(uf => checks.some(c => c.uf === uf)).length;

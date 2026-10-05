@@ -339,6 +339,4 @@ A coleta passou de 57 levantamentos em 13 UFs no briefing para **129 em 27 UFs**
 
 ## Mapa
 
-- A malha estadual vem de `uf/shapefile/uf.shp` em github.com/fititnt/gis-dataset-brasil (IBGE, via o extinto brasilemcidades.gov.br, licença DbCL).
-- Primeiro tentei dissolver a malha municipal do IBGE de 2010 (tbrugz/geodata-br, CC0), mas ela tem municípios faltando e deixava buracos no AM, GO, MT, PA e BA.
-- Para usar a malha oficial mais recente (BR_UF_2024), rode `scripts/build-map.sh` com o shapefile do IBGE.
+- Em 05/10/2026 o mapa das UFs saiu do site, trocado pelos gráficos de pesquisa × urna. A malha estadual (gis-dataset-brasil, IBGE, DbCL) deixou de ser usada.

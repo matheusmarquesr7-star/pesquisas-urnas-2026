@@ -1,9 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  acertouDupla, displayValues, distancia, erroDistancia, erroMedio, finais, latestByInstitute, mediaFinais,
-  movingAverage, ordem, presidentRows, ranking, recalculado, resultShares, senateLatest, senateMeanError,
-  seatsByParty, topTwo, validos, vies,
+  acertouDupla, biggestMisses, displayValues, distancia, duplaPorUf, erroDistancia, erroMedio, finais, finaisPorCandidato,
+  latestByInstitute, mediaFinais, movingAverage, ordem, presidentRows, ranking, recalculado, resultShares, senateChecks,
+  senateExpected, senateLatest, senateMeanError, senatePoints, seatsByParty, topTwo, validos, vies,
 } from '../src/lib/metrics.js';
 import { pp, pct, shortDate, initials } from '../src/lib/format.js';
 import { presidentPolls, presidentResult, senatePolls, senateResult } from './load.js';
@@ -162,4 +162,49 @@ test('formatação pt-BR', () => {
   assert.equal(shortDate('2026-08-17'), '17/ago');
   assert.equal(initials('Flávio Bolsonaro'), 'FB');
   assert.equal(initials('Lula'), 'L');
+});
+
+test('Presidente: finais × urna por candidato usa só as pesquisas finais que mediram cada um', () => {
+  const rows = [
+    { inst: 'A', date: '2026-10-01', shares: { F: 44, L: 46, Cury: 3 } },
+    { inst: 'A', date: '2026-09-20', shares: { F: 30, L: 30, Cury: 30 } }, // antiga: a última do A é a de 01/10
+    { inst: 'B', date: '2026-10-02', shares: { F: 42, L: 45 } },
+    { inst: 'C', date: '2026-09-20', shares: { F: 50, L: 40 } }, // fora da semana da eleição
+  ];
+  const urnaTeste = { F: 47.03, L: 45.16, Cury: 2.89, Zema: 0.27 };
+  const [f, l, cury, ...rest] = finaisPorCandidato(rows, urnaTeste, ['F', 'L', 'Cury', 'Zema']);
+  assert.equal(f.n, 2);
+  close(f.media, 43);
+  close(f.diff, 43 - 47.03);
+  close(l.media, 45.5);
+  assert.equal(cury.n, 1);
+  close(cury.diff, 3 - 2.89);
+  assert.deepEqual([f.min, f.max], [42, 44]);
+  assert.equal(rest.length, 0, 'Zema sem nenhuma medição sai da lista');
+});
+
+test('Senado: pesquisa × urna por UF faz a média das pesquisas VV mais recentes de cada instituto', () => {
+  // PR: AtlasIntel (03/10) e Quaest (03/10), ambas em votos válidos.
+  const expected = Object.fromEntries(senateExpected(senatePolls.ufs.PR, senateResult.ufs.PR).map(e => [e.name, e]));
+  close(expected['Filipe Barros'].media, (23.6 + 25) / 2);
+  close(expected['Filipe Barros'].diff, 24.3 - 27.25);
+  close(expected['Gleisi Hoffmann'].diff, (19 + 15) / 2 - 13.35);
+  assert.equal(expected['Alexandre Curi'].n, 1, 'só a Quaest mediu Curi');
+  assert.equal(expected['Deltan Dallagnol'].eleito, true);
+  assert.equal(senateExpected([], senateResult.ufs.PR).length, 0);
+});
+
+test('Senado: pontos do gráfico pesquisa × urna batem com os maiores erros', () => {
+  const points = senatePoints(senatePolls.ufs, senateResult.ufs);
+  for (const p of points) close(p.diff, p.poll - p.urna);
+  const top = biggestMisses(senatePolls.ufs, senateResult.ufs, 1)[0];
+  assert.equal(Math.max(...points.map(p => Math.abs(p.diff))), Math.abs(top.diff));
+  assert.ok(points.filter(p => p.uf === 'PR').length === 3 + 7, 'PR: 3 nomes da AtlasIntel + 7 da Quaest');
+});
+
+test('Senado: acerto da dupla por UF soma todas as checagens', () => {
+  const checks = senateChecks(senatePolls.ufs, senateResult.ufs);
+  const rows = duplaPorUf(checks, Object.keys(senateResult.ufs));
+  for (const r of rows) assert.equal(r[2] + r[1] + r[0] + r.na, r.total, r.uf);
+  assert.equal(rows.reduce((s, r) => s + r.total, 0), checks.length);
 });

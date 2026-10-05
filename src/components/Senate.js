@@ -3,19 +3,12 @@ import { html } from '../lib/html.js';
 import { num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { acertouDupla, dayNumber, differences, displayValues, elected, senateLatest, seatsByParty } from '../lib/metrics.js';
 import { BLOC_ORDER, blocOf, BLOCS, STATES, stateName, UFS } from '../data/meta.js';
-import { blocColor, inkOn } from '../map/colors.js';
+import { blocColor } from '../lib/colors.js';
 import { Icon } from './Icon.js';
 import { Avatar, BackButton, BaseBadge, BlocLegend, DuplaBadge, PartyTag, SectionHead, Swatch, toneOfParty } from './ui.js';
 
 const VALID_BASES = ['VV', '200', 'n/e'];
 export const pollsInBase = (polls, base) => (polls ?? []).filter(p => base === 'totais' ? p.base === 'VT' : VALID_BASES.includes(p.base));
-
-/* ---------------------------------------------------------------- Mapa */
-
-export const senatePaint = (resultByUf, theme) => uf => {
-  const pair = resultByUf[uf].c.filter(c => c[3]);
-  return { halves: pair.map(c => blocColor(theme, blocOf(c[1]))) };
-};
 
 /* ---------------------------------------------------------------- Placar */
 
@@ -291,29 +284,3 @@ export function SenateSide({ resultByUf, pollsByUf, checks, route, theme }) {
   </section>`;
 }
 
-export function SenateLegend() {
-  return html`<div class="legend">
-    <span class="legend-side"><i class="swatch tone-red"></i>Esquerda e centro-esquerda</span>
-    <span class="legend-side"><i class="swatch tone-beige"></i>Centro</span>
-    <span class="legend-side"><i class="swatch tone-blue"></i>Direita</span>
-    <span class="legend-scale">cada metade = uma vaga · <i class="poll-dot" aria-hidden="true"></i> UF com pesquisas comparadas</span>
-  </div>`;
-}
-
-export const senateLabel = pollsByUf => uf => ({
-  dot: pollsByUf[uf]?.length > 0,
-  aria: `${stateName(uf)}${pollsByUf[uf]?.length ? ', com pesquisas comparadas' : ', sem pesquisas'}`,
-});
-
-export const senateTooltip = (resultByUf, checks) => uf => ({
-  title: stateName(uf),
-  lines: [
-    ...resultByUf[uf].c.filter(c => c[3]).map(c => `${c[0]} (${c[1]}) ${c[2] != null ? pct(c[2], 1) : ''}`),
-    (() => {
-      const list = checks.filter(c => c.uf === uf && c.dupla.avaliavel);
-      return list.length ? `Dupla certa em ${list.filter(c => c.dupla.acertos === 2).length} de ${list.length} institutos` : 'Sem pesquisas avaliáveis';
-    })(),
-  ],
-});
-
-export const senateInk = color => inkOn(color);

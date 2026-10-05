@@ -1,8 +1,8 @@
 /*
  * Três layouts, pelo espaço disponível (breakpoints espelhados em App.js):
- *   largo    >= 1440px          mapa | painel central | lista
- *   desktop  1000px a 1439px    mapa | painel com abas
- *   estreito < 1000px           mapa, com o painel numa gaveta inferior
+ *   largo    >= 1440px          pesquisas × urnas | painel central | lista
+ *   desktop  1000px a 1439px    pesquisas × urnas | painel com abas
+ *   estreito < 1000px           pesquisas × urnas, com o painel numa gaveta inferior
  * No desktop e no largo a página não rola: cada coluna rola sozinha.
  */
 
@@ -100,17 +100,6 @@ main {
   border-left: 1px solid var(--line);
 }
 
-/* O quadro do mapa é quadrado; a área em volta decide o tamanho. */
-.map-area {
-  display: grid;
-  place-items: center;
-  container-type: inline-size;
-}
-
-.map-frame {
-  width: min(100cqw, 640px);
-}
-
 .panel-body {
   position: relative;
 }
@@ -181,20 +170,7 @@ main {
     min-height: 0;
   }
 
-  .stage {
-    min-height: 0;
-  }
-
-  .map-area {
-    flex: 1;
-    min-height: 0;
-    container-type: size;
-  }
-
-  .map-frame {
-    width: min(100cqw, 100cqh);
-  }
-
+  .stage,
   .main-column,
   .panel-body {
     min-height: 0;
@@ -218,7 +194,7 @@ main {
   }
 }
 
-/* Estreito: uma coluna, com o painel numa gaveta que sobe sobre o mapa. */
+/* Estreito: uma coluna, com o painel numa gaveta que sobe sobre os gráficos. */
 @media (max-width: 999px) {
   .workspace {
     grid-template-columns: minmax(0, 1fr);

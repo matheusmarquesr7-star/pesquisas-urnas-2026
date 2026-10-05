@@ -1,29 +1,8 @@
-// Cores do mapa. O canvas não lê CSS, então os tons de fundo espelham src/styles/tokens.css.
+// Cores das etiquetas de UF nas listas (preenchimento + texto legível por cima).
+// Calculadas em JS porque o contraste do texto depende da cor final; os tons espelham src/styles/tokens.css.
 
-export const MAP_THEMES = {
-  dark: {
-    background: '#0f0e0d',
-    base: '#1d1b19',
-    empty: '#2a2725',
-    coast: 'rgba(255,255,255,.12)',
-    focus: '#f7f5f2',
-    focusGlow: 'rgba(255,255,255,.42)',
-    hover: 'rgba(255,255,255,.85)',
-    calloutLine: 'rgba(255,255,255,.32)',
-    seatDivider: 'rgba(15,14,13,.9)',
-  },
-  light: {
-    background: '#f7f5f2',
-    base: '#e8e4de',
-    empty: '#dcd7d0',
-    coast: 'rgba(30,24,18,.16)',
-    focus: '#1d1914',
-    focusGlow: 'rgba(30,24,18,.3)',
-    hover: 'rgba(30,24,18,.85)',
-    calloutLine: 'rgba(30,24,18,.34)',
-    seatDivider: 'rgba(247,245,242,.95)',
-  },
-};
+/** Base neutra de cada tema, misturada com o tom do partido ou do vencedor. */
+const BASE = { dark: '#1d1b19', light: '#e8e4de' };
 
 export const HUES = {
   blue: '#4162e2',
@@ -74,9 +53,9 @@ function legible(lab) {
   return color;
 }
 
-/** Mistura a base neutra do mapa com um tom (`t` de 0 a 1), em OKLab. */
+/** Mistura a base neutra com um tom (`t` de 0 a 1), em OKLab. */
 export function blend(theme, hue, t) {
-  const base = toLab(MAP_THEMES[theme].base), end = toLab(hueFor(hue, theme));
+  const base = toLab(BASE[theme]), end = toLab(hueFor(hue, theme));
   return legible(base.map((v, i) => v + (end[i] - v) * t));
 }
 
@@ -90,7 +69,6 @@ export function marginColor(theme, hue, margin) {
 }
 
 export const blocColor = (theme, bloc) => blend(theme, { esquerda: 'red', direita: 'blue', centro: 'beige' }[bloc] ?? 'beige', .9);
-export const statusColor = (theme, status) => blend(theme, status, .88);
 
 /** Cor de texto legível sobre um preenchimento `#rrggbb`: a de maior contraste. */
 export function inkOn(hex) {

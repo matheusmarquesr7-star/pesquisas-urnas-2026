@@ -1,27 +1,23 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { html } from './lib/html.js';
-import { pct, shortDate } from './lib/format.js';
+import { shortDate } from './lib/format.js';
 import {
-  biggestMisses, highlights, instituteStats, mediaFinais, partyBias, presidentRows, ranking, resultShares, senateChecks,
+  biggestMisses, duplaPorUf, highlights, instituteStats, mediaFinais, partyBias, presidentRows, ranking, resultShares,
+  senateChecks, senatePoints,
 } from './lib/metrics.js';
-import { CANDIDATES, stateName } from './data/meta.js';
+import { stateName, UFS } from './data/meta.js';
 import { useHotkey } from './hooks/useHotkey.js';
 import { useMediaQuery } from './hooks/useMediaQuery.js';
 import { useRoute } from './hooks/useRoute.js';
 import { useTheme } from './hooks/useTheme.js';
-import { BrazilMap } from './map/BrazilMap.js';
 import { Icon } from './components/Icon.js';
 import { Methodology } from './components/Methodology.js';
 import { SearchDialog } from './components/SearchDialog.js';
 import { TopBar } from './components/TopBar.js';
-import { leadText } from './components/GapChart.js';
-import { PresidentLegend, PresidentMain, presidentPaint, PresidentScoreboard, PresidentSide } from './components/President.js';
-import {
-  senateLabel, SenateLegend, SenateNational, senatePaint, SenateScoreboard, SenateSide, SenateState, senateTooltip,
-} from './components/Senate.js';
-import {
-  InstitutesLegend, institutesLabel, institutesPaint, InstitutesScoreboard, InstitutesSide, InstitutesTable, institutesTooltip,
-} from './components/Institutes.js';
+import { InstitutesCompare, PresidentCompare, SenateCompare } from './components/Compare.js';
+import { PresidentMain, PresidentScoreboard, PresidentSide } from './components/President.js';
+import { SenateNational, SenateScoreboard, SenateSide, SenateState } from './components/Senate.js';
+import { InstitutesScoreboard, InstitutesSide, InstitutesTable } from './components/Institutes.js';
 
 // Espelha styles/layout.css: três colunas quando largo, gaveta inferior quando estreito.
 const WIDE_LAYOUT = '(min-width: 1440px)';
@@ -35,7 +31,7 @@ function Footer({ onMethodology, data }) {
   </footer>`;
 }
 
-export function App({ geo, data }) {
+export function App({ data }) {
   const { presidentResult, presidentPolls, senateResult, senatePolls, institutes: INSTITUTES, instituteSlug, instituteBySlug } = data;
   const slugs = useMemo(() => new Set(Object.values(instituteSlug)), [instituteSlug]);
   const route = useRoute(slugs);
@@ -58,6 +54,8 @@ export function App({ geo, data }) {
   const bias = useMemo(() => partyBias(senatePolls, senateResult), []);
   const misses = useMemo(() => biggestMisses(senatePolls, senateResult, 6), []);
   const lines = useMemo(() => highlights(rows, stats, checks, bias), [rows, stats, checks, bias]);
+  const points = useMemo(() => senatePoints(senatePolls, senateResult), []);
+  const dupla = useMemo(() => duplaPorUf(checks, UFS), [checks]);
 
   const nav = {
     ...route,
@@ -96,27 +94,14 @@ export function App({ geo, data }) {
   }
 
   /* --------------------------------------------- conteúdo de cada tela */
-  let board, main, side, map, tabs, stageTitle, legend;
+  let board, main, side, compare, tabs, stageTitle;
   if (view === 'presidente') {
     board = html`<${PresidentScoreboard} result=${presidentResult} urna=${urna} media=${media} rows=${rows} base=${base}/>`;
     main = html`<${PresidentMain} rows=${rows} urna=${urna} media=${media} rank=${rank} excluded=${excluded} base=${base}/>`;
     side = html`<${PresidentSide} result=${presidentResult} route=${nav} theme=${theme}/>`;
     tabs = { main: 'Pesquisas', side: uf ? `UF: ${uf}` : 'Estados' };
-    stageTitle = html`Presidente por UF <span>quem venceu e por quanto</span>`;
-    legend = html`<${PresidentLegend} theme=${theme}/>`;
-    map = {
-      paint: presidentPaint(presidentResult, theme),
-      label: code => {
-        const r = presidentResult.ufs[code];
-        return { value: r[r.vencedor] != null ? pct(r[r.vencedor], 0) : null, aria: `${stateName(code)}: ${r.vencedor === 'F' ? 'Flávio' : 'Lula'} venceu` };
-      },
-      tooltip: code => {
-        const r = presidentResult.ufs[code];
-        return { lines: [`Flávio ${pct(r.F, 2)} · Lula ${pct(r.L, 2)}`, r.F != null && r.L != null ? leadText(r.F - r.L) : `${CANDIDATES[r.vencedor].short} venceu`, ...(r.confianca === 'baixa' ? ['dado parcial ou incerto'] : [])] };
-      },
-      onState: code => nav.openState(code, 'presidente'),
-      aria: 'Mapa do Brasil: vencedor para Presidente em cada UF',
-    };
+    stageTitle = html`Pesquisas × urnas <span>o que se esperava e o que saiu</span>`;
+    compare = html`<${PresidentCompare} rows=${rows} urna=${urna} base=${base} onInstitute=${nav.openInstituteByName}/>`;
   } else if (view === 'senado') {
     board = html`<${SenateScoreboard} resultByUf=${senateResult} pollsByUf=${senatePolls} checks=${checks}/>`;
     main = uf
@@ -124,30 +109,18 @@ export function App({ geo, data }) {
       : html`<${SenateNational} resultByUf=${senateResult} stats=${stats} checks=${checks} misses=${misses} bias=${bias} route=${nav}/>`;
     side = html`<${SenateSide} resultByUf=${senateResult} pollsByUf=${senatePolls} checks=${checks} route=${nav} theme=${theme}/>`;
     tabs = { main: uf ? 'Resultado e pesquisas' : 'Resumo', side: 'Eleitos por UF' };
-    stageTitle = html`Senado <span>as duas vagas de cada UF</span>`;
-    legend = html`<${SenateLegend}/>`;
-    map = {
-      paint: senatePaint(senateResult, theme),
-      label: senateLabel(senatePolls),
-      tooltip: senateTooltip(senateResult, checks),
-      onState: code => nav.openState(code, 'senado'),
-      aria: 'Mapa do Brasil: partidos dos dois senadores eleitos em cada UF',
-    };
+    stageTitle = html`Pesquisas × urnas <span>${uf ? stateName(uf) : 'Senado'}</span>`;
+    compare = html`<${SenateCompare} uf=${uf} resultByUf=${senateResult} pollsByUf=${senatePolls} points=${points} dupla=${dupla}
+      onState=${code => nav.openState(code, 'senado')}/>`;
   } else {
     board = html`<${InstitutesScoreboard} lines=${lines}/>`;
     main = html`<div class="insights"><${InstitutesTable} stats=${stats} selected=${inst} onSelect=${name => nav.openInstituteByName(name)} base=${base}/></div>`;
     side = html`<${InstitutesSide} stats=${stats} selected=${inst} rows=${rows} onSelect=${nav.openInstituteByName}
       onBack=${route.back} onState=${code => nav.openState(code, 'senado')}/>`;
     tabs = { main: 'Ranking', side: inst ? 'Detalhe' : 'Institutos' };
-    stageTitle = html`${inst ?? 'Todos os institutos'} <span>acertou a dupla do Senado?</span>`;
-    legend = html`<${InstitutesLegend} selected=${inst}/>`;
-    map = {
-      paint: institutesPaint(checks, inst, theme),
-      label: institutesLabel(checks, inst),
-      tooltip: institutesTooltip(checks, inst),
-      onState: code => nav.openState(code, 'senado'),
-      aria: inst ? `Mapa: onde ${inst} acertou a dupla do Senado` : 'Mapa: em que UFs os institutos acertaram a dupla do Senado',
-    };
+    stageTitle = html`${inst ?? 'Todos os institutos'} <span>pesquisas × urnas</span>`;
+    compare = html`<${InstitutesCompare} inst=${inst} rows=${rows} urna=${urna} points=${points}
+      onSelect=${nav.openInstituteByName} onState=${code => nav.openState(code, 'senado')}/>`;
   }
 
   const current = wide ? null : tab;
@@ -158,17 +131,13 @@ export function App({ geo, data }) {
     <main>
       ${board}
       <div class=${'workspace' + (wide ? ' is-wide' : '')}>
-        <section class="stage" aria-label="Mapa">
+        <section class="stage" aria-label="Pesquisas × urnas">
           <div class="stage-head">
             <h2 class="stage-title">${stageTitle}</h2>
             ${(uf || inst) && html`<button class="back-button" onClick=${route.back} aria-label=${uf ? 'Voltar para o Brasil' : 'Voltar para todos os institutos'} title="Voltar (Esc)">
               <${Icon} name="left" size=${16}/>${uf ? 'Brasil' : 'Todos'}</button>`}
           </div>
-          <div class="map-area">
-            <${BrazilMap} geo=${geo} theme=${theme} paint=${map.paint} label=${map.label} tooltip=${map.tooltip}
-              selected=${uf} onState=${map.onState} ariaLabel=${map.aria}/>
-          </div>
-          ${legend}
+          ${compare}
         </section>
 
         ${wide && html`<section class="main-column" aria-label=${tabs.main}>${main}</section>`}

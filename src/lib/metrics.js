@@ -116,6 +116,22 @@ export function mediaFinais(rows) {
 }
 
 /**
+ * Pesquisas × urna por candidato: média de cada candidato entre as linhas que o mediram (nem todas
+ * divulgam os menores). `keys` fixa a ordem; candidatos sem nenhuma medição saem.
+ */
+export function porCandidato(list, urna, keys) {
+  return keys.map(key => {
+    const values = list.map(row => row.shares[key]).filter(v => v != null);
+    if (!values.length || urna[key] == null) return null;
+    const media = mean(values);
+    return { key, media, urna: urna[key], diff: media - urna[key], n: values.length, min: Math.min(...values), max: Math.max(...values) };
+  }).filter(Boolean);
+}
+
+/** Pesquisas finais (última de cada instituto na semana da eleição) × urna, por candidato. */
+export const finaisPorCandidato = (rows, urna, keys) => porCandidato(finais(rows), urna, keys);
+
+/**
  * Média móvel de `days` dias (janela que termina em cada dia) para a chave `key`.
  * Devolve um ponto por dia em que a janela tem pelo menos uma pesquisa.
  */
@@ -263,17 +279,52 @@ export function partyBias(pollsByUf, resultByUf) {
   return Object.fromEntries([...byParty.entries()].map(([party, { diffs, names }]) => [party, { media: mean(diffs), n: diffs.length, candidatos: names.size }]));
 }
 
-/** Maiores erros individuais (|pesquisa − urna|) nas pesquisas VV mais recentes de cada instituto. */
-export function biggestMisses(pollsByUf, resultByUf, limit = 6) {
-  const misses = [];
+/**
+ * Cada candidato medido na pesquisa VV mais recente de cada instituto, com o resultado ao lado:
+ * os pontos do gráfico pesquisa × urna do Senado.
+ */
+export function senatePoints(pollsByUf, resultByUf) {
+  const points = [];
   for (const [uf, polls] of Object.entries(pollsByUf)) {
+    const ufResult = resultByUf[uf];
+    const party = Object.fromEntries(ufResult.c.map(c => [c[0], c[1]]));
+    const winners = new Set(elected(ufResult));
+    const urna = resultMap(ufResult);
     for (const poll of senateLatest(polls).filter(comparable)) {
-      for (const [name, diff] of Object.entries(differences(poll, resultByUf[uf]))) {
-        misses.push({ uf, inst: poll.inst, name, poll: poll.x[name], urna: resultMap(resultByUf[uf])[name], diff });
+      for (const [name, diff] of Object.entries(differences(poll, ufResult))) {
+        points.push({ uf, inst: poll.inst, name, party: party[name], eleito: winners.has(name), poll: poll.x[name], urna: urna[name], diff });
       }
     }
   }
-  return misses.sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, limit);
+  return points;
+}
+
+/** Maiores erros individuais (|pesquisa − urna|) nas pesquisas VV mais recentes de cada instituto. */
+export function biggestMisses(pollsByUf, resultByUf, limit = 6) {
+  return senatePoints(pollsByUf, resultByUf).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, limit);
+}
+
+/**
+ * Numa UF: média de cada candidato nas pesquisas VV mais recentes de cada instituto × resultado.
+ * Candidatos sem resultado conhecido ficam de fora; ordem do resultado.
+ */
+export function senateExpected(polls, ufResult) {
+  const latest = senateLatest(polls ?? []).filter(comparable);
+  return ufResult.c.filter(c => c[2] != null).map(([name, party, urna, eleito]) => {
+    const values = latest.map(p => p.x[name]).filter(v => v != null);
+    if (!values.length) return null;
+    const media = mean(values);
+    return { name, party, eleito, media, urna, diff: media - urna, n: values.length, min: Math.min(...values), max: Math.max(...values) };
+  }).filter(Boolean);
+}
+
+/** Acerto da dupla por UF: quantas checagens deram 2/2, 1/2, 0/2 ou não eram avaliáveis. */
+export function duplaPorUf(checks, ufs) {
+  return ufs.map(uf => {
+    const list = checks.filter(c => c.uf === uf);
+    const count = n => list.filter(c => c.dupla.avaliavel && c.dupla.acertos === n).length;
+    return { uf, total: list.length, 2: count(2), 1: count(1), 0: count(0), na: list.filter(c => !c.dupla.avaliavel).length };
+  });
 }
 
 /* ---------------------------------------------------------------- Institutos */

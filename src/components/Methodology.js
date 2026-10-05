@@ -55,7 +55,7 @@ export function Methodology({ result, polls, onBack, updated, source }) {
       <h3>Senado: “acertou a dupla?”</h3>
       <p>Em cada UF, duas vagas. Pegamos os dois primeiros da pesquisa e contamos quantos foram eleitos: 2/2 (verde), 1/2 (amarelo) ou 0/2 (vermelho). Quando só o líder foi divulgado, a pesquisa não é avaliável (cinza). Se o 2º e o 3º empatam, os empatados que foram eleitos ocupam a vaga restante, e o selo ganha um *. No resumo, vale a última pesquisa de cada instituto em cada UF; na mesma data, preferimos a versão em votos válidos.</p>
       <p>As bases variam: <b>VV</b> (1º + 2º voto reescalados a 100%) é comparável ao resultado; <b>VT</b> (votos totais) inclui indecisos; <b>Soma 200%</b> soma as menções, já que cada eleitor cita dois nomes. Para exibir as de 200% junto das demais, dividimos cada valor pela soma dos nomes listados e multiplicamos por 100 (“normalizado”). Só a base VV entra no erro médio e no ranking de erro do Senado. As outras aparecem nas tabelas com o selo da base.</p>
-      <p>Cores do mapa: esquerda e centro-esquerda (PT, PSB, PDT, Rede, PSOL) em vermelho; direita (PL, Novo, PP, Republicanos, União) em azul; centro (MDB, PSD, PSDB, Podemos) em bege. Cada metade da UF é uma vaga.</p>
+      <p>Cores dos partidos: esquerda e centro-esquerda (PT, PSB, PDT, Rede, PSOL) em vermelho; direita (PL, Novo, PP, Republicanos, União) em azul; centro (MDB, PSD, PSDB, Podemos) em bege.</p>
     </section>
 
     <section>
@@ -73,7 +73,7 @@ export function Methodology({ result, polls, onBack, updated, source }) {
       <p>O resultado vem dos arquivos oficiais do TSE, com 100% das seções totalizadas. As pesquisas foram conferidas em reportagens e no registro de pesquisas do TSE. O que mudou em cada revisão e o que ficou sem fonte está em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>.</p>
       <p>Os dados ficam no Supabase, na tabela <code>pu26_datasets</code>, e o site os lê ao vivo: corrigir um número ali atualiza o site sem novo deploy. ${source === 'supabase' ? 'Esta visita está usando os dados ao vivo.' : 'Nesta visita o Supabase não respondeu, e o site usa a cópia dos dados embutida no último build.'}</p>
       <ul class="sources">${SOURCES.map(([label, url]) => html`<li key=${url}><a href=${url} target="_blank" rel="noopener">${label}</a></li>`)}</ul>
-      <p class="note">Malha estadual: IBGE (via gis-dataset-brasil, licença DbCL), simplificada com mapshaper. Desenho da interface baseado no projeto open-apuracao-brazil (MIT), na linguagem visual do seuimposto.com. Código: <a href=${REPO} target="_blank" rel="noopener">${REPO.replace('https://', '')}</a>.</p>
+      <p class="note">Desenho da interface baseado no projeto open-apuracao-brazil (MIT), na linguagem visual do seuimposto.com. Código: <a href=${REPO} target="_blank" rel="noopener">${REPO.replace('https://', '')}</a>.</p>
     </section>
   </article>`;
 }
