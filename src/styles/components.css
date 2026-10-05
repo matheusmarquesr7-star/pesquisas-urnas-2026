@@ -149,11 +149,7 @@
   color: var(--ink);
 }
 
-.office-tab[aria-pressed='true'] {
-  color: var(--ink);
-}
-
-.office-tab[aria-pressed='true']::after {
+.office-tab[aria-current='page']::after {
   content: '';
   position: absolute;
   inset: auto var(--space-4) -1px;
@@ -1022,7 +1018,7 @@ button.place-row:focus-visible {
     font-size: 0.8125rem;
   }
 
-  .office-tab[aria-pressed='true']::after {
+  .office-tab[aria-current='page']::after {
     inset-inline: var(--space-2);
     bottom: 0;
   }

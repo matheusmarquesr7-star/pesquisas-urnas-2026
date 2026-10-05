@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks';
 import { html } from '../lib/html.js';
-import { int, num, pct, pp, shortDate } from '../lib/format.js';
+import { int, num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { FINAL_WEEK, distancia } from '../lib/metrics.js';
 import { CANDIDATES, MINOR, STATES, stateName, UFS } from '../data/meta.js';
 import { inkOn, marginColor } from '../map/colors.js';
@@ -11,6 +11,20 @@ import { Avatar, BackButton, DuelBar, InlineBar, OrderBadge, SectionHead } from 
 
 const baseLabel = base => base === 'totais' ? 'votos totais' : 'votos válidos';
 const list = names => names.length > 1 ? `${names.slice(0, -1).join(', ')} e ${names.at(-1)}` : names[0] ?? '';
+
+/** "Quaest e Datafolha puseram Lula à frente; Gerp cravou empate" — a partir do que cada pesquisa apontou. */
+function wrongSentence(rows) {
+  const groups = new Map();
+  for (const row of rows) {
+    const key = row.distancia === 0 ? 'empate' : row.distancia > 0 ? 'F' : 'L';
+    groups.set(key, [...(groups.get(key) ?? []), row.inst]);
+  }
+  return [...groups.entries()].map(([key, names]) => {
+    const many = names.length > 1;
+    if (key === 'empate') return `${list(names)} ${many ? 'cravaram' : 'cravou'} empate`;
+    return `${list(names)} ${many ? 'puseram' : 'pôs'} ${CANDIDATES[key].short} à frente`;
+  }).join('; ');
+}
 
 /* ---------------------------------------------------------------- Placar */
 
@@ -52,7 +66,7 @@ export function PresidentScoreboard({ result, urna, media, rows, base }) {
         <b>${gap > 0 ? 'Flávio' : 'Lula'} venceu por ${pp(Math.abs(gap), 2)}.</b>
         ${' '}${media && html`A média das pesquisas finais dava <b>${leadText(avgGap)}</b>${wrong.length ? html`, e ${wrong.length} de ${finals.length} apontavam o vencedor errado` : ''}.`}
       </p>
-      <p class="counting"><span>2º turno em 25/out</span><span>${rows.length} pesquisas</span></p>
+      <p class="counting"><span>2º turno em ${shortDate(result.segundo_turno)}</span><span>${plural(rows.length, 'pesquisa', 'pesquisas')}</span></p>
     </div>
   </section>`;
 }
@@ -73,7 +87,7 @@ export function ErrorSummary({ rows, media }) {
     <dl class="tiles">
       <div class=${'tile' + (wrong.length ? ' is-alert' : '')}>
         <dt>Erraram quem ficou em 1º</dt>
-        <dd><b>${wrong.length} de ${finals.length}</b><small>${wrong.length ? list(wrong.map(r => r.inst)) + ' puseram Lula à frente' : 'todas acertaram'}</small></dd>
+        <dd><b>${wrong.length} de ${finals.length}</b><small>${wrong.length ? wrongSentence(wrong) : 'todas acertaram'}</small></dd>
       </div>
       <div class="tile">
         <dt>Erro médio na distância</dt>
@@ -234,7 +248,7 @@ function StateDetail({ uf, result, route }) {
     </section>
     <section class="panel-section">
       <dl class="facts">
-        <div><dt>Apuração</dt><dd>${r.apuracao ?? 'final (100%)'}</dd></div>
+        <div><dt>Apuração</dt><dd>${r.apuracao ?? 'não informada pela fonte'}</dd></div>
         <div><dt>Confiança no dado</dt><dd>${r.confianca}</dd></div>
         ${r.obs && html`<div><dt>Observação</dt><dd>${r.obs}</dd></div>`}
         <div><dt>Fonte</dt><dd class="source">${r.fonte}</dd></div>

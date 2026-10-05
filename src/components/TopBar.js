@@ -15,7 +15,7 @@ export function TopBar({ route, theme, onToggleTheme, onSearch }) {
 
     <nav class="office-tabs" aria-label="Seção">
       ${TABS.map(([key, label]) => html`<button key=${key} class="office-tab" aria-current=${route.view === key ? 'page' : null}
-        aria-pressed=${route.view === key} onClick=${() => route.setView(key)}>${label}</button>`)}
+        onClick=${() => route.setView(key)}>${label}</button>`)}
     </nav>
 
     <div class="topbar-actions">

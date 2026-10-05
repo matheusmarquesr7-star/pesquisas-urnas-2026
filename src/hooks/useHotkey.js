@@ -10,7 +10,7 @@ export function useHotkey(key, handler, { enabled = true, whileTyping = false } 
   useEffect(() => {
     if (!enabled) return;
     const onKeyDown = event => {
-      if (event.key !== key || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (event.key !== key || event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
       if (!whileTyping && isTyping(event.target)) return;
       latest.current(event);
     };

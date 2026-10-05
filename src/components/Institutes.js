@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
 import { html } from '../lib/html.js';
-import { num, pct, pp, shortDate } from '../lib/format.js';
+import { num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { stateName, UFS } from '../data/meta.js';
 import { statusColor } from '../map/colors.js';
 import { leadText } from './GapChart.js';
@@ -99,7 +99,7 @@ export function InstituteDetail({ stat, rows, onBack, onState }) {
     <header class="place-header">
       <div class="place-header-nav"><${BackButton} to="Todos os institutos" onClick=${onBack}/></div>
       <h2>${stat.inst}</h2>
-      <p>${stat.presidente} pesquisas de Presidente · ${stat.senado} de Senado</p>
+      <p>${plural(stat.presidente, 'pesquisa', 'pesquisas')} de Presidente · ${stat.senado} de Senado</p>
     </header>
     <section class="panel-section">
       <${SectionHead} title="Presidente"/>
@@ -131,7 +131,7 @@ export function InstitutesSide({ stats, selected, rows, onSelect, onBack, onStat
     <p class="note">O mapa mostra, em cada UF, se a última pesquisa de Senado do instituto acertou a dupla eleita.</p>
     <ul class="place-list">${sorted.map(s => html`<li key=${s.inst}>
       <button class="place-row inst-row" onClick=${() => onSelect(s.inst)}>
-        <span class="place-name"><strong>${s.inst}</strong><small>${s.presidente} pres. · ${s.senado} Senado${s.ufs ? ` · ${s.ufs} UFs` : ''}</small></span>
+        <span class="place-name"><strong>${s.inst}</strong><small>${s.presidente} pres. · ${s.senado} Senado${s.ufs ? ` · ${plural(s.ufs, 'UF', 'UFs')}` : ''}</small></span>
         <span class="mini-badges" aria-hidden="true">${s.checks.map(c => html`<i key=${c.uf} class=${'mini is-' + (c.dupla.avaliavel ? STATUS(c.dupla.acertos) : 'na')}></i>`)}</span>
       </button>
     </li>`)}</ul>

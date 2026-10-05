@@ -30,7 +30,7 @@ function scaleY(values) {
  * (faixa azul); abaixo, Lula (faixa vermelha). A linha clara é o resultado das urnas e o traço
  * vertical de cada ponto até ela é o erro da pesquisa.
  */
-export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
+export function GapChart({ rows, urna, highlight: requested, onHighlight, describedBy }) {
   const [ref, width] = useWidth();
   const [active, setActive] = useState(null);
   const pointRefs = useRef([]);
@@ -39,6 +39,8 @@ export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
   const offsets = useMemo(() => jitter(dated), [dated]);
   const finalRows = useMemo(() => new Set(finais(rows)), [rows]);
   const institutes = useMemo(() => [...new Set(dated.map(r => r.inst))].sort((a, b) => a.localeCompare(b, 'pt-BR')), [dated]);
+  // Um instituto destacado que não tem pesquisas na base atual deixa de estar destacado.
+  const highlight = institutes.includes(requested) ? requested : null;
   const height = width < 560 ? 270 : 320;
 
   let plot = null;
@@ -51,6 +53,7 @@ export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
     const focus = active != null ? dated[active] : null;
     const highlighted = highlight ? dated.filter(r => r.inst === highlight) : [];
 
+    const toggle = index => onHighlight(highlight === dated[index].inst ? null : dated[index].inst);
     const move = (index, step) => {
       const next = Math.max(0, Math.min(dated.length - 1, index + step));
       pointRefs.current[next]?.focus();
@@ -62,8 +65,13 @@ export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
       else if (event.key === 'End') { event.preventDefault(); move(dated.length - 1, 0); }
       else if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        onHighlight(highlight === dated[index].inst ? null : dated[index].inst);
-      } else if (event.key === 'Escape') setActive(null);
+        toggle(index);
+      } else if (event.key === 'Escape') {
+        // Fecha só o cartão do ponto; não deixa o Esc chegar ao atalho global de "voltar".
+        event.preventDefault();
+        event.stopPropagation();
+        setActive(null);
+      }
     };
     const roving = active ?? dated.length - 1;
     const tipLeft = focus ? Math.max(0, Math.min(width - 236, px(focus) + 14 > width - 236 ? px(focus) - 250 : px(focus) + 14)) : 0;
@@ -106,7 +114,7 @@ export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
             aria-pressed=${highlight === row.inst}
             onFocus=${() => setActive(index)} onBlur=${() => setActive(current => current === index ? null : current)}
             onPointerEnter=${() => setActive(index)} onPointerLeave=${event => { if (event.pointerType === 'mouse') setActive(null); }}
-            onClick=${() => { setActive(index); }} onKeyDown=${event => onKeyDown(event, index)}>
+            onClick=${() => { setActive(index); toggle(index); }} onKeyDown=${event => onKeyDown(event, index)}>
             <circle class="hit" cx=${px(row)} cy=${y(row.distancia)} r="12"/>
             <circle class="dot" cx=${px(row)} cy=${y(row.distancia)} r=${finalRows.has(row) ? 6 : 4.5}/>
           </g>`;

@@ -1,20 +1,32 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { html } from '../lib/html.js';
-import { normalize } from '../lib/format.js';
+import { normalize, plural } from '../lib/format.js';
 import { STATES } from '../data/meta.js';
 import { Icon } from './Icon.js';
 
 const SUGGESTIONS = ['SP', 'RJ', 'MG'];
 
+/** Pesquisas distintas (a mesma pesquisa divulgada em VV e VT conta uma vez). */
+const distinctPolls = polls => new Set((polls ?? []).map(p => p.inst + (p.div ?? '?'))).size;
+
+/** Sigla exata primeiro, depois nomes que começam com o termo, depois os que só o contêm. */
+function rank(needle, name, code) {
+  if (code && code.toLowerCase() === needle) return 0;
+  const text = normalize(name);
+  if (text.startsWith(needle)) return 1;
+  if (text.split(/\s+/).some(word => word.startsWith(needle))) return 2;
+  return text.includes(needle) ? 3 : null;
+}
+
 function findPlaces(query, institutes, pollsByUf) {
   const needle = normalize(query.trim());
   const states = Object.entries(STATES)
-    .filter(([uf, [name]]) => !needle ? SUGGESTIONS.includes(uf) : normalize(name).includes(needle) || uf.toLowerCase() === needle)
-    .map(([uf, [name, region]]) => ({ type: 'state', id: uf, name, detail: `UF · ${region}${pollsByUf[uf]?.length ? ` · ${pollsByUf[uf].length} pesquisas de Senado` : ''}`, tag: uf }));
+    .map(([uf, [name, region]]) => ({ type: 'state', id: uf, name, tag: uf, order: needle ? rank(needle, name, uf) : SUGGESTIONS.includes(uf) ? 1 : null,
+      detail: `UF · ${region}${pollsByUf[uf]?.length ? ` · ${plural(distinctPolls(pollsByUf[uf]), 'pesquisa', 'pesquisas')} de Senado` : ''}` }));
   const insts = institutes
-    .filter(name => !needle ? ['Datafolha', 'Quaest', 'AtlasIntel'].includes(name) : normalize(name).includes(needle))
-    .map(name => ({ type: 'institute', id: name, name, detail: 'Instituto de pesquisa', tag: name.slice(0, 2).toUpperCase() }));
-  return [...states, ...insts];
+    .map(name => ({ type: 'institute', id: name, name, detail: 'Instituto de pesquisa', tag: name.slice(0, 2).toUpperCase(),
+      order: needle ? rank(needle, name) : ['Datafolha', 'Quaest', 'AtlasIntel'].includes(name) ? 4 : null }));
+  return [...states, ...insts].filter(place => place.order != null).sort((a, b) => a.order - b.order);
 }
 
 export function SearchDialog({ institutes, pollsByUf, onState, onInstitute, onClose }) {

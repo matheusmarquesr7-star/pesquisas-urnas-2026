@@ -1,6 +1,7 @@
 import { html } from '../lib/html.js';
-import { longDate, num, pct } from '../lib/format.js';
-import { FINAL_WEEK } from '../lib/metrics.js';
+import { longDate, num, pct, shortDate } from '../lib/format.js';
+import { distancia, FINAL_WEEK, resultShares, totais, validos } from '../lib/metrics.js';
+import { leadText } from './GapChart.js';
 import { BackButton } from './ui.js';
 
 export const REPO = 'https://github.com/matheusmarquesr7-star/pesquisas-urnas-2026';
@@ -15,12 +16,18 @@ const SOURCES = [
   ['TSE: resultados oficiais (para conferência)', 'https://resultados.tse.jus.br/'],
 ];
 
-export function Methodology({ result, onBack, updated }) {
+const names = polls => polls.map(p => `${p.inst} (${shortDate(p.divulgacao)})`).join(', ');
+
+export function Methodology({ result, polls, onBack, updated }) {
   const blank = result.comparecimento.brancos_pct + result.comparecimento.nulos_pct;
+  const dates = polls.map(p => p.divulgacao).filter(Boolean).sort();
+  const noValid = polls.filter(p => !validos(p));
+  const noTotal = polls.filter(p => !totais(p));
+  const gap = leadText(distancia(resultShares(result)), 2);
   return html`<article class="methodology" aria-labelledby="metodologia-titulo">
     <div class="methodology-nav"><${BackButton} to="o painel" onClick=${onBack}/></div>
     <h2 id="metodologia-titulo">Como o site compara pesquisas e urnas</h2>
-    <p class="lead">Juntamos as principais pesquisas divulgadas entre 16 de agosto e 3 de outubro de 2026 e medimos quanto cada uma se afastou do resultado do 1º turno, em 4 de outubro. Dados atualizados em ${longDate(updated)}.</p>
+    <p class="lead">Juntamos as principais pesquisas divulgadas entre ${longDate(dates[0])} e ${longDate(dates.at(-1))} de 2026 e medimos quanto cada uma se afastou do resultado do 1º turno, em ${longDate(result.data)}. Dados atualizados em ${longDate(updated)}.</p>
 
     <section>
       <h3>Votos válidos × votos totais</h3>
@@ -29,13 +36,13 @@ export function Methodology({ result, onBack, updated }) {
 
     <section>
       <h3>Quando recalculamos os válidos</h3>
-      <p>Se o instituto só divulgou votos totais, recalculamos: <code>válido = total × 100 ÷ (100 − brancos − nulos − indecisos)</code>. Esses valores aparecem com <b>*</b>. Sem brancos, nulos e indecisos divulgados (AtlasIntel de 10/set), não há como recalcular e a pesquisa só aparece em votos totais. Gerp e Futura divulgaram apenas válidos e, por isso, ficam de fora da base de votos totais.</p>
+      <p>Se o instituto só divulgou votos totais, recalculamos: <code>válido = total × 100 ÷ (100 − brancos − nulos − indecisos)</code>. Esses valores aparecem com <b>*</b>.${noValid.length ? ` Sem brancos, nulos e indecisos divulgados (${names(noValid)}), não há como recalcular, e a pesquisa só aparece em votos totais.` : ''}${noTotal.length ? ` ${names(noTotal)} ${noTotal.length > 1 ? 'divulgaram' : 'divulgou'} apenas válidos e por isso ${noTotal.length > 1 ? 'ficam' : 'fica'} de fora da base de votos totais.` : ''}</p>
     </section>
 
     <section>
       <h3>As medidas de erro</h3>
       <ul>
-        <li><b>Distância</b> = Flávio − Lula. Positiva: Flávio à frente. Nas urnas, Flávio +1,87 ponto.</li>
+        <li><b>Distância</b> = Flávio − Lula. Positiva: Flávio à frente. Nas urnas: ${gap}.</li>
         <li><b>Erro na distância</b> = |distância da pesquisa − distância das urnas|. É a medida principal do ranking: diz quanto a pesquisa errou a diferença entre os dois primeiros.</li>
         <li><b>Erro médio</b> = média de |pesquisa − urna| entre os candidatos que aparecem na pesquisa e no resultado.</li>
         <li><b>Viés</b> = distância da pesquisa − distância das urnas, com sinal. Negativo: subestimou Flávio em relação a Lula.</li>

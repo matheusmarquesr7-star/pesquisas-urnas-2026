@@ -1,6 +1,6 @@
 import { useMemo } from 'preact/hooks';
 import { html } from '../lib/html.js';
-import { num, pct, pp, shortDate } from '../lib/format.js';
+import { num, pct, plural, pp, shortDate } from '../lib/format.js';
 import { acertouDupla, dayNumber, differences, displayValues, elected, senateLatest, seatsByParty } from '../lib/metrics.js';
 import { BLOC_ORDER, blocOf, BLOCS, STATES, stateName, UFS } from '../data/meta.js';
 import { blocColor, inkOn } from '../map/colors.js';
@@ -117,7 +117,7 @@ function BiggestMisses({ misses, onState }) {
 }
 
 function PartyBias({ bias }) {
-  const parties = ['PL', 'PT', 'PSB', 'MDB', 'PP', 'Novo', 'União', 'PSD'].filter(p => bias[p]?.n >= 3);
+  const parties = Object.keys(bias).filter(p => bias[p].candidatos >= 3).sort((a, b) => Math.abs(bias[b].media) - Math.abs(bias[a].media));
   return html`<section class="insight" aria-labelledby="vies-partido">
     <${SectionHead} id="vies-partido" title="Quem as pesquisas subestimaram"><span class="section-count">média de pesquisa − urna, votos válidos</span><//>
     <ul class="hbars is-diverging">${parties.map(party => {
@@ -127,10 +127,10 @@ function PartyBias({ bias }) {
         <span class="hbar-track is-diverging"><i class=${'tone-' + toneOfParty(party) + (value < 0 ? ' is-negative' : '')}
           style=${{ width: Math.min(50, Math.abs(value) * 6) + '%' }}></i></span>
         <b>${pp(value, 1, true)}</b>
-        <small class="muted">${bias[party].n} cand.</small>
+        <small class="muted" title=${`${plural(bias[party].n, 'medição', 'medições')} de ${plural(bias[party].candidatos, 'candidato', 'candidatos')}`}>${bias[party].candidatos} cand.</small>
       </li>`;
     })}</ul>
-    <p class="note">Negativo: o partido teve nas urnas mais do que as pesquisas indicavam. Só partidos com pelo menos 3 candidatos medidos.</p>
+    <p class="note">Negativo: o partido teve nas urnas mais do que as pesquisas indicavam. Só partidos com pelo menos 3 candidatos medidos; cada candidato pode ter sido medido por mais de um instituto.</p>
   </section>`;
 }
 
@@ -243,7 +243,7 @@ export function SenateState({ uf, ufResult, polls, base, route }) {
         </div>
       </div>
       <h2>${stateName(uf)}</h2>
-      <p>${STATES[uf][1]} · Senado, 2 vagas · ${ufResult.apurado ? `${num(ufResult.apurado, 2)}% apurado` : 'apuração final'}</p>
+      <p>${STATES[uf][1]} · Senado, 2 vagas · ${ufResult.apurado != null ? `${num(ufResult.apurado, ufResult.apurado === 100 ? 0 : 2)}% apurado` : '% apurado não informado pela fonte'}</p>
     </header>
 
     <section class="panel-section">
@@ -279,7 +279,7 @@ export function SenateSide({ resultByUf, pollsByUf, checks, route, theme }) {
       const colors = pair.map(c => blocColor(theme, blocOf(c[1])));
       return html`<li key=${uf}>
         <button class="place-row senate-row" aria-pressed=${route.uf === uf} onClick=${() => route.openState(uf, 'senado')}
-          aria-label=${`${stateName(uf)}: ${pair.map(c => `${c[0]} (${c[1]})`).join(' e ')}${list.length ? `; ${list.length} institutos checados` : '; sem pesquisas'}`}>
+          aria-label=${`${stateName(uf)}: ${pair.map(c => `${c[0]} (${c[1]})`).join(' e ')}${list.length ? `; ${plural(list.length, 'instituto checado', 'institutos checados')}` : '; sem pesquisas'}`}>
           <span class="place-tag" style=${{ background: `linear-gradient(90deg, ${colors[0]} 50%, ${colors[1]} 50%)`, color: '#fff', textShadow: '0 0 3px rgba(0,0,0,.7)' }}>${uf}</span>
           <span class="place-name"><strong>${stateName(uf)}</strong><small>${pair.map(c => `${c[0]} (${c[1]})`).join(' · ')}</small></span>
           <span class="mini-badges" aria-hidden="true">${list.length

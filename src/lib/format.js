@@ -38,6 +38,9 @@ export function longDate(iso) {
   return new Date(iso + 'T12:00:00Z').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
 }
 
+/** '1 pesquisa' / '2 pesquisas'. */
+export const plural = (n, one, many) => `${int(n)} ${n === 1 ? one : many}`;
+
 export const normalize = text => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 export const slug = text => normalize(text).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

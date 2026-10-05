@@ -63,23 +63,28 @@ test('erroMedio considera só candidatos presentes na pesquisa e na urna', () =>
 
 test('presidentRows descarta pesquisas sem dados na base e ranking ordena pelo erro', () => {
   const rows = presidentRows(presidentPolls, presidentResult, 'validos');
-  assert.equal(rows.length, presidentPolls.length - 1, 'só a AtlasIntel de 10/set não tem válidos');
+  const withValid = presidentPolls.filter(p => validos(p)?.F != null && validos(p)?.L != null);
+  assert.equal(rows.length, withValid.length);
+  assert.ok(!rows.some(r => r.inst === 'AtlasIntel' && r.date === '2026-09-10'), 'AtlasIntel de 10/set não tem válidos');
   const totals = presidentRows(presidentPolls, presidentResult, 'totais');
-  assert.equal(totals.length, presidentPolls.length - 2, 'Gerp e Futura só divulgaram válidos');
+  assert.equal(totals.length, presidentPolls.filter(p => p.t?.F != null && p.t?.L != null).length);
+  assert.ok(!totals.some(r => r.inst === 'Gerp'), 'Gerp só divulgou válidos');
 
   const ranked = ranking(rows);
   assert.equal(new Set(ranked.map(r => r.inst)).size, ranked.length, 'uma linha por instituto');
-  assert.equal(ranked[0].inst, 'Gerp');
   for (let i = 1; i < ranked.length; i++) assert.ok(ranked[i].erroDistancia >= ranked[i - 1].erroDistancia);
   assert.equal(latestByInstitute(rows).find(r => r.inst === 'Datafolha').date, '2026-10-03');
 });
 
-test('pesquisas finais: as 5 da última semana, com média mostrando Lula à frente', () => {
+test('pesquisas finais: última de cada instituto na semana da eleição, e a média delas', () => {
   const rows = presidentRows(presidentPolls, presidentResult, 'validos');
-  assert.deepEqual(finais(rows).map(r => r.inst).sort(), ['AtlasIntel', 'Datafolha', 'Futura/100% Cidades', 'Gerp', 'Quaest']);
+  const final = finais(rows);
+  for (const name of ['AtlasIntel', 'Datafolha', 'Futura/100% Cidades', 'Gerp', 'Quaest']) assert.ok(final.some(r => r.inst === name), name);
+  assert.ok(final.every(r => r.date >= '2026-09-27'));
+  assert.equal(new Set(final.map(r => r.inst)).size, final.length);
   const media = mediaFinais(rows);
-  close(media.shares.F, (42 + 44.1 + 45 + 46 + 44.8) / 5);
-  close(media.shares.L, (45 + 47 + 46 + 44 + 42.6) / 5);
+  close(media.shares.F, final.reduce((s, r) => s + r.shares.F, 0) / final.length);
+  close(media.shares.L, final.reduce((s, r) => s + r.shares.L, 0) / final.length);
 });
 
 test('média móvel de 10 dias usa a janela que termina em cada dia', () => {

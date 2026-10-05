@@ -253,13 +253,14 @@ export function partyBias(pollsByUf, resultByUf) {
     const party = Object.fromEntries(resultByUf[uf].c.map(c => [c[0], c[1]]));
     for (const poll of senateLatest(polls).filter(comparable)) {
       for (const [name, diff] of Object.entries(differences(poll, resultByUf[uf]))) {
-        const list = byParty.get(party[name]) ?? [];
-        list.push(diff);
-        byParty.set(party[name], list);
+        const entry = byParty.get(party[name]) ?? { diffs: [], names: new Set() };
+        entry.diffs.push(diff);
+        entry.names.add(uf + name);
+        byParty.set(party[name], entry);
       }
     }
   }
-  return Object.fromEntries([...byParty.entries()].map(([party, diffs]) => [party, { media: mean(diffs), n: diffs.length }]));
+  return Object.fromEntries([...byParty.entries()].map(([party, { diffs, names }]) => [party, { media: mean(diffs), n: diffs.length, candidatos: names.size }]));
 }
 
 /** Maiores erros individuais (|pesquisa − urna|) nas pesquisas VV mais recentes de cada instituto. */
@@ -278,8 +279,8 @@ export function biggestMisses(pollsByUf, resultByUf, limit = 6) {
 /* ---------------------------------------------------------------- Institutos */
 
 /** Tudo o que se sabe de cada instituto, juntando Presidente (base válidos) e Senado. */
-export function instituteStats(presRows, checks, senatePolls) {
-  const names = new Set([...presRows.map(r => r.inst), ...checks.map(c => c.inst)]);
+export function instituteStats(presRows, checks, senatePolls, allNames = []) {
+  const names = new Set([...allNames, ...presRows.map(r => r.inst), ...checks.map(c => c.inst)]);
   const senateCount = new Map();
   for (const polls of Object.values(senatePolls)) {
     const seen = new Set();
@@ -330,7 +331,8 @@ export function highlights(presRows, stats, checks, bias) {
   const rated = checks.filter(c => c.dupla.avaliavel);
   if (rated.length) {
     lines.push({ kind: 'senate', hits: rated.filter(c => c.dupla.acertos === 2).length, total: rated.length });
-    const ranked = stats.filter(s => s.ufs >= 3 && s.taxaDupla != null).sort((a, b) => b.taxaDupla - a.taxaDupla || a.erroSenado - b.erroSenado);
+    const byError = (a, b) => (a.erroSenado ?? Infinity) - (b.erroSenado ?? Infinity);
+    const ranked = stats.filter(s => s.ufs >= 3 && s.taxaDupla != null).sort((a, b) => b.taxaDupla - a.taxaDupla || byError(a, b));
     if (ranked.length) lines.push({ kind: 'senateBest', stat: ranked[0], worst: ranked.at(-1) });
   }
   if (bias?.PL && bias?.PT) lines.push({ kind: 'partyBias', pl: bias.PL, pt: bias.PT });

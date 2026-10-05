@@ -55,7 +55,7 @@ export function App({ geo }) {
   const media = useMemo(() => mediaFinais(rows), [rows]);
   const rank = useMemo(() => ranking(rows), [rows]);
   const checks = useMemo(() => senateChecks(senatePolls, senateResult), []);
-  const stats = useMemo(() => instituteStats(rows, checks, senatePolls), [rows, checks]);
+  const stats = useMemo(() => instituteStats(rows, checks, senatePolls, INSTITUTES), [rows, checks]);
   const bias = useMemo(() => partyBias(senatePolls, senateResult), []);
   const misses = useMemo(() => biggestMisses(senatePolls, senateResult, 6), []);
   const lines = useMemo(() => highlights(rows, stats, checks, bias), [rows, stats, checks, bias]);
@@ -76,7 +76,7 @@ export function App({ geo }) {
   }, [uf, inst, view]);
   useEffect(() => { if (!uf && !inst) setTab('main'); }, [view]);
   useEffect(() => {
-    const close = () => document.querySelector('.main-column, .panel-body')?.scrollTo?.({ top: 0 });
+    const close = () => document.querySelectorAll('.main-column, .panel-body').forEach(el => el.scrollTo?.({ top: 0 }));
     addEventListener('route:navigate', close);
     return () => removeEventListener('route:navigate', close);
   }, []);
@@ -90,7 +90,7 @@ export function App({ geo }) {
   if (view === 'metodologia') {
     return html`<div class="app is-article">
       <${TopBar} route=${nav} theme=${theme} onToggleTheme=${toggleTheme} onSearch=${() => setSearching(true)}/>
-      <main><${Methodology} result=${presidentResult} onBack=${route.back} updated=${UPDATED}/></main>
+      <main><${Methodology} result=${presidentResult} polls=${presidentPolls} onBack=${route.back} updated=${UPDATED}/></main>
       ${searching && html`<${SearchDialog} institutes=${INSTITUTES} pollsByUf=${senatePolls} onState=${code => nav.openState(code, 'senado')}
         onInstitute=${nav.openInstituteByName} onClose=${() => setSearching(false)}/>`}
     </div>`;
@@ -103,7 +103,7 @@ export function App({ geo }) {
     main = html`<${PresidentMain} rows=${rows} urna=${urna} media=${media} rank=${rank} excluded=${excluded} base=${base}/>`;
     side = html`<${PresidentSide} result=${presidentResult} route=${nav} theme=${theme}/>`;
     tabs = { main: 'Pesquisas', side: uf ? `UF: ${uf}` : 'Estados' };
-    stageTitle = html`Presidente por UF<span>quem venceu e por quanto</span>`;
+    stageTitle = html`Presidente por UF <span>quem venceu e por quanto</span>`;
     legend = html`<${PresidentLegend} theme=${theme}/>`;
     map = {
       paint: presidentPaint(presidentResult, theme),
@@ -125,7 +125,7 @@ export function App({ geo }) {
       : html`<${SenateNational} resultByUf=${senateResult} stats=${stats} checks=${checks} misses=${misses} bias=${bias} route=${nav}/>`;
     side = html`<${SenateSide} resultByUf=${senateResult} pollsByUf=${senatePolls} checks=${checks} route=${nav} theme=${theme}/>`;
     tabs = { main: uf ? 'Resultado e pesquisas' : 'Resumo', side: 'Eleitos por UF' };
-    stageTitle = html`Senado<span>as duas vagas de cada UF</span>`;
+    stageTitle = html`Senado <span>as duas vagas de cada UF</span>`;
     legend = html`<${SenateLegend}/>`;
     map = {
       paint: senatePaint(senateResult, theme),
@@ -140,7 +140,7 @@ export function App({ geo }) {
     side = html`<${InstitutesSide} stats=${stats} selected=${inst} rows=${rows} onSelect=${nav.openInstituteByName}
       onBack=${route.back} onState=${code => nav.openState(code, 'senado')}/>`;
     tabs = { main: 'Ranking', side: inst ? 'Detalhe' : 'Institutos' };
-    stageTitle = html`${inst ?? 'Todos os institutos'}<span>acertou a dupla do Senado?</span>`;
+    stageTitle = html`${inst ?? 'Todos os institutos'} <span>acertou a dupla do Senado?</span>`;
     legend = html`<${InstitutesLegend} selected=${inst}/>`;
     map = {
       paint: institutesPaint(checks, inst, theme),
