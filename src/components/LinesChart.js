@@ -4,8 +4,9 @@ import { pct, shortDate } from '../lib/format.js';
 import { dayNumber, ELECTION_DAY, isoFromDay, movingAverage } from '../lib/metrics.js';
 import { CANDIDATES } from '../data/meta.js';
 import { useWidth } from '../hooks/useWidth.js';
+import { EventKey, EventMarks } from './Events.js';
 
-const MARGIN = { top: 14, right: 104, bottom: 28, left: 34 };
+const MARGIN = { top: 30, right: 104, bottom: 28, left: 34 };
 const LAST_DAY = dayNumber(ELECTION_DAY);
 const SERIES = ['F', 'L'];
 const MIN_LABEL_GAP = 16;
@@ -70,6 +71,7 @@ export function LinesChart({ rows, urna, base }) {
         </g>`)}
         ${X_TICKS.map((iso, i) => html`<text key=${iso} class="chart-tick" x=${x(dayNumber(iso))} y=${height - 8}
           text-anchor=${i === 0 ? 'start' : i === X_TICKS.length - 1 ? 'end' : 'middle'}>${shortDate(iso)}</text>`)}
+        <${EventMarks} x=${x} top=${MARGIN.top} bottom=${MARGIN.top + innerHeight}/>
         <line class="chart-election" x1=${x(LAST_DAY)} x2=${x(LAST_DAY)} y1=${MARGIN.top} y2=${MARGIN.top + innerHeight}/>
         ${hoverDay != null && html`<line class="chart-crosshair" x1=${x(hoverDay)} x2=${x(hoverDay)} y1=${MARGIN.top} y2=${MARGIN.top + innerHeight}/>`}
 
@@ -98,6 +100,7 @@ export function LinesChart({ rows, urna, base }) {
       ${SERIES.map(key => html`<li key=${key}><i class=${'line-key tone-' + CANDIDATES[key].tone}></i>${CANDIDATES[key].name} (${CANDIDATES[key].party})</li>`)}
       <li><i class="dot-key is-hollow"></i>Pontos: pesquisas · linhas: média móvel de 10 dias</li>
       <li><i class="diamond-key"></i>Urnas</li>
+      <${EventKey}/>
     </ul>
     <div class="chart-plot" ref=${ref} style=${{ height: height + 'px' }}>${plot}</div>
   </div>`;

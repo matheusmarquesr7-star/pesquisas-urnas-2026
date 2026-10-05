@@ -3,7 +3,7 @@ import { html } from './lib/html.js';
 import { shortDate } from './lib/format.js';
 import {
   biggestMisses, duplaPorUf, highlights, instituteStats, mediaFinais, partyBias, presidentRows, ranking, resultShares,
-  senateChecks, senatePoints,
+  senateChecks,
 } from './lib/metrics.js';
 import { stateName, UFS } from './data/meta.js';
 import { useHotkey } from './hooks/useHotkey.js';
@@ -54,7 +54,6 @@ export function App({ data }) {
   const bias = useMemo(() => partyBias(senatePolls, senateResult), []);
   const misses = useMemo(() => biggestMisses(senatePolls, senateResult, 6), []);
   const lines = useMemo(() => highlights(rows, stats, checks, bias), [rows, stats, checks, bias]);
-  const points = useMemo(() => senatePoints(senatePolls, senateResult), []);
   const dupla = useMemo(() => duplaPorUf(checks, UFS), [checks]);
 
   const nav = {
@@ -101,7 +100,7 @@ export function App({ data }) {
     side = html`<${PresidentSide} result=${presidentResult} route=${nav} theme=${theme}/>`;
     tabs = { main: 'Pesquisas', side: uf ? `UF: ${uf}` : 'Estados' };
     stageTitle = html`Pesquisas × urnas <span>o que se esperava e o que saiu</span>`;
-    compare = html`<${PresidentCompare} rows=${rows} urna=${urna} base=${base} onInstitute=${nav.openInstituteByName}/>`;
+    compare = html`<${PresidentCompare} key=${base} result=${presidentResult} rows=${rows} urna=${urna} base=${base}/>`;
   } else if (view === 'senado') {
     board = html`<${SenateScoreboard} resultByUf=${senateResult} pollsByUf=${senatePolls} checks=${checks}/>`;
     main = uf
@@ -110,7 +109,7 @@ export function App({ data }) {
     side = html`<${SenateSide} resultByUf=${senateResult} pollsByUf=${senatePolls} checks=${checks} route=${nav} theme=${theme}/>`;
     tabs = { main: uf ? 'Resultado e pesquisas' : 'Resumo', side: 'Eleitos por UF' };
     stageTitle = html`Pesquisas × urnas <span>${uf ? stateName(uf) : 'Senado'}</span>`;
-    compare = html`<${SenateCompare} uf=${uf} resultByUf=${senateResult} pollsByUf=${senatePolls} points=${points} dupla=${dupla}
+    compare = html`<${SenateCompare} uf=${uf} resultByUf=${senateResult} pollsByUf=${senatePolls} dupla=${dupla}
       onState=${code => nav.openState(code, 'senado')}/>`;
   } else {
     board = html`<${InstitutesScoreboard} lines=${lines}/>`;
@@ -119,8 +118,8 @@ export function App({ data }) {
       onBack=${route.back} onState=${code => nav.openState(code, 'senado')}/>`;
     tabs = { main: 'Ranking', side: inst ? 'Detalhe' : 'Institutos' };
     stageTitle = html`${inst ?? 'Todos os institutos'} <span>pesquisas × urnas</span>`;
-    compare = html`<${InstitutesCompare} inst=${inst} rows=${rows} urna=${urna} points=${points}
-      onSelect=${nav.openInstituteByName} onState=${code => nav.openState(code, 'senado')}/>`;
+    compare = html`<${InstitutesCompare} inst=${inst} result=${presidentResult} rows=${rows} urna=${urna} base=${base}
+      onSelect=${nav.openInstituteByName}/>`;
   }
 
   const current = wide ? null : tab;

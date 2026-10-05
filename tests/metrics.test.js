@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   acertouDupla, biggestMisses, displayValues, distancia, duplaPorUf, erroDistancia, erroMedio, finais, finaisPorCandidato,
   latestByInstitute, mediaFinais, movingAverage, ordem, presidentRows, ranking, recalculado, resultShares, senateChecks,
-  senateExpected, senateLatest, senateMeanError, senatePoints, seatsByParty, topTwo, validos, vies,
+  senateLatest, senateMeanError, senatePoints, seatsByParty, topTwo, validos, vies,
 } from '../src/lib/metrics.js';
 import { pp, pct, shortDate, initials } from '../src/lib/format.js';
 import { presidentPolls, presidentResult, senatePolls, senateResult } from './load.js';
@@ -183,16 +183,6 @@ test('Presidente: finais × urna por candidato usa só as pesquisas finais que m
   assert.equal(rest.length, 0, 'Zema sem nenhuma medição sai da lista');
 });
 
-test('Senado: pesquisa × urna por UF faz a média das pesquisas VV mais recentes de cada instituto', () => {
-  // PR: AtlasIntel (03/10) e Quaest (03/10), ambas em votos válidos.
-  const expected = Object.fromEntries(senateExpected(senatePolls.ufs.PR, senateResult.ufs.PR).map(e => [e.name, e]));
-  close(expected['Filipe Barros'].media, (23.6 + 25) / 2);
-  close(expected['Filipe Barros'].diff, 24.3 - 27.25);
-  close(expected['Gleisi Hoffmann'].diff, (19 + 15) / 2 - 13.35);
-  assert.equal(expected['Alexandre Curi'].n, 1, 'só a Quaest mediu Curi');
-  assert.equal(expected['Deltan Dallagnol'].eleito, true);
-  assert.equal(senateExpected([], senateResult.ufs.PR).length, 0);
-});
 
 test('Senado: pontos do gráfico pesquisa × urna batem com os maiores erros', () => {
   const points = senatePoints(senatePolls.ufs, senateResult.ufs);

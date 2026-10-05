@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { UFS } from '../src/data/meta.js';
-import { presidentPolls, presidentResult, senatePolls, senateResult } from './load.js';
+import { events, presidentPolls, presidentResult, senatePolls, senateResult } from './load.js';
 
 const ISO = /^2026-\d{2}-\d{2}$/;
 const BASES = ['VV', 'VT', '200', 'n/e'];
@@ -90,3 +90,15 @@ test('Senado: toda pesquisa tem instituto, data (ou null explícito) e base vál
   }
 });
 
+
+test('Acontecimentos: data da campanha, tema conhecido, título e fonte em cada um', () => {
+  const temas = ['campanha', 'debate', 'master', 'bets', 'justica'];
+  assert.ok(events.length > 0);
+  for (const e of events) {
+    assert.match(e.data, ISO, e.titulo);
+    assert.ok(e.data >= '2026-08-16' && e.data <= '2026-10-04', `${e.titulo}: fora da campanha`);
+    assert.ok(temas.includes(e.tema), `${e.titulo}: tema ${e.tema}`);
+    assert.ok(e.titulo && e.resumo, 'título e resumo');
+    assert.ok(e.fonte.startsWith('https://'), `${e.titulo}: fonte`);
+  }
+});

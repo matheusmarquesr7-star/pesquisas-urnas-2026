@@ -1,0 +1,58 @@
+[
+ {
+  "data": "2026-08-16",
+  "tema": "campanha",
+  "titulo": "Começa a campanha",
+  "resumo": "Início oficial da campanha do 1º turno.",
+  "fonte": "https://odiario.net/banco-master-o-escandalo-financeiro-que-agita-a-campanha-presidencial-no-brasil/"
+ },
+ {
+  "data": "2026-08-23",
+  "tema": "debate",
+  "titulo": "Debate da Band sem Lula e Flávio",
+  "resumo": "Os dois líderes faltam ao 1º debate. Caiado, Renan e Cury atacam as ausências.",
+  "fonte": "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/8/15/sem-a-confirmacao-de-lula-e-flavio-bolsonaro-band-marca-debate-presidencial-para-23-de-agosto"
+ },
+ {
+  "data": "2026-09-09",
+  "tema": "master",
+  "titulo": "Caso Master: Fachin para apuração da PGR",
+  "resumo": "O presidente do STF suspende a apuração sobre os policiais que relataram mensagens de Vorcaro a Moraes.",
+  "fonte": "https://www.brasil247.com/brasil/fachin-suspende-procedimento-de-gonet-para-investigar-policiais-por-relatorio-sobre-mensagens-de-vorcaro-a-moraes/"
+ },
+ {
+  "data": "2026-09-11",
+  "tema": "master",
+  "titulo": "Caso Master: Flávio é investigado pela PF",
+  "resumo": "Cai o sigilo do caso. Vem a público que a PF investiga Flávio pelo financiamento do filme sobre o pai.",
+  "fonte": "https://www.metropoles.com/brasil/flavio-defende-fim-dos-sigilos-do-caso-master-e-pede-investigacao-de-dino"
+ },
+ {
+  "data": "2026-09-11",
+  "tema": "justica",
+  "titulo": "TSE cassa a candidatura de Pablo Marçal",
+  "resumo": "Por unanimidade. O PRTB passa a ter Leonardo Avalanche como candidato.",
+  "fonte": "https://pt.wikipedia.org/wiki/Elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026"
+ },
+ {
+  "data": "2026-09-25",
+  "tema": "bets",
+  "titulo": "Governo proíbe as bets",
+  "resumo": "Lula assina a MP 1.394, que proíbe as apostas de quota fixa no país.",
+  "fonte": "https://www.nexojornal.com.br/expresso/2026/09/29/governo-proibe-bets-stf-mp-congresso"
+ },
+ {
+  "data": "2026-09-28",
+  "tema": "bets",
+  "titulo": "Bets vão ao STF contra a proibição",
+  "resumo": "Associações do setor pedem a suspensão imediata da MP.",
+  "fonte": "https://www.jota.info/stf/do-supremo/associacoes-de-bets-vao-ao-stf-contra-proibicao-das-apostas-no-brasil"
+ },
+ {
+  "data": "2026-10-01",
+  "tema": "debate",
+  "titulo": "Globo cancela o último debate",
+  "resumo": "Lula e Flávio desistem, e decisões judiciais mudam as regras na véspera.",
+  "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/sem-flavio-e-lula-globo-cancela-debate-presidencial/"
+ }
+]

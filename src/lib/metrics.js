@@ -304,20 +304,6 @@ export function biggestMisses(pollsByUf, resultByUf, limit = 6) {
   return senatePoints(pollsByUf, resultByUf).sort((a, b) => Math.abs(b.diff) - Math.abs(a.diff)).slice(0, limit);
 }
 
-/**
- * Numa UF: média de cada candidato nas pesquisas VV mais recentes de cada instituto × resultado.
- * Candidatos sem resultado conhecido ficam de fora; ordem do resultado.
- */
-export function senateExpected(polls, ufResult) {
-  const latest = senateLatest(polls ?? []).filter(comparable);
-  return ufResult.c.filter(c => c[2] != null).map(([name, party, urna, eleito]) => {
-    const values = latest.map(p => p.x[name]).filter(v => v != null);
-    if (!values.length) return null;
-    const media = mean(values);
-    return { name, party, eleito, media, urna, diff: media - urna, n: values.length, min: Math.min(...values), max: Math.max(...values) };
-  }).filter(Boolean);
-}
-
 /** Acerto da dupla por UF: quantas checagens deram 2/2, 1/2, 0/2 ou não eram avaliáveis. */
 export function duplaPorUf(checks, ufs) {
   return ufs.map(uf => {

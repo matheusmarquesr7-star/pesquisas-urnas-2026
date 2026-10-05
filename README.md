@@ -17,9 +17,10 @@ A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiro
   - Gráfico da distância Flávio − Lula ao longo da campanha: a linha das urnas e o traço de erro de cada pesquisa, com destaque por instituto e navegação por teclado.
   - Gráfico de linhas com média móvel de 10 dias.
   - Ranking da véspera, tabela completa e resultado por UF.
-  - Pesquisas × urnas: quanto cada candidato teve a mais ou a menos nas pesquisas finais e a distância que cada instituto previu, contra a linha das urnas.
+  - Pesquisas × urnas: o resultado real e uma pesquisa escolhida para comparar, por data, por instituto ou pelo acontecimento da campanha (a primeira pesquisa depois dele).
+  - O que marcou a campanha: linha do tempo com fonte (debates, caso Master, proibição das bets, cassação de Marçal), com os mesmos números marcados nos gráficos.
 - **Senado**
-  - Pesquisas × urnas: dispersão com cada candidato medido (pesquisa contra urna, com a diagonal do acerto exato), acerto da dupla por UF e, com uma UF aberta, a média das pesquisas × urna de cada candidato.
+  - Pesquisas × urnas: acerto da dupla por UF e, com uma UF aberta, o resultado real e cada pesquisa da UF para comparar.
   - Vagas por partido, recalculadas dos eleitos.
   - Acerto da dupla por instituto, maiores erros e viés por partido.
   - Detalhe de cada UF:
@@ -28,7 +29,7 @@ A interface parte do projeto [open-apuracao-brazil](https://github.com/bpinheiro
     - selo "acertou a dupla?";
     - minigráficos de evolução;
     - notas de divergência e sub judice.
-- **Institutos:** tabela que junta Presidente e Senado, destaques calculados a partir dos dados e, para o instituto escolhido, a última pesquisa presidencial × urna e as medições dele no Senado.
+- **Institutos:** tabela que junta Presidente e Senado, destaques calculados a partir dos dados e, para o instituto escolhido, cada pesquisa presidencial dele × urna e a distância que previu na véspera.
 - **Metodologia:** votos válidos × totais, recálculo dos válidos, normalização das pesquisas em 200%, datas aproximadas e fontes.
 - **Controles:**
   - Seletor de base (válidos ou totais).
@@ -91,6 +92,7 @@ Os dados também ficam versionados em `src/data/`:
 | `pesquisas-presidente.json` | 44 pesquisas nacionais (`t` = votos totais, `v` = válidos, `nv` = brancos + nulos + indecisos, `aprox` = data estimada, `confirmada: false` = não encontrada em fonte aberta, marcada com † no site) |
 | `resultado-senado.json` | Candidatos por UF: `[nome, partido, % válidos, eleito]`, observações e fontes |
 | `pesquisas-senado.json` | 129 levantamentos nas 27 UFs, com base `VV`, `VT`, `200` ou `n/e` |
+| `eventos.json` | Acontecimentos da campanha: data, tema, título, resumo e fonte |
 | `divergencias.md` | Tudo o que mudou em relação aos dados iniciais e o que ficou sem fonte |
 
 O resultado vem dos arquivos oficiais do TSE, com 100% das seções totalizadas:

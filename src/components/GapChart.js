@@ -3,8 +3,9 @@ import { html } from '../lib/html.js';
 import { pct, pp, shortDate } from '../lib/format.js';
 import { dayNumber, distancia, ELECTION_DAY, finais, jitter } from '../lib/metrics.js';
 import { useWidth } from '../hooks/useWidth.js';
+import { EventKey, EventMarks } from './Events.js';
 
-const MARGIN = { top: 22, right: 92, bottom: 28, left: 34 };
+const MARGIN = { top: 38, right: 92, bottom: 28, left: 34 };
 const LAST_DAY = dayNumber(ELECTION_DAY);
 const X_TICKS = ['2026-08-16', '2026-09-01', '2026-09-15', '2026-10-04'];
 
@@ -92,8 +93,9 @@ export function GapChart({ rows, urna, highlight: requested, onHighlight, descri
         </g>`)}
         ${X_TICKS.map((iso, i) => html`<text key=${iso} class="chart-tick" x=${x(dayNumber(iso))} y=${height - 8}
           text-anchor=${i === 0 ? 'start' : i === X_TICKS.length - 1 ? 'end' : 'middle'}>${shortDate(iso)}</text>`)}
-        <line class="chart-election" x1=${x(LAST_DAY)} x2=${x(LAST_DAY)} y1=${MARGIN.top - 8} y2=${MARGIN.top + innerHeight}/>
-        <text class="chart-note" x=${x(LAST_DAY)} y=${MARGIN.top - 11} text-anchor="end">eleição</text>
+        <${EventMarks} x=${x} top=${MARGIN.top} bottom=${MARGIN.top + innerHeight}/>
+        <line class="chart-election" x1=${x(LAST_DAY)} x2=${x(LAST_DAY)} y1=${MARGIN.top - 26} y2=${MARGIN.top + innerHeight}/>
+        <text class="chart-note" x=${x(LAST_DAY) + 4} y=${MARGIN.top - 28}>eleição</text>
 
         ${dated.map(row => html`<line key=${'e' + row.id} class=${'error-stem' + (highlight && row.inst !== highlight ? ' is-dim' : '') + (highlight === row.inst || focus === row ? ' is-strong' : '')}
           x1=${px(row)} x2=${px(row)} y1=${y(row.distancia)} y2=${y(target)}/>`)}
@@ -145,6 +147,7 @@ export function GapChart({ rows, urna, highlight: requested, onHighlight, descri
       <li><i class="dot-key is-final"></i>Última de cada instituto (semana da eleição)</li>
       <li><i class="result-key"></i>Resultado das urnas</li>
       <li><i class="stem-key"></i>Erro (distância até as urnas)</li>
+      <${EventKey}/>
     </ul>
   </div>`;
 }
