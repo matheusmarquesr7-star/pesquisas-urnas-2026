@@ -59,7 +59,7 @@ export function Methodology({ result, onBack, updated }) {
 
     <section>
       <h3>Fontes e limitações</h3>
-      <p>Os números do TSE e do seuimposto.com não puderam ser lidos diretamente durante a coleta. O resultado foi conferido em veículos de imprensa que publicaram a apuração, e as divergências entre fontes, os dados parciais e as lacunas estão listados em <a href="/divergencias.md" target="_blank" rel="noopener">divergencias.md</a>. Quando o TSE publicar os arquivos finais, basta atualizar os JSON em <code>src/data/</code>.</p>
+      <p>Os números do TSE e do seuimposto.com não puderam ser lidos diretamente durante a coleta. O resultado foi conferido em veículos de imprensa que publicaram a apuração, e as divergências entre fontes, os dados parciais e as lacunas estão listados em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>. Quando o TSE publicar os arquivos finais, basta atualizar os JSON em <code>src/data/</code>.</p>
       <ul class="sources">${SOURCES.map(([label, url]) => html`<li key=${url}><a href=${url} target="_blank" rel="noopener">${label}</a></li>`)}</ul>
       <p class="note">Malha estadual: IBGE (via gis-dataset-brasil, licença DbCL), simplificada com mapshaper. Desenho da interface baseado no projeto open-apuracao-brazil (MIT), na linguagem visual do seuimposto.com. Código: <a href=${REPO} target="_blank" rel="noopener">${REPO.replace('https://', '')}</a>.</p>
     </section>

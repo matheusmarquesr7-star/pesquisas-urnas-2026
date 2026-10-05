@@ -105,7 +105,7 @@ export function GapChart({ rows, urna, highlight, onHighlight, describedBy }) {
             ref=${el => { pointRefs.current[index] = el; }} tabindex=${index === roving ? 0 : -1} role="button" aria-label=${label}
             aria-pressed=${highlight === row.inst}
             onFocus=${() => setActive(index)} onBlur=${() => setActive(current => current === index ? null : current)}
-            onPointerEnter=${() => setActive(index)} onPointerLeave=${() => setActive(null)}
+            onPointerEnter=${() => setActive(index)} onPointerLeave=${event => { if (event.pointerType === 'mouse') setActive(null); }}
             onClick=${() => { setActive(index); }} onKeyDown=${event => onKeyDown(event, index)}>
             <circle class="hit" cx=${px(row)} cy=${y(row.distancia)} r="12"/>
             <circle class="dot" cx=${px(row)} cy=${y(row.distancia)} r=${finalRows.has(row) ? 6 : 4.5}/>

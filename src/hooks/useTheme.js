@@ -10,6 +10,8 @@ function storedTheme() {
 function initialTheme() {
   const stored = storedTheme();
   if (stored === 'light' || stored === 'dark') return stored;
+  const preset = document.documentElement.dataset.theme;
+  if (preset === 'light' || preset === 'dark') return preset;
   return matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 }
 

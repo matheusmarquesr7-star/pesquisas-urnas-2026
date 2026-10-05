@@ -15,7 +15,7 @@ function BootError({ error }) {
 }
 
 try {
-  const response = await fetch('/data/brasil-uf.topo.json');
+  const response = await fetch(`${import.meta.env.BASE_URL}data/brasil-uf.topo.json`);
   if (!response.ok) throw new Error(`Não foi possível carregar a malha das UFs (HTTP ${response.status}).`);
   const geo = createGeography(await response.json());
   root.replaceChildren();

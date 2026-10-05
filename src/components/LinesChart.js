@@ -61,7 +61,8 @@ export function LinesChart({ rows, urna, base }) {
     plot = html`
       <svg width=${width} height=${height} role="img" tabindex="0"
         aria-label=${`Percentual de Flávio e Lula em cada pesquisa (${base === 'totais' ? 'votos totais' : 'votos válidos'}), com a média móvel de 10 dias e o resultado das urnas. Use as setas para percorrer os dias.`}
-        onPointerMove=${event => setHoverDay(nearestDay(event.clientX))} onPointerLeave=${() => setHoverDay(null)}
+        onPointerMove=${event => setHoverDay(nearestDay(event.clientX))} onPointerDown=${event => setHoverDay(nearestDay(event.clientX))}
+        onPointerLeave=${event => { if (event.pointerType === 'mouse') setHoverDay(null); }}
         onKeyDown=${onKeyDown} onBlur=${() => setHoverDay(null)}>
         ${ticks.map(tick => html`<g key=${tick}>
           <line class="chart-grid" x1=${MARGIN.left} x2=${MARGIN.left + innerWidth} y1=${y(tick)} y2=${y(tick)}/>

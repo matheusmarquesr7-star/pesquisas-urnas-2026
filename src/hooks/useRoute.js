@@ -24,6 +24,11 @@ export function toHash({ view, uf, inst, base }) {
   return view === 'metodologia' ? '#metodologia' : `#${path}?base=${base}`;
 }
 
+/** pushState/replaceState podem ser recusados (iframe isolado, por exemplo): a rota continua em memória. */
+function writeHistory(method, url) {
+  try { history[method](null, '', url); } catch { /* sem histórico: o estado segue só na página */ }
+}
+
 export function useRoute(institutes) {
   const read = () => parse(location.hash, institutes);
   const [route, setRoute] = useState(read);
@@ -35,7 +40,7 @@ export function useRoute(institutes) {
     addEventListener('popstate', sync);
     addEventListener('hashchange', sync);
     // Normaliza a URL de entrada (ex.: sem hash → #presidente?base=validos) sem criar entrada no histórico.
-    history.replaceState(null, '', toHash(latest.current));
+    writeHistory('replaceState', toHash(latest.current));
     return () => {
       removeEventListener('popstate', sync);
       removeEventListener('hashchange', sync);
@@ -47,8 +52,7 @@ export function useRoute(institutes) {
     // trocar a base só reescreve a entrada atual.
     const go = (changes, { push = false } = {}) => {
       const next = { ...latest.current, ...changes };
-      if (push) history.pushState(null, '', toHash(next));
-      else history.replaceState(null, '', toHash(next));
+      writeHistory(push ? 'pushState' : 'replaceState', toHash(next));
       latest.current = next;
       setRoute(next);
       if (push) window.dispatchEvent(new CustomEvent('route:navigate'));

@@ -8,14 +8,14 @@
     <meta name="description" content="Quanto as pesquisas eleitorais erraram no 1º turno de 2026: Presidente e Senado nas 27 UFs, com ranking de institutos." />
     <meta property="og:title" content="Pesquisas × Urnas 2026" />
     <meta property="og:description" content="Quanto as pesquisas erraram no 1º turno de 2026: Presidente, Senado e ranking de institutos." />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/data/brasil-uf.topo.json" as="fetch" crossorigin />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./data/brasil-uf.topo.json" as="fetch" crossorigin />
     <script>
-      // Aplica o tema salvo (ou o do sistema) antes da primeira pintura; espelha src/hooks/useTheme.js.
+      // Aplica o tema salvo (ou o já definido pela página hospedeira, ou o do sistema) antes da primeira pintura; espelha src/hooks/useTheme.js.
       (function () {
         var theme = null;
         try { theme = localStorage.getItem('pesquisas-urnas:tema'); } catch (error) {}
+        if (theme !== 'light' && theme !== 'dark') theme = document.documentElement.dataset.theme;
         if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         document.documentElement.dataset.theme = theme;
       })();

@@ -20,6 +20,8 @@ function divergences() {
 }
 
 export default defineConfig({
+  // Caminhos relativos: o site funciona na raiz de um domínio ou em qualquer subpasta.
+  base: './',
   plugins: [divergences()],
   build: { target: 'es2022' },
 });

@@ -53,10 +53,31 @@ function fromLab([L, a, b]) {
     .map(v => Math.round(Math.max(0, Math.min(1, v <= .0031308 ? v * 12.92 : 1.055 * v ** (1 / 2.4) - .055)) * 255).toString(16).padStart(2, '0')).join('');
 }
 
+const luminance = hex => {
+  const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
+    .map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
+  return .2126 * r + .7152 * g + .0722 * b;
+};
+const contrast = (a, b) => (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+const INK_ON_LIGHT = '#1d1914';
+const INK_ON_DARK = '#ffffff';
+const AA = 4.5;
+
+/** Escurece levemente (em OKLab) um preenchimento até que o rótulo por cima passe no contraste AA. */
+function legible(lab) {
+  let color = fromLab(lab);
+  for (let L = lab[0]; L > 0.2; L -= 0.01) {
+    color = fromLab([L, lab[1], lab[2]]);
+    const lum = luminance(color);
+    if (contrast(lum, 1) >= AA || contrast(lum, luminance(INK_ON_LIGHT)) >= AA) break;
+  }
+  return color;
+}
+
 /** Mistura a base neutra do mapa com um tom (`t` de 0 a 1), em OKLab. */
 export function blend(theme, hue, t) {
   const base = toLab(MAP_THEMES[theme].base), end = toLab(hueFor(hue, theme));
-  return fromLab(base.map((v, i) => v + (end[i] - v) * t));
+  return legible(base.map((v, i) => v + (end[i] - v) * t));
 }
 
 /** Vantagem do vencedor na UF, em pontos: até 5, até 15, até 30, mais. */
@@ -71,12 +92,8 @@ export function marginColor(theme, hue, margin) {
 export const blocColor = (theme, bloc) => blend(theme, { esquerda: 'red', direita: 'blue', centro: 'beige' }[bloc] ?? 'beige', .9);
 export const statusColor = (theme, status) => blend(theme, status, .88);
 
-const INK_ON_LIGHT = '#1d1914';
-const INK_ON_DARK = '#ffffff';
-
-/** Cor de texto legível sobre um preenchimento `#rrggbb`. */
+/** Cor de texto legível sobre um preenchimento `#rrggbb`: a de maior contraste. */
 export function inkOn(hex) {
-  const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
-    .map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
-  return .2126 * r + .7152 * g + .0722 * b > .3 ? INK_ON_LIGHT : INK_ON_DARK;
+  const lum = luminance(hex);
+  return contrast(lum, 1) >= contrast(lum, luminance(INK_ON_LIGHT)) ? INK_ON_DARK : INK_ON_LIGHT;
 }
