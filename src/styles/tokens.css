@@ -1,19 +1,11 @@
-@font-face {
-  font-family: Geist;
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url('./fonts/geist.woff2') format('woff2');
-}
-
 /*
  * Neutros quentes (fundo #0F0E0D, como o seuimposto.com) carregam a interface.
  * Azul e vermelho são reservados a Flávio e Lula (e, no Senado, a direita e esquerda);
  * bege é o centro. Os status (acertou / errou) têm cores próprias e sempre vêm com ícone e texto.
- * --bg é espelhado em src/map/mapTheme.js para o canvas.
+ * --bg é espelhado em src/map/colors.js para o canvas.
  */
 :root {
-  --font: Geist, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font: 'Geist Variable', Geist, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --text-xs: 0.6875rem;
   --text-sm: 0.75rem;

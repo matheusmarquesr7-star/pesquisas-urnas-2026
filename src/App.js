@@ -5,9 +5,6 @@ import {
   biggestMisses, highlights, instituteStats, mediaFinais, partyBias, presidentRows, ranking, resultShares, senateChecks,
 } from './lib/metrics.js';
 import { CANDIDATES, stateName } from './data/meta.js';
-import {
-  INSTITUTES, instituteBySlug, instituteSlug, presidentPolls, presidentResult, senatePolls, senateResult, UPDATED,
-} from './data/index.js';
 import { useHotkey } from './hooks/useHotkey.js';
 import { useMediaQuery } from './hooks/useMediaQuery.js';
 import { useRoute } from './hooks/useRoute.js';
@@ -29,17 +26,19 @@ import {
 // Espelha styles/layout.css: três colunas quando largo, gaveta inferior quando estreito.
 const WIDE_LAYOUT = '(min-width: 1440px)';
 const SHEET_LAYOUT = '(max-width: 999px)';
-const SLUGS = new Set(Object.values(instituteSlug));
 
-function Footer({ onMethodology }) {
+function Footer({ onMethodology, data }) {
   return html`<footer class="panel-foot">
-    <p><strong>Dados reais do 1º turno de 2026</strong>, reunidos a partir de veículos de imprensa; atualizado em ${shortDate(UPDATED)}.</p>
+    <p><strong>Dados reais do 1º turno de 2026</strong>, reunidos a partir de veículos de imprensa; atualizado em ${shortDate(data.updated)}.</p>
+    <p>${data.source === 'supabase' ? 'Dados lidos ao vivo do Supabase.' : 'Cópia dos dados embutida no site (Supabase indisponível agora).'}</p>
     <p><button class="link-button" onClick=${onMethodology}>Metodologia, fontes e divergências</button></p>
   </footer>`;
 }
 
-export function App({ geo }) {
-  const route = useRoute(SLUGS);
+export function App({ geo, data }) {
+  const { presidentResult, presidentPolls, senateResult, senatePolls, institutes: INSTITUTES, instituteSlug, instituteBySlug } = data;
+  const slugs = useMemo(() => new Set(Object.values(instituteSlug)), [instituteSlug]);
+  const route = useRoute(slugs);
   const [theme, toggleTheme] = useTheme();
   const [searching, setSearching] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -90,7 +89,7 @@ export function App({ geo }) {
   if (view === 'metodologia') {
     return html`<div class="app is-article">
       <${TopBar} route=${nav} theme=${theme} onToggleTheme=${toggleTheme} onSearch=${() => setSearching(true)}/>
-      <main><${Methodology} result=${presidentResult} polls=${presidentPolls} onBack=${route.back} updated=${UPDATED}/></main>
+      <main><${Methodology} result=${presidentResult} polls=${presidentPolls} onBack=${route.back} updated=${data.updated} source=${data.source}/></main>
       ${searching && html`<${SearchDialog} institutes=${INSTITUTES} pollsByUf=${senatePolls} onState=${code => nav.openState(code, 'senado')}
         onInstitute=${nav.openInstituteByName} onClose=${() => setSearching(false)}/>`}
     </div>`;
@@ -152,7 +151,7 @@ export function App({ geo }) {
   }
 
   const current = wide ? null : tab;
-  const footer = html`<${Footer} onMethodology=${() => route.setView('metodologia')}/>`;
+  const footer = html`<${Footer} data=${data} onMethodology=${() => route.setView('metodologia')}/>`;
 
   return html`<div class="app">
     <${TopBar} route=${nav} theme=${theme} onToggleTheme=${toggleTheme} onSearch=${() => setSearching(true)}/>

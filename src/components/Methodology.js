@@ -18,7 +18,7 @@ const SOURCES = [
 
 const names = polls => polls.map(p => `${p.inst} (${shortDate(p.divulgacao)})`).join(', ');
 
-export function Methodology({ result, polls, onBack, updated }) {
+export function Methodology({ result, polls, onBack, updated, source }) {
   const blank = result.comparecimento.brancos_pct + result.comparecimento.nulos_pct;
   const dates = polls.map(p => p.divulgacao).filter(Boolean).sort();
   const noValid = polls.filter(p => !validos(p));
@@ -72,7 +72,8 @@ export function Methodology({ result, polls, onBack, updated }) {
 
     <section>
       <h3>Fontes e limitações</h3>
-      <p>Os números do TSE e do seuimposto.com não puderam ser lidos diretamente durante a coleta. O resultado foi conferido em veículos de imprensa que publicaram a apuração, e as divergências entre fontes, os dados parciais e as lacunas estão listados em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>. Quando o TSE publicar os arquivos finais, basta atualizar os JSON em <code>src/data/</code>.</p>
+      <p>Os números do TSE e do seuimposto.com não puderam ser lidos diretamente durante a coleta. O resultado foi conferido em veículos de imprensa que publicaram a apuração, e as divergências entre fontes, os dados parciais e as lacunas estão listados em <a href="./divergencias.md" target="_blank" rel="noopener">divergencias.md</a>.</p>
+      <p>Os dados ficam no Supabase, na tabela <code>pu26_datasets</code>, e o site os lê ao vivo: corrigir um número ali atualiza o site sem novo deploy. ${source === 'supabase' ? 'Esta visita está usando os dados ao vivo.' : 'Nesta visita o Supabase não respondeu, e o site usa a cópia dos dados embutida no último build.'} Quando o TSE publicar os arquivos finais, basta atualizar essa tabela.</p>
       <ul class="sources">${SOURCES.map(([label, url]) => html`<li key=${url}><a href=${url} target="_blank" rel="noopener">${label}</a></li>`)}</ul>
       <p class="note">Malha estadual: IBGE (via gis-dataset-brasil, licença DbCL), simplificada com mapshaper. Desenho da interface baseado no projeto open-apuracao-brazil (MIT), na linguagem visual do seuimposto.com. Código: <a href=${REPO} target="_blank" rel="noopener">${REPO.replace('https://', '')}</a>.</p>
     </section>
