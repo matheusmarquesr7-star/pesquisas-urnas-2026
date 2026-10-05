@@ -1,0 +1,1208 @@
+{
+ "atualizado": "2026-10-05",
+ "ufs": {
+  "AC": [
+   {
+    "inst": "Data Control",
+    "div": "2026-09-18",
+    "campo": "n/e",
+    "fonte": "https://acreagora.com/2026/09/18/gladson-tem-206-e-bittar-175-na-soma-dos-dois-votos-para-o-senado-no-acre/",
+    "obs": "Jorge 13 e Mara 12 do título de https://folhadoacre.com.br/2026/09/disputa-para-o-senado-gladson-lidera-com-20-bittar-aparece-com-175-jorge-com-13-e-mara-12/ (mesma pesquisa provável). Houve Data Control posterior sem números obtidos.",
+    "base": "n/e",
+    "x": {
+     "Gladson Cameli": 20.6,
+     "Marcio Bittar": 17.5,
+     "Jorge Viana": 13,
+     "Mara Rocha": 12
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-21",
+    "campo": "2026-09-16 a 2026-09-19 (n=1.600)",
+    "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-governador-senado-acre-setembro-2026/",
+    "base": "VT",
+    "x": {
+     "Gladson Cameli": 24,
+     "Marcio Bittar": 21,
+     "Jorge Viana": 15,
+     "Mara Rocha": 15
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-25",
+    "campo": "2026-09-21 a 2026-09-24 (n=804)",
+    "fonte": "https://ac24horas.com/2026/09/25/quaest-gladson-lidera-corrida-pelo-senado-com-19-seguido-por-bittar-mara-rocha-e-jv/",
+    "obs": "Mara 13 e Jorge 12 do título de https://folhadoacre.com.br/2026/09/pesquisa-quaest-mostra-gladson-com-19-bittar-com-14-mara-13-e-jorge-12-para-o-senado/",
+    "base": "VT",
+    "x": {
+     "Gladson Cameli": 19,
+     "Marcio Bittar": 14,
+     "Mara Rocha": 13,
+     "Jorge Viana": 12
+    }
+   },
+   {
+    "inst": "IP Sensus",
+    "div": "2026-09-26",
+    "campo": "n/e (n=1.000; reg. AC-02001/2026)",
+    "fonte": "https://ac24horas.com/2026/09/26/ip-sensus-senado-gladson-lidera-com-23-bittar-tem-18-e-jorge-14/",
+    "obs": "consolidado = média do 1º e 2º voto",
+    "base": "VT",
+    "x": {
+     "Gladson Cameli": 23.6,
+     "Marcio Bittar": 18.85,
+     "Jorge Viana": 14.8,
+     "Mara Rocha": 13.65
+    }
+   },
+   {
+    "inst": "Delta",
+    "div": "2026-09-30",
+    "campo": "2026-09-23 a 2026-09-29 (n=800)",
+    "fonte": "https://oriobranco.net/senado-marcio-bittar-lidera-cenario-consolidado-com-2025-aponta-pesquisa-delta-acreemdia",
+    "obs": "cenário consolidado (1º+2º voto); também em https://ac24horas.com/2026/09/30/senado-bittar-lidera-com-2025-seguido-por-gladson-mara-e-jorge-viana-aponta-delta/",
+    "base": "VT",
+    "x": {
+     "Marcio Bittar": 20.25,
+     "Gladson Cameli": 16.38,
+     "Mara Rocha": 15.94,
+     "Jorge Viana": 12.06,
+     "Sérgio Petecão": 8.25,
+     "Eduardo Velloso": 7.5
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "campo": "2026-09-27 a 2026-10-02 (n=836)",
+    "fonte": "https://ac24horas.com/2026/10/03/atlasintel-para-o-senado-bittar-tem-24-mara-19-jorge-viana-175-e-gladson-12/",
+    "obs": "resumo da busca descreve como 'votos válidos' (não confirmado no texto integral)",
+    "base": "n/e",
+    "x": {
+     "Marcio Bittar": 24.6,
+     "Mara Rocha": 19.1,
+     "Jorge Viana": 17.5,
+     "Gladson Cameli": 12.2
+    }
+   },
+   {
+    "inst": "Delta",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "n/e",
+    "fonte": "https://ac24horas.com/2026/10/03/delta-revela-disputa-acirrada-pelas-duas-vagas-do-acre-no-senado-federal/",
+    "obs": "números confirmados no título de https://oriobranco.net/disputa-ao-senado-esquenta-marcio-bittar-e-o-lider-no-novo-levantamento-delta/ ; associação à matéria de 03/10 vem do resumo da busca (data aprox)",
+    "base": "VT",
+    "x": {
+     "Marcio Bittar": 19.05,
+     "Gladson Cameli": 18.55,
+     "Mara Rocha": 15.4,
+     "Jorge Viana": 13.4,
+     "Sérgio Petecão": 8.95,
+     "Eduardo Velloso": 6.75
+    }
+   },
+   {
+    "inst": "Delta",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Marcio Bittar": 22.5,
+     "Gladson Cameli": 21.91
+    },
+    "aprox": true,
+    "campo": "n/e",
+    "fonte": "https://ac24horas.com/2026/10/03/delta-revela-disputa-acirrada-pelas-duas-vagas-do-acre-no-senado-federal/",
+    "obs": "Só os dois primeiros divulgados nesta base."
+   },
+   {
+    "inst": "IP Sensus",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "n/e",
+    "fonte": "https://ac24horas.com/2026/10/03/ip-sensus-senado-gladson-bittar-e-jorge-despontam-na-reta-final/",
+    "obs": "consolidado; 1º voto: Gladson 27,8 / Bittar 20,0 / Jorge 18,2 / Mara 11,3. Pode corresponder à matéria de 02/10 (https://ac24horas.com/2026/10/02/senado-pesquisa-ip-sensus-mostra-equilibrio-entre-gladson-bittar-e-jorge-viana/) — data aprox",
+    "base": "VT",
+    "x": {
+     "Gladson Cameli": 23.4,
+     "Marcio Bittar": 19.9,
+     "Jorge Viana": 15.9,
+     "Mara Rocha": 11.3
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Gladson Cameli": 18,
+     "Marcio Bittar": 17,
+     "Mara Rocha": 15,
+     "Jorge Viana": 13
+    },
+    "campo": "2026-10-02 a 2026-10-03 (n=1.800)",
+    "fonte": "https://noticiasdahora.com.br/politica/ultima-quaest-para-o-senado-gladson-tem-18-bittar-17-mara-15-e-jorge-viana-13/"
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03 (n=1.800)",
+    "fonte": "https://ac24horas.com/2026/10/03/quaest-gladson-tem-24-marcio-22-mara-19-e-jorge-16-na-corrida-ao-senado/",
+    "base": "VV",
+    "x": {
+     "Gladson Cameli": 24,
+     "Marcio Bittar": 22,
+     "Mara Rocha": 19,
+     "Jorge Viana": 16
+    }
+   },
+   {
+    "inst": "Veritá",
+    "div": "2026-10-03",
+    "campo": "2026-09-26 a 2026-10-01 (n=1.030; reg. AC-02934/2026)",
+    "fonte": "https://ac24horas.com/2026/10/03/verita-senado-bittar-tem-48-gladson-36-mara-31-e-jorge-27/",
+    "obs": "título arredonda para 48/36/31/27; decimais vêm do texto (via resumo)",
+    "base": "200",
+    "x": {
+     "Marcio Bittar": 48.9,
+     "Gladson Cameli": 36.0,
+     "Mara Rocha": 31.9,
+     "Jorge Viana": 27.8
+    }
+   }
+  ],
+  "AL": [
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-09-21",
+    "aprox": true,
+    "campo": "2026-09-18 a 2026-09-20",
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/parana-pesquisas-senado-al-lira-tem-412-marina-378-e-renan-346/",
+    "base": "200",
+    "x": {
+     "Arthur Lira": 41.2,
+     "Marina JHC": 37.8,
+     "Renan Calheiros": 34.6
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-25",
+    "aprox": true,
+    "campo": "2026-09-21 a 2026-09-24 (n=804)",
+    "fonte": "https://reporternordeste.com.br/marina-jhc-arthur-lira-e-renan-empatam-na-disputa-pelo-senado-aponta-quaest/",
+    "base": "VT",
+    "x": {
+     "Marina JHC": 20,
+     "Arthur Lira": 20,
+     "Renan Calheiros": 17
+    }
+   },
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-09-30",
+    "campo": "2026-09-26 a 2026-09-29 (n=1.400)",
+    "fonte": "https://www.metropoles.com/brasil/senado-em-al-marina-jhc-tem-456-arthur-lira-416-e-calheiros-369",
+    "base": "200",
+    "x": {
+     "Marina JHC": 45.6,
+     "Arthur Lira": 41.6,
+     "Renan Calheiros": 36.9
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-10-02",
+    "campo": "2026-09-29 a 2026-10-01 (n=1.600)",
+    "fonte": "https://www.cadaminuto.com.br/noticia/2026/10/02/real-time-big-data-marina-tem-27-renan-23-e-lira-22-para-o-senado-em-al",
+    "base": "VT",
+    "x": {
+     "Marina JHC": 27,
+     "Renan Calheiros": 23,
+     "Arthur Lira": 22,
+     "Davi Davino Filho": 17,
+     "Dr. Wanderley": 4,
+     "Alexandre Fleming": 1
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03 (n=1.800)",
+    "fonte": "https://www.blogrobertomoreira.com/2026/10/quaest-para-o-senado-em-alagoas-votos.html",
+    "base": "VV",
+    "x": {
+     "Marina JHC": 29,
+     "Arthur Lira": 27,
+     "Renan Calheiros": 25,
+     "Davi Davino Filho": 9,
+     "Dr. Wanderley": 9
+    }
+   }
+  ],
+  "AM": [
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-09-05",
+    "aprox": true,
+    "campo": "2026-09-02 a 2026-09-04 (n=1.350)",
+    "fonte": "https://exame.com/brasil/parana-pesquisas-eduardo-braga-lidera-disputa-ao-senado-no-amazonas-com-50/",
+    "base": "200",
+    "x": {
+     "Eduardo Braga": 50,
+     "Capitão Alberto Neto": 39.3,
+     "Plínio Valério": 28.9,
+     "Wilson Lima": 25.6,
+     "Professora Evany": 5.2
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-10-02",
+    "campo": "2026-09-28 a 2026-10-01 (n=1.600; reg. AM-07297/2026)",
+    "fonte": "https://brasilnocentro.com.br/alberto-neto-tem-25-e-plinio-braga-e-wilson-empatam-com-19-para-o-senado-no-amazonas-diz-pesquisa/",
+    "obs": "1º voto: Alberto Neto 29, Braga 27, Wilson 19, Plínio 15; 2º voto: Plínio 24, Alberto Neto 20, Wilson 20, Braga 11",
+    "base": "VT",
+    "x": {
+     "Capitão Alberto Neto": 25,
+     "Wilson Lima": 19,
+     "Plínio Valério": 19,
+     "Eduardo Braga": 19
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "n/e (provável 02-03/10)",
+    "fonte": "https://amazonas1.com.br/quaest-eduardo-braga-lidera-senado-amazonas/",
+    "base": "VV",
+    "x": {
+     "Eduardo Braga": 36,
+     "Capitão Alberto Neto": 25,
+     "Plínio Valério": 22,
+     "Wilson Lima": 15
+    }
+   }
+  ],
+  "AP": [
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-09-28",
+    "campo": "2026-09-25 a 2026-09-27 (n=1.000)",
+    "fonte": "https://www.metropoles.com/brasil/senado-ap-furlan-tem-54-randolfe-e-barreto-empatam-diz-parana-pesquisas",
+    "base": "200",
+    "x": {
+     "Rayssa Furlan": 54,
+     "Randolfe Rodrigues": 36.7,
+     "Lucas Barreto": 36.1
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-30",
+    "campo": "2026-09-25 a 2026-09-29 (n=1.600)",
+    "fonte": "https://www.brasilemfolhas.com.br/2026/09/rayssa-furlan-lidera-corrida-ao-senado-no-amapa-com-30/",
+    "base": "VT",
+    "x": {
+     "Rayssa Furlan": 30,
+     "Randolfe Rodrigues": 20,
+     "Lucas Barreto": 20,
+     "Aliny Serrão": 13,
+     "Acácio Favacho": 11
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "aprox": true,
+    "campo": "2026-09-27 a 2026-10-02 (n=800)",
+    "fonte": "https://br.bossanews.com/rayssa-furlan-registra-253-e-randolfe-rodrigues-199-na-disputa-ao-senado-no-amapa/",
+    "obs": "consolidado 1º+2º voto; data de divulgação não confirmada (mesmo lote da Atlas AC de 03/10)",
+    "base": "n/e",
+    "x": {
+     "Rayssa Furlan": 25.3,
+     "Randolfe Rodrigues": 19.9,
+     "Lucas Barreto": 19.7,
+     "Aliny Serrão": 14.6,
+     "Acácio Favacho": 12.4,
+     "Capi": 3.1
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03 (n=1.800)",
+    "fonte": "https://www.diariodoamapa.com.br/cadernos/politica/quaest-para-o-senado-rayssa-tem-30-randolfe-e-lucas-21-acacio-20/",
+    "base": "VV",
+    "x": {
+     "Rayssa Furlan": 30,
+     "Randolfe Rodrigues": 21,
+     "Lucas Barreto": 21,
+     "Acácio Favacho": 20
+    }
+   }
+  ],
+  "BA": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Rui Costa": 27.3,
+     "Jaques Wagner": 24.6,
+     "Angelo Coronel": 21.9,
+     "João Roma": 21.2
+    }
+   }
+  ],
+  "CE": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-09-30",
+    "base": "VT",
+    "x": {
+     "Cid Gomes": 26.3,
+     "Luizianne Lins": 25.7,
+     "Capitão Wagner": 21.7,
+     "Alcides Fernandes": 18.5
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Cid Gomes": 31,
+     "Luizianne Lins": 28,
+     "Capitão Wagner": 23
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Cid Gomes": 32,
+     "Luizianne Lins": 27,
+     "Capitão Wagner": 26
+    }
+   }
+  ],
+  "DF": [
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Michelle Bolsonaro": 25,
+     "Bia Kicis": 20,
+     "Leila do Vôlei": 18,
+     "Erika Kokay": 15
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Michelle Bolsonaro": 30,
+     "Bia Kicis": 24,
+     "Leila do Vôlei": 21,
+     "Erika Kokay": 18
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Michelle Bolsonaro": 25,
+     "Leila do Vôlei": 22,
+     "Bia Kicis": 19,
+     "Erika Kokay": 15
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Michelle Bolsonaro": 31,
+     "Leila do Vôlei": 27,
+     "Bia Kicis": 24,
+     "Erika Kokay": 17
+    }
+   }
+  ],
+  "ES": [
+   {
+    "inst": "Quaest",
+    "div": "2026-08-27",
+    "campo": "2026-08-23 a 2026-08-26 (n=804)",
+    "fonte": "https://www.poder360.com.br/brasil/renato-casagrande-lidera-disputa-pelo-senado-no-es-diz-quaest/",
+    "base": "VT",
+    "x": {
+     "Renato Casagrande": 28,
+     "Sergio Meneguelli": 10,
+     "Rose de Freitas": 10,
+     "Fabiano Contarato": 9,
+     "Maguinha Malta": 6,
+     "Evair de Melo": 4
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-15",
+    "aprox": true,
+    "campo": "n/e",
+    "fonte": "https://www.agazeta.com.br/es/politica/quaest-veja-como-fica-migracao-de-voto-no-es-entre-1-e-2-vagas-no-senado-0926",
+    "obs": "data (15/09) e números vêm do resumo da busca; confirmar",
+    "base": "VT",
+    "x": {
+     "Renato Casagrande": 28,
+     "Sergio Meneguelli": 10,
+     "Fabiano Contarato": 9,
+     "Rose de Freitas": 9,
+     "Maguinha Malta": 6,
+     "Evair de Melo": 5
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-25",
+    "aprox": true,
+    "campo": "2026-09-21 a 2026-09-24",
+    "fonte": "https://www.cartacapital.com.br/politica/casagrande-lidera-isolado-a-disputa-pelo-senado-no-es-mostra-pesquisa-real-time/",
+    "obs": "associação URL↔rodada incerta",
+    "base": "VT",
+    "x": {
+     "Renato Casagrande": 29,
+     "Sergio Meneguelli": 13,
+     "Fabiano Contarato": 11,
+     "Evair de Melo": 10,
+     "Maguinha Malta": 10
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-30",
+    "aprox": true,
+    "campo": "2026-09-25 a 2026-09-29",
+    "fonte": "https://www.cnnbrasil.com.br/eleicoes/real-time-big-data-casagrande-lidera-senado-no-es-2o-vaga-esta-indefinida/",
+    "obs": "Evair de Melo, Contarato e Maguinha 'empatados tecnicamente' — % não obtidos; associação URL↔rodada incerta",
+    "base": "VT",
+    "x": {
+     "Renato Casagrande": 28,
+     "Sergio Meneguelli": 13
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "campo": "2026-10-02 a 2026-10-03 (n=1.800)",
+    "fonte": "https://www.agazeta.com.br/es/politica/quaest-casagrande-tem-31-e-evair-e-maguinha-18-dos-votos-validos-para-o-senado-no-es-1026",
+    "base": "VV",
+    "x": {
+     "Renato Casagrande": 31,
+     "Evair de Melo": 18,
+     "Maguinha Malta": 18,
+     "Fabiano Contarato": 10,
+     "Rose de Freitas": 8,
+     "Sergio Meneguelli": 8,
+     "Marcos do Val": 5
+    }
+   }
+  ],
+  "GO": [
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Gracinha Caiado": 30,
+     "Gustavo Gayer": 21,
+     "Zacharias Calil": 18
+    }
+   }
+  ],
+  "MA": [
+   {
+    "inst": "Quaest",
+    "div": "2026-09-25",
+    "campo": "2026-09-21 a 2026-09-24",
+    "fonte": "https://m.imirante.com/noticias/sao-luis/2026/09/25/ipolitica-roseana-sarney-lidera-para-o-senado-e-fufuca-aparece-em-2",
+    "base": "VT",
+    "x": {
+     "Roseana Sarney": 19,
+     "André Fufuca": 15,
+     "Lahesio Bonfim": 12
+    }
+   }
+  ],
+  "MG": [
+   {
+    "inst": "Datafolha",
+    "div": "2026-09-11",
+    "base": "VT",
+    "x": {
+     "Marília Campos": 12,
+     "Carlos Viana": 10,
+     "Aécio Neves": 10,
+     "Domingos Sávio": 8,
+     "Marcelo Aro": 6
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-09-24",
+    "base": "VT",
+    "x": {
+     "Marília Campos": 13,
+     "Aécio Neves": 11,
+     "Carlos Viana": 11,
+     "Domingos Sávio": 9
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "n/e",
+    "x": {
+     "Marília Campos": 23,
+     "Domingos Sávio": 21.3,
+     "Áurea Carolina": 17.3
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Marília Campos": 13,
+     "Carlos Viana": 12,
+     "Domingos Sávio": 11,
+     "Aécio Neves": 8
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Marília Campos": 21,
+     "Carlos Viana": 19,
+     "Domingos Sávio": 17,
+     "Aécio Neves": 13,
+     "Áurea Carolina": 9,
+     "Marcelo Aro": 9,
+     "Marco Antônio Superman": 4
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Domingos Sávio": 16,
+     "Carlos Viana": 15,
+     "Marília Campos": 14,
+     "Aécio Neves": 14
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Domingos Sávio": 22,
+     "Carlos Viana": 18,
+     "Marília Campos": 18,
+     "Aécio Neves": 17,
+     "Marcelo Aro": 10,
+     "Marco Antônio Superman": 9,
+     "Áurea Carolina": 6
+    }
+   }
+  ],
+  "MS": [
+   {
+    "inst": "IPEMS",
+    "div": "2026-09-10",
+    "aprox": true,
+    "campo": "2026-09-05 a 2026-09-09 (n=800)",
+    "fonte": "https://acritica.net/eleicoes-2026/pesquisa-ipems-senado-ms-reinaldo-lidera-setembro-2026/",
+    "base": "n/e",
+    "x": {
+     "Reinaldo Azambuja": 29.22,
+     "Capitão Contar": 23.9
+    }
+   },
+   {
+    "inst": "Ranking Brasil",
+    "div": "2026-09-10",
+    "aprox": true,
+    "campo": "2026-09-04 a 2026-09-09 (n=2.000)",
+    "fonte": "https://acritica.net/politica/pesquisa-senado-ms-azambuja-contar-vander-2026/",
+    "obs": "simulação '1ª vaga'; na '2ª vaga': Azambuja 28, Contar 24,9, Vander 17",
+    "base": "n/e",
+    "x": {
+     "Reinaldo Azambuja": 33,
+     "Capitão Contar": 20.2,
+     "Vander Loubet": 18.3
+    }
+   }
+  ],
+  "PA": [
+   {
+    "inst": "Futura/100% Cidades",
+    "div": "2026-10-01",
+    "base": "200",
+    "x": {
+     "Helder Barbalho": 48.9,
+     "Delegado Éder Mauro": 39.1,
+     "Chicão": 35.2,
+     "Zequinha Marinho": 27.3,
+     "Celso Sabino": 12.5
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Helder Barbalho": 20,
+     "Delegado Éder Mauro": 16,
+     "Chicão": 13,
+     "Zequinha Marinho": 11,
+     "Celso Sabino": 6
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Helder Barbalho": 28,
+     "Delegado Éder Mauro": 24,
+     "Chicão": 20,
+     "Zequinha Marinho": 17,
+     "Celso Sabino": 8
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": null,
+    "final": true,
+    "base": "VV",
+    "x": {
+     "Helder Barbalho": 27.1,
+     "Delegado Éder Mauro": 21.2,
+     "Chicão": 18.9,
+     "Zequinha Marinho": 18.2
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": null,
+    "base": "n/e",
+    "x": {
+     "Helder Barbalho": 36,
+     "Delegado Éder Mauro": 16,
+     "Chicão": 16
+    }
+   }
+  ],
+  "PE": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "parcial": true,
+    "x": {
+     "Humberto Costa": 25.5
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Marília Arraes": 21,
+     "Humberto Costa": 20,
+     "Mendonça Filho": 12,
+     "Eduardo da Fonte": 10
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Marília Arraes": 29,
+     "Humberto Costa": 29,
+     "Mendonça Filho": 16,
+     "Eduardo da Fonte": 14,
+     "Túlio Gadêlha": 6,
+     "Carlos Sant'anna": 3
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Marília Arraes": 20,
+     "Humberto Costa": 18,
+     "Mendonça Filho": 12,
+     "Eduardo da Fonte": 10,
+     "Túlio Gadêlha": 6
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Marília Arraes": 30,
+     "Humberto Costa": 27,
+     "Mendonça Filho": 18,
+     "Eduardo da Fonte": 15,
+     "Túlio Gadêlha": 9,
+     "Carlos Sant'anna": 1
+    }
+   }
+  ],
+  "PI": [
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-09-03",
+    "campo": "2026-08-28 a 2026-09-02 (n=1.622)",
+    "fonte": "https://www.cartacapital.com.br/politica/a-disputa-pelas-duas-vagas-do-piaui-no-senado-segundo-nova-pesquisa-atlas/",
+    "base": "n/e",
+    "x": {
+     "Marcelo Castro": 22.4,
+     "Júlio César": 17.2,
+     "Ciro Nogueira": 13.3
+    },
+    "obs": "Contratante: MeioNorte."
+   }
+  ],
+  "PR": [
+   {
+    "inst": "Neokemp",
+    "div": "2026-10-01",
+    "base": "n/e",
+    "x": {
+     "Deltan Dallagnol": 24.9,
+     "Filipe Barros": 23.0,
+     "Gleisi Hoffmann": 15.7,
+     "Alexandre Curi": 12.1,
+     "Dr. Rosinha": 9.7,
+     "Cristina Graeml": 8.9
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Deltan Dallagnol": 27,
+     "Filipe Barros": 23.6,
+     "Gleisi Hoffmann": 19
+    }
+   }
+  ],
+  "RJ": [
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-30",
+    "base": "VT",
+    "x": {
+     "Carlos Jordy": 18,
+     "Benedita da Silva": 15,
+     "Carlos Portinho": 14,
+     "Pedro Paulo": 12,
+     "Marcelo Crivella": 10
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "parcial": true,
+    "x": {
+     "Carlos Jordy": 24.8
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Benedita da Silva": 26,
+     "Carlos Portinho": 19,
+     "Carlos Jordy": 18,
+     "Pedro Paulo": 13,
+     "Monica Benicio": 9,
+     "Marcelo Crivella": 6
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Carlos Jordy": 17,
+     "Carlos Portinho": 16,
+     "Benedita da Silva": 16,
+     "Pedro Paulo": 10,
+     "Marcelo Crivella": 9,
+     "Monica Benicio": 6
+    }
+   },
+   {
+    "inst": "Prefab",
+    "div": null,
+    "base": "n/e",
+    "x": {
+     "Benedita da Silva": 28.4,
+     "Carlos Jordy": 20.9,
+     "Carlos Portinho": 20.4,
+     "Pedro Paulo": 15
+    }
+   }
+  ],
+  "RN": [
+   {
+    "inst": "Exatus",
+    "div": "2026-09-24",
+    "base": "200",
+    "x": {
+     "Styvenson Valentim": 51.08,
+     "Zenaide Maia": 31.95,
+     "Samanda de Lula": 16.2
+    }
+   },
+   {
+    "inst": "Exatus",
+    "div": "2026-10-03",
+    "base": "200",
+    "x": {
+     "Styvenson Valentim": 47.2,
+     "Zenaide Maia": 35.47,
+     "Samanda de Lula": 19.99,
+     "Rafael Motta": 19.3,
+     "Coronel Hélio": 17.29
+    }
+   },
+   {
+    "inst": "Consult",
+    "div": null,
+    "base": "n/e",
+    "x": {
+     "Styvenson Valentim": 23.8,
+     "Zenaide Maia": 15.41,
+     "Coronel Hélio": 9.91,
+     "Samanda de Lula": 9.08,
+     "Rafael Motta": 7.53
+    }
+   }
+  ],
+  "RR": [
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-10",
+    "aprox": true,
+    "campo": "2026-09-05 a 2026-09-09 (n=1.600)",
+    "fonte": "https://ncnews.com.br/?p=47202",
+    "obs": "URL exata da matéria incerta (resumo cita RTBD set/2026)",
+    "base": "VT",
+    "x": {
+     "Teresa Surita": 25,
+     "Nicoletti": 17,
+     "Chico Rodrigues": 16,
+     "Helena da Asatur": 15
+    }
+   },
+   {
+    "inst": "Census",
+    "aprox": true,
+    "campo": "n/e (posterior a 09/09)",
+    "fonte": "https://ncnews.com.br/?p=47202",
+    "obs": "'soma do 1º e 2º voto' normalizada (somam 100%) — tratado como VV; data de divulgação não obtida",
+    "base": "VV",
+    "x": {
+     "Teresa Surita": 27.95,
+     "Nicoletti": 23.53,
+     "Chico Rodrigues": 21.22,
+     "Helena da Asatur": 20.05,
+     "Hélio Negão": 7.25
+    },
+    "div": null
+   }
+  ],
+  "RS": [
+   {
+    "inst": "Neokemp",
+    "div": "2026-10-03",
+    "base": "n/e",
+    "x": {
+     "Marcel van Hattem": 34.3,
+     "Manuela d'Ávila": 25.2,
+     "Sanderson": 18.8,
+     "Paulo Pimenta": 11.5,
+     "Germano Rigotto": 6.1
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Sanderson": 25,
+     "Marcel van Hattem": 22,
+     "Manuela d'Ávila": 20,
+     "Paulo Pimenta": 18
+    }
+   }
+  ],
+  "SC": [
+   {
+    "inst": "Quaest",
+    "div": "2026-08-24",
+    "base": "VT",
+    "x": {
+     "Esperidião Amin": 19,
+     "Carlos Bolsonaro": 16,
+     "Carol de Toni": 12,
+     "Décio Lima": 9
+    }
+   },
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-09-23",
+    "base": "200",
+    "x": {
+     "Carol de Toni": 42.3,
+     "Carlos Bolsonaro": 36,
+     "Esperidião Amin": 34.2
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-24",
+    "base": "VT",
+    "x": {
+     "Carol de Toni": 17,
+     "Carlos Bolsonaro": 16,
+     "Esperidião Amin": 15
+    }
+   },
+   {
+    "inst": "Neokemp",
+    "div": "2026-10-01",
+    "base": "n/e",
+    "x": {
+     "Carol de Toni": 29,
+     "Carlos Bolsonaro": 21.9,
+     "Esperidião Amin": 18.7,
+     "Décio Lima": 12.4
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Carol de Toni": 28.6,
+     "Carlos Bolsonaro": 18.1,
+     "Esperidião Amin": 18.0
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Carol de Toni": 20,
+     "Carlos Bolsonaro": 15,
+     "Esperidião Amin": 13
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Carol de Toni": 30,
+     "Carlos Bolsonaro": 24,
+     "Esperidião Amin": 20
+    }
+   }
+  ],
+  "SE": [
+   {
+    "inst": "Quaest",
+    "div": "2026-09-27",
+    "campo": "n/e",
+    "fonte": "https://www.dgabc.com.br/Noticia/4343709/quaest-se-andre-david-e-rogerio-carvalho-tem-11-para-o-senado",
+    "base": "VT",
+    "x": {
+     "Delegado André David": 11,
+     "Rogério Carvalho": 11,
+     "André Moura": 9,
+     "Delegado Alessandro": 8
+    }
+   }
+  ],
+  "SP": [
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-08-24",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 21,
+     "Simone Tebet": 19,
+     "Marina Silva": 16,
+     "André do Prado": 14
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-09-11",
+    "base": "VT",
+    "x": {
+     "Marina Silva": 13,
+     "Simone Tebet": 13,
+     "André do Prado": 11,
+     "Guilherme Derrite": 10
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-23",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 16,
+     "Marina Silva": 13,
+     "Simone Tebet": 12,
+     "André do Prado": 8
+    }
+   },
+   {
+    "inst": "Vox Brasil",
+    "div": "2026-09-25",
+    "base": "200",
+    "x": {
+     "Guilherme Derrite": 28.2,
+     "André do Prado": 26.6,
+     "Marina Silva": 25.9,
+     "Simone Tebet": 23.1,
+     "Ricardo Salles": 11.5,
+     "Soninha Francine": 5.1
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-09-29",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 18,
+     "Simone Tebet": 15,
+     "Marina Silva": 15,
+     "André do Prado": 12
+    }
+   },
+   {
+    "inst": "Real Time Big Data",
+    "div": "2026-09-29",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 22,
+     "André do Prado": 20,
+     "Simone Tebet": 18,
+     "Marina Silva": 15
+    }
+   },
+   {
+    "inst": "Futura/100% Cidades",
+    "div": "2026-10-02",
+    "base": "200",
+    "x": {
+     "Guilherme Derrite": 40.8,
+     "Marina Silva": 36.2,
+     "Simone Tebet": 35.5,
+     "André do Prado": 32.8
+    }
+   },
+   {
+    "inst": "AtlasIntel",
+    "div": "2026-10-03",
+    "base": "VV",
+    "parcial": true,
+    "x": {
+     "Guilherme Derrite": 25.9
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 16,
+     "André do Prado": 16,
+     "Marina Silva": 15,
+     "Simone Tebet": 14
+    }
+   },
+   {
+    "inst": "Datafolha",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Guilherme Derrite": 22,
+     "André do Prado": 22,
+     "Marina Silva": 21,
+     "Simone Tebet": 20
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VT",
+    "x": {
+     "Guilherme Derrite": 20,
+     "André do Prado": 18,
+     "Marina Silva": 17,
+     "Simone Tebet": 17
+    }
+   },
+   {
+    "inst": "Quaest",
+    "div": "2026-10-03",
+    "base": "VV",
+    "x": {
+     "Guilherme Derrite": 25,
+     "André do Prado": 23,
+     "Marina Silva": 22,
+     "Simone Tebet": 22
+    }
+   }
+  ],
+  "TO": [
+   {
+    "inst": "Paraná Pesquisas",
+    "div": "2026-08-28",
+    "campo": "n/e",
+    "fonte": "https://www.poder360.com.br/poder-pesquisas/eduardo-gomes-tem-351-e-lidera-disputa-ao-senado-em-to/",
+    "base": "n/e",
+    "x": {
+     "Eduardo Gomes": 35.1,
+     "Alexandre Guimarães": 21.6
+    }
+   }
+  ]
+ }
+}

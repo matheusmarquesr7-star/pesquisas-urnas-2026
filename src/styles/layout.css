@@ -1,0 +1,308 @@
+/*
+ * Três layouts, pelo espaço disponível (breakpoints espelhados em App.js):
+ *   largo    >= 1440px          mapa | painel central | lista
+ *   desktop  1000px a 1439px    mapa | painel com abas
+ *   estreito < 1000px           mapa, com o painel numa gaveta inferior
+ * No desktop e no largo a página não rola: cada coluna rola sozinha.
+ */
+
+.app {
+  max-width: 2200px;
+  min-height: 100dvh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Barra superior */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  flex: none;
+  height: var(--topbar-height);
+  padding-inline: var(--space-5);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.brand-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand h1 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}
+
+.brand h1 span[aria-hidden] {
+  color: var(--ink-3);
+  font-weight: 400;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.base-toggle {
+  margin-right: var(--space-2);
+}
+
+.office-tabs {
+  display: flex;
+  align-self: stretch;
+}
+
+/* Área de trabalho */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 44%);
+  align-items: start;
+}
+
+.workspace.is-wide {
+  grid-template-columns: minmax(400px, 30%) minmax(0, 1fr) var(--side-width);
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-3) var(--space-5) var(--space-4);
+}
+
+.main-column {
+  position: relative;
+  min-width: 0;
+  border-left: 1px solid var(--line);
+}
+
+/* O quadro do mapa é quadrado; a área em volta decide o tamanho. */
+.map-area {
+  display: grid;
+  place-items: center;
+  container-type: inline-size;
+}
+
+.map-frame {
+  width: min(100cqw, 640px);
+}
+
+.panel-body {
+  position: relative;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-left: 1px solid var(--line);
+}
+
+.panel-foot {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+}
+
+.panel-foot p + p {
+  margin-top: var(--space-1);
+}
+
+.panel-foot strong {
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+.boot,
+.boot-loading {
+  max-width: 44ch;
+  margin: 18vh auto 0;
+  padding-inline: var(--space-5);
+  color: var(--ink-2);
+}
+
+.boot h1 {
+  margin-bottom: var(--space-2);
+  color: var(--ink);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.boot .button {
+  margin-top: var(--space-4);
+}
+
+/* Desktop e largo: tudo cabe na janela. */
+@media (min-width: 1000px) and (min-height: 620px) {
+  .app:not(.is-article) {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .app:not(.is-article) main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .scoreboard {
+    flex: none;
+  }
+
+  .workspace {
+    flex: 1;
+    grid-template-rows: minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  .stage {
+    min-height: 0;
+  }
+
+  .map-area {
+    flex: 1;
+    min-height: 0;
+    container-type: size;
+  }
+
+  .map-frame {
+    width: min(100cqw, 100cqh);
+  }
+
+  .main-column,
+  .panel-body {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
+  .panel-body {
+    flex: 1;
+  }
+}
+
+/* Janela larga mas muito baixa: a página rola e o painel fica à vista. */
+@media (min-width: 1000px) and (max-height: 619px) {
+  .panel {
+    position: sticky;
+    top: var(--topbar-height);
+    max-height: calc(100dvh - var(--topbar-height));
+    overflow-y: auto;
+  }
+}
+
+/* Estreito: uma coluna, com o painel numa gaveta que sobe sobre o mapa. */
+@media (max-width: 999px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  main {
+    padding-bottom: var(--sheet-peek);
+  }
+
+  .stage {
+    padding-inline: var(--space-4);
+  }
+
+  .panel {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: var(--z-sheet);
+    height: min(88dvh, 820px);
+    border: 0;
+    border-top: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transform: translateY(calc(100% - var(--sheet-peek)));
+    transition: transform 260ms var(--ease-out);
+  }
+
+  .panel.is-open {
+    transform: none;
+  }
+
+  .panel-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-backdrop);
+    background: var(--backdrop);
+  }
+}
+
+@media (max-width: 859px) {
+  .topbar {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: var(--topbar-height) auto;
+    row-gap: 0;
+    height: auto;
+    padding-inline: var(--space-4);
+  }
+
+  .office-tabs {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-inline: calc(-1 * var(--space-4));
+    padding-inline: var(--space-2);
+    border-top: 1px solid var(--line);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .base-toggle {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .sim-chip {
+    display: none;
+  }
+
+  .brand h1 {
+    font-size: var(--text-md);
+  }
+
+  .topbar-actions {
+    gap: 0;
+  }
+
+  .topbar-actions .icon-button {
+    width: 32px;
+  }
+}

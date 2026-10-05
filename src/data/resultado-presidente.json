@@ -1,0 +1,376 @@
+{
+ "cargo": "Presidente",
+ "turno": 1,
+ "data": "2026-10-04",
+ "segundo_turno": "2026-10-25",
+ "atualizado": "2026-10-05",
+ "apurado": 100,
+ "candidatos": [
+  {
+   "id": "F",
+   "nome": "Flávio Bolsonaro",
+   "curto": "Flávio",
+   "partido": "PL",
+   "validos": 47.03,
+   "votos": 56102126
+  },
+  {
+   "id": "L",
+   "nome": "Lula",
+   "curto": "Lula",
+   "partido": "PT",
+   "validos": 45.16,
+   "votos": 53866947
+  },
+  {
+   "id": "Cury",
+   "nome": "Augusto Cury",
+   "curto": "Cury",
+   "partido": "Avante",
+   "validos": 2.89,
+   "votos": 3448364
+  },
+  {
+   "id": "Renan",
+   "nome": "Renan Santos",
+   "curto": "Renan Santos",
+   "partido": "Missão",
+   "validos": 2.24,
+   "votos": 2675790
+  },
+  {
+   "id": "Caiado",
+   "nome": "Ronaldo Caiado",
+   "curto": "Caiado",
+   "partido": "PSD",
+   "validos": 2.18,
+   "votos": 2602710,
+   "obs": "Votos com 99,79% apurado (Exame); o percentual é o final."
+  },
+  {
+   "id": "Zema",
+   "nome": "Romeu Zema",
+   "curto": "Zema",
+   "partido": "Novo",
+   "validos": 0.27,
+   "votos": 326134,
+   "obs": "Percentual e votos com 99,79% apurado (Exame)."
+  }
+ ],
+ "outros": {
+  "validos": 0.23,
+  "nomes": "Samara (UP), Hertz Dias (PSTU), Edmilson Costa (PCB), Rui Costa Pimenta (PCO) e outros"
+ },
+ "comparecimento": {
+  "brancos_pct": 1.84,
+  "nulos_pct": 2.93,
+  "validos_pct": 95.23,
+  "abstencao_pct": 21.07,
+  "comparecimento": 125020982,
+  "validos": 119057862,
+  "brancos": 2297528,
+  "nulos": 3665592,
+  "abstencao": 33378099,
+  "apurado_ref": 99.79,
+  "obs": "Brancos e nulos em % do comparecimento, com 99,79% das seções apuradas (Exame, 04/10 22h04). Nenhuma fonte acessível publicou os números de 100%."
+ },
+ "ufs": {
+  "AC": {
+   "L": 28.73,
+   "F": 64.56,
+   "votos": {
+    "F": 302807,
+    "L": 134770
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "agazetadoacre.com/2026/10/noticias/politica/flavio-bolsonaro-tem-6456-dos-votos-no-acre-e-abre-vantagem-de-168-mil-votos-sobre-lula/"
+  },
+  "AL": {
+   "L": 54.73,
+   "F": null,
+   "votos": {
+    "L": 995459
+   },
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "resumo de busca que agregava metropoles.com e cajueira.substack.com ('piso de Lula no NE: Alagoas 54,73%, 995.459 votos')",
+   "obs": "Em Maceió, Flávio teve 52,37% e Lula 41,08% (correio24horas.com.br), a única capital do NE vencida por Flávio"
+  },
+  "AM": {
+   "L": 47.26,
+   "F": 45.82,
+   "confianca": "baixa",
+   "vencedor": "L",
+   "apuracao": "parcial: 7.756 de 8.157 seções (~95%)",
+   "fonte": "amazonas1.com.br/lula-ultrapassa-flavio-bolsonaro-e-assume-lideranca-na-apuracao-no-amazonas/",
+   "obs": "Parcial com ~95% das seções (amazonas1.com.br). O valor 'AM Lula 63,95%' dos dados iniciais era do Maranhão."
+  },
+  "AP": {
+   "L": 45.71,
+   "F": 45.67,
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "exame.com/brasil/resultado-da-eleicao-para-presidencia-no-amapa-lula-fica-em-primeiro-lugar/",
+   "obs": "Diferença de só 225 votos. O resumo da busca misturou um artigo da CNN de 2022 sobre o Amapá, então vale reconferir."
+  },
+  "BA": {
+   "L": 66.12,
+   "F": 28.58,
+   "votos": {
+    "L": 5641207,
+    "F": 2438241
+   },
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/ ; correio24horas.com.br ('Lula recebe 66% dos votos no estado')",
+   "obs": "Matéria publicada com 98,36% apurado no país; o % da UF pode ter mudado alguns centésimos"
+  },
+  "CE": {
+   "L": 63.28,
+   "F": 31.28,
+   "votos": {
+    "L": 3552535,
+    "F": 1756239
+   },
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/"
+  },
+  "DF": {
+   "L": 38.11,
+   "F": 51.31,
+   "votos": {
+    "F": 909616,
+    "L": 675627
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "brasildefato.com.br/2026/10/04/1o-turno-flavio-bolsonaro-vence-no-df-com-5131-dos-votos-no-df-e-lula-3811/ ; gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/"
+  },
+  "ES": {
+   "L": 37.76,
+   "F": 54.78,
+   "votos": {
+    "F": 1233194,
+    "L": 850028
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "apuracao": "100%",
+   "fonte": "otempo.com.br/eleicoes/2026/analises/mapa-dos-votos/es"
+  },
+  "GO": {
+   "L": 31.06,
+   "F": 53.6,
+   "votos": {
+    "F": 2051888,
+    "L": 1188880
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "otempo.com.br/eleicoes/2026/analises/mapa-dos-votos/go",
+   "obs": "Flávio venceu em 218 cidades e Lula em 28. Não achei o % de Caiado em GO; pela soma, os outros candidatos ficaram com cerca de 15%."
+  },
+  "MA": {
+   "L": 63.95,
+   "F": 30.93,
+   "votos": {
+    "L": 2561100,
+    "F": 1238495
+   },
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/",
+   "obs": "Um resumo do portalamazonia.com (Amazônia Legal) traz 63,98% x 30,90% para um estado não identificado, que provavelmente é o MA com apuração mais avançada"
+  },
+  "MG": {
+   "L": 43.32,
+   "F": 48.24,
+   "confianca": "média",
+   "vencedor": "F",
+   "apuracao": "parcial (valores do usuário, não reverificados)",
+   "fonte": "parcial informada pelo usuário; gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/ ('com 99,85% das seções de MG, Flávio à frente por 592,3 mil votos')",
+   "obs": "Em BH: Flávio 48,32% x Lula 41,36% (em.com.br). Em 2022 Lula tinha vencido MG."
+  },
+  "MS": {
+   "L": 40.51,
+   "F": 58.63,
+   "confianca": "baixa",
+   "vencedor": "F",
+   "fonte": "midiamax.com.br/politica/2026/lista-confira-percentual-votos-lula-flavio-bolsonaro-tiveram-cada-cidade-ms/",
+   "obs": "Suspeito: Flávio + Lula somam 99,14%, deixando menos de 1% aos demais candidatos (no país eles tiveram ~7,8%). Pode ser percentual só entre os dois. Vencedor e margem aproximada mantidos."
+  },
+  "MT": {
+   "L": 29.18,
+   "F": 65.15,
+   "votos": {
+    "F": 1298581,
+    "L": 581681
+   },
+   "confianca": "média",
+   "vencedor": "F",
+   "fonte": "resumo de busca que agregava metropoles.com (15x12), ndmais.com.br (apuração MT) e gazetadopovo.com.br; URL exata incerta",
+   "obs": "Os votos e os percentuais batem entre si (válidos ~1,99 mi)"
+  },
+  "PA": {
+   "L": 49.9,
+   "F": 44.5,
+   "confianca": "média",
+   "vencedor": "L",
+   "apuracao": "parcial (valores do usuário, não reverificados)",
+   "fonte": "parcial informada pelo usuário"
+  },
+  "PB": {
+   "L": 61.31,
+   "F": 33.07,
+   "votos": {
+    "L": 1540937,
+    "F": 831205
+   },
+   "confianca": "alta",
+   "vencedor": "L",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/ (Lula 61,31% também em outro resumo de busca)",
+   "obs": "Em João Pessoa: Lula 46,50 x Flávio 45,67 (correio24horas)"
+  },
+  "PE": {
+   "L": 63.45,
+   "F": 31.03,
+   "votos": {
+    "L": 3553971,
+    "F": 1738043
+   },
+   "confianca": "média",
+   "vencedor": "L",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/"
+  },
+  "PI": {
+   "L": 70.97,
+   "F": 24.09,
+   "votos": {
+    "L": 1520985
+   },
+   "confianca": "alta",
+   "vencedor": "L",
+   "fonte": "metropoles.com/brasil/flavio-e-mais-votado-em-roraima-no-1-turno-lula-no-piaui (Lula 70,97%, 1.520.985); Flávio 24,09 = valor do usuário",
+   "obs": "Lula 70,97% (Metrópoles) × 70,99% (dados iniciais). Mantido o valor da fonte jornalística mais recente."
+  },
+  "PR": {
+   "L": 31.2,
+   "F": 59.91,
+   "Cury": 3.11,
+   "Renan": 2.69,
+   "Caiado": 2.6,
+   "Zema": 0.26,
+   "votos": {
+    "F": 3945345,
+    "L": 2054597
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "apuracao": "100%",
+   "fonte": "band.com.br/politica/eleicoes/veja-o-resultado-completo-das-eleicoes-2026-no-parana ; exame.com/eleicoes/2026/apuracao/primeiro-turno/presidente/mapa-de-apuracao/?estado=pr"
+  },
+  "RJ": {
+   "L": 39.41,
+   "F": 53.01,
+   "confianca": "média",
+   "vencedor": "F",
+   "apuracao": "parcial (valores do usuário, não reverificados)",
+   "fonte": "parcial informada pelo usuário"
+  },
+  "RN": {
+   "L": 59.75,
+   "F": 34.77,
+   "votos": {
+    "L": 1237963
+   },
+   "confianca": "alta",
+   "vencedor": "L",
+   "fonte": "Lula 59,75% / 1.237.963 em resumo de busca (Times Brasil/Metrópoles/Cajueira); Flávio 34,77 = valor do usuário"
+  },
+  "RO": {
+   "L": 25.89,
+   "F": 67.45,
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "Flávio 67,45% confirmado num resumo de busca (exame/otempo); Lula 25,89 = valor do usuário"
+  },
+  "RR": {
+   "L": 22.86,
+   "F": 71.06,
+   "votos": {
+    "F": 231322
+   },
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "metropoles.com/brasil/flavio-e-mais-votado-em-roraima-no-1-turno-lula-no-piaui (Flávio 71,06%, 231.322); Lula 22,86 = valor do usuário",
+   "obs": "É o melhor resultado de Flávio no país."
+  },
+  "RS": {
+   "L": 35.73,
+   "F": 55.54,
+   "confianca": "média",
+   "vencedor": "F",
+   "fonte": "gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/ (também citado num resumo de ndmais.com.br)",
+   "obs": "Apuração quase completa ('com quase 100% das urnas')"
+  },
+  "SC": {
+   "L": 25.04,
+   "F": 66.65,
+   "confianca": "alta",
+   "vencedor": "F",
+   "fonte": "jornalrazao.com/politica/resultado-presidente-em-sc-2026-flavio-bolsonaro-lula-tse",
+   "obs": "Na parcial de 26,35% estava 62,66 x 28,68 (jornalrazao)"
+  },
+  "SE": {
+   "L": 62.75,
+   "F": 30.63,
+   "votos": {
+    "L": 856019
+   },
+   "confianca": "alta",
+   "vencedor": "L",
+   "fonte": "Lula 62,75% / 856.019 em resumo de busca (Times Brasil/Cajueira); Flávio 30,63 = valor do usuário"
+  },
+  "SP": {
+   "L": 38.2,
+   "F": 51.92,
+   "confianca": "baixa",
+   "vencedor": "F",
+   "apuracao": "parcial (% apurado não informado pela fonte)",
+   "fonte": "timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-em-sao-paulo/ ; parcial com 49,31%: exame.com/...mapa-de-apuracao/?estado=sp (Flávio 53,60 x Lula 36,65; brancos 2,35%, nulos 3,41%, abstenção 22,34%)",
+   "obs": "Não achei o resultado final de SP. Os números vinham convergindo (53,60/36,65 com 49% apurado e depois 51,92/38,20)."
+  },
+  "TO": {
+   "L": 43.42,
+   "F": 50.44,
+   "votos": {
+    "F": 469321,
+    "L": 404009
+   },
+   "confianca": "média",
+   "vencedor": "F",
+   "fonte": "resumo de busca que agregava metropoles.com/brasil/eleicoes-2026-flavio-leva-1o-turno-em-15-estados-lula-em-12 e gazetadopovo.com.br",
+   "obs": "Votos e % batem entre si. Em 2022 Lula tinha vencido TO."
+  }
+ },
+ "fontes": [
+  {
+   "nome": "Resultado nacional (100%)",
+   "url": "https://www.gazetadopovo.com.br/eleicoes/2026/flavio-vence-lula-em-15-estados-df/"
+  },
+  {
+   "nome": "Mapa de apuração Exame (99,79%)",
+   "url": "https://exame.com/eleicoes/2026/apuracao/primeiro-turno/presidente/mapa-de-apuracao/"
+  },
+  {
+   "nome": "Metrópoles: Flávio leva 15 UFs, Lula 12",
+   "url": "https://www.metropoles.com/brasil/eleicoes-2026-flavio-leva-1o-turno-em-15-estados-lula-em-12"
+  },
+  {
+   "nome": "Times Brasil: resultado no Nordeste",
+   "url": "https://timesbrasil.com.br/brasil/decisao-2026-confira-o-resultado-da-eleicao-para-presidente-no-nordeste/"
+  }
+ ]
+}

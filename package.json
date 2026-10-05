@@ -1,0 +1,31 @@
+{
+  "name": "pesquisas-urnas-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compara as pesquisas eleitorais com o resultado do 1º turno de 2026 (Presidente e Senado), com ranking de institutos.",
+  "license": "MIT",
+  "author": "Matheus Marques",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusmarquesr7-star/pesquisas-urnas-2026.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "map": "sh scripts/build-map.sh"
+  },
+  "dependencies": {
+    "htm": "^3.1.1",
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "mapshaper": "^0.7.76",
+    "vite": "^7.3.6"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

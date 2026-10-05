@@ -1,0 +1,1203 @@
+{
+ "cargo": "Senado",
+ "data": "2026-10-04",
+ "atualizado": "2026-10-05",
+ "vagas_por_uf": 2,
+ "ufs": {
+  "AC": {
+   "nome": "Acre",
+   "apurado": null,
+   "c": [
+    [
+     "Marcio Bittar",
+     "PL",
+     25.59,
+     true
+    ],
+    [
+     "Mara Rocha",
+     "Republicanos",
+     17.95,
+     true
+    ],
+    [
+     "Gladson Cameli",
+     "PP",
+     16.6,
+     false
+    ],
+    [
+     "Jorge Viana",
+     "PT",
+     14.17,
+     false
+    ],
+    [
+     "Sérgio Petecão",
+     "PSD",
+     10.38,
+     false
+    ],
+    [
+     "Eduardo Velloso",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "Uma fonte cita os votos de Gladson Cameli (3º) como “anulados sub judice”. Confirmar no TSE."
+   ],
+   "fontes": [
+    "https://www.metropoles.com/brasil/eleitos-senadores-acre",
+    "https://agazetadoacre.com/2026/10/noticias/politica/mara-rocha-desbanca-gladson-cameli-e-garante-a-segunda-vaga-para-o-senado-no-acre-com-mais-de-150-mil-votos/",
+    "https://jovempan.com.br/politica/marcio-bittar-e-mara-rocha-sao-eleitos-senadores-pelo-acre/",
+    "https://ndmais.com.br/politica/eleicoes-2026-acre-resultado-senadores-eleitos/"
+   ]
+  },
+  "AL": {
+   "nome": "Alagoas",
+   "apurado": null,
+   "c": [
+    [
+     "Arthur Lira",
+     "PP",
+     28.87,
+     true
+    ],
+    [
+     "Marina JHC",
+     "PSDB",
+     28.2,
+     true
+    ],
+    [
+     "Renan Calheiros",
+     "MDB",
+     22.25,
+     false
+    ],
+    [
+     "Davi Davino Filho",
+     "Republicanos",
+     7.81,
+     false
+    ],
+    [
+     "Dr. Wanderley",
+     null,
+     null,
+     false
+    ],
+    [
+     "Alexandre Fleming",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "4º lugar de Davi Davino Filho não confirmado explicitamente pelas fontes."
+   ],
+   "fontes": [
+    "https://oantagonista.com.br/brasil/renan-calheiros-e-derrotado-em-alagoas-lira-e-eleito-senador/",
+    "https://movimentoeconomico.com.br/estados/alagoas/2026/10/04/arthur-lira-pp-e-marina-candia-psdb-sao-eleitos-para-o-senado-em-alagoas/",
+    "https://www.cartacapital.com.br/politica/lira-e-marina-jhc-levam-as-duas-vagas-por-alagoas-e-tiram-renan-calheiros-do-senado/",
+    "https://www.gazetaweb.com/noticias/eleicoes/apos-32-anos-como-senador-de-alagoas-renan-calheiros-perde-eleicao-no-estado-940254"
+   ]
+  },
+  "AM": {
+   "nome": "Amazonas",
+   "apurado": 99.87,
+   "c": [
+    [
+     "Eduardo Braga",
+     "MDB",
+     32.26,
+     true
+    ],
+    [
+     "Plínio Valério",
+     "PSDB",
+     24.69,
+     true
+    ],
+    [
+     "Capitão Alberto Neto",
+     "PL",
+     23.69,
+     false
+    ],
+    [
+     "Wilson Lima",
+     "União",
+     11.88,
+     false
+    ],
+    [
+     "Professora Evany",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "Valores com 99,87% das seções apuradas."
+   ],
+   "fontes": [
+    "https://ndmais.com.br/politica/eleicoes-2026-amazonas-resultado-senadores-eleitos/",
+    "https://diariodopoder.com.br/brasil-e-regioes/lsf-brasil/eduardo-braga-e-plinio-valerio-ficam-com-as-vagas-do-amazonas-no-senado",
+    "https://amazonas1.com.br/plinio-vira-sobre-alberto-neto-e-garante-segunda-vaga-ao-senado-no-am/",
+    "https://amazonas1.com.br/wilson-lima-despenca-para-4o-e-fica-fora-das-duas-vagas-ao-senado-no-am/"
+   ]
+  },
+  "AP": {
+   "nome": "Amapá",
+   "apurado": null,
+   "c": [
+    [
+     "Rayssa Furlan",
+     "Podemos",
+     29.98,
+     true
+    ],
+    [
+     "Lucas Barreto",
+     "PSD",
+     24.22,
+     true
+    ],
+    [
+     "Randolfe Rodrigues",
+     "PT",
+     18.55,
+     false
+    ],
+    [
+     "Acácio Favacho",
+     "MDB",
+     null,
+     false
+    ],
+    [
+     "Aliny Serrão",
+     "União",
+     null,
+     false
+    ],
+    [
+     "Capi",
+     "PSB",
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "4º colocado não encontrado nas fontes acessíveis."
+   ],
+   "fontes": [
+    "https://www.otempo.com.br/eleicoes/2026/senadores/2026/10/4/eleicoes-2026-veja-quem-lidera-a-disputa-para-senador-no-amapa",
+    "https://ochefaodanoticia.com.br/colunas/eleicoes-2026/randolfe-perde-reeleicao-no-amapa-e-deixa-o-senado-apos-16-anos/",
+    "https://gazetabrasil.com.br/brasil/2026/10/04/rayssa-furlan-e-lucas-barreto-sao-eleitos-senadores-pelo-amapa-randolfe-fica-de-fora/",
+    "https://www12.senado.leg.br/radio/1/noticia/2026/10/04/amapa-elege-rayssa-furlan-e-reelege-lucas-barreto-para-o-senado"
+   ]
+  },
+  "BA": {
+   "nome": "Bahia",
+   "apurado": null,
+   "c": [
+    [
+     "Rui Costa",
+     "PT",
+     29.99,
+     true
+    ],
+    [
+     "Jaques Wagner",
+     "PT",
+     27.56,
+     true
+    ],
+    [
+     "Angelo Coronel",
+     "Republicanos",
+     20.17,
+     false
+    ],
+    [
+     "João Roma",
+     "PL",
+     20.05,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": []
+  },
+  "CE": {
+   "nome": "Ceará",
+   "apurado": null,
+   "c": [
+    [
+     "Cid Gomes",
+     "PSB",
+     31.04,
+     true
+    ],
+    [
+     "Luizianne Lins",
+     "Rede",
+     28.87,
+     true
+    ],
+    [
+     "Capitão Wagner",
+     "União",
+     20.87,
+     false
+    ],
+    [
+     "Alcides Fernandes",
+     "PL",
+     18.42,
+     false
+    ]
+   ],
+   "obs": [
+    "Fontes divergem: O Povo 31,04/28,87; SRZD 31,13/28,97; lista nacional 31,21/29,04. Nenhuma fonte acessível declarou 100% apurado. Confirmar no TSE."
+   ],
+   "fontes": [
+    "https://diariodopoder.com.br/brasil-e-regioes/lsf-brasil/cid-e-luizianne-levam-vagas-do-ceara-no-senado-capitao-wagner-fica-de-fora",
+    "https://timesbrasil.com.br/eleicoes-2026/decisao-2029-cid-gomes-psb-e-luizianne-rede-sao-eleitos-senadores-pelo-ceara/",
+    "https://exame.com/brasil/resultado-senador-do-ceara-2026-cid-gomes-psb-e-luizianne-lins-rede-sao-eleitos/",
+    "https://www12.senado.leg.br/noticias/materias/2026/10/04/cid-gomes-e-luizianne-sao-eleitos-senadores-pelo-ceara"
+   ]
+  },
+  "DF": {
+   "nome": "Distrito Federal",
+   "apurado": null,
+   "c": [
+    [
+     "Michelle Bolsonaro",
+     "PL",
+     29.05,
+     true
+    ],
+    [
+     "Bia Kicis",
+     "PL",
+     27.44,
+     true
+    ],
+    [
+     "Leila do Vôlei",
+     "PDT",
+     21.25,
+     false
+    ],
+    [
+     "Erika Kokay",
+     "PT",
+     18.97,
+     false
+    ]
+   ],
+   "obs": [
+    "Leila do Vôlei 21,25% é o final (antes 21,31% parcial). Erika Kokay 18,97% ainda é parcial."
+   ],
+   "fontes": [
+    "https://www.band.com.br/politica/eleicoes/michelle-bolsonaro-e-bia-kicis-sao-eleitos-senadoras-pelo-distrito-federal",
+    "https://exame.com/brasil/resultado-no-df-michelle-bolsonaro-e-bia-kicis-sao-eleitas-para-o-senado/",
+    "https://ndmais.com.br/politica/eleicoes-2026-distrito-federal-resultado-senadores-eleitos/",
+    "https://www.metropoles.com/distrito-federal/michelle-bolsonaro-e-bia-kicis-sao-eleitas-senadoras-pelo-df"
+   ]
+  },
+  "ES": {
+   "nome": "Espírito Santo",
+   "apurado": null,
+   "c": [
+    [
+     "Renato Casagrande",
+     "PSB",
+     24.7,
+     true
+    ],
+    [
+     "Evair de Melo",
+     "Republicanos",
+     24.39,
+     true
+    ],
+    [
+     "Maguinha Malta",
+     "PL",
+     18.9,
+     false
+    ],
+    [
+     "Fabiano Contarato",
+     "PT",
+     12.94,
+     false
+    ],
+    [
+     "Sergio Meneguelli",
+     "PSD",
+     7.49,
+     false
+    ],
+    [
+     "Rose de Freitas",
+     null,
+     null,
+     false
+    ],
+    [
+     "Marcos do Val",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": [
+    "https://eshoje.com.br/politica/2026/10/derrotados-senado-es-2026/",
+    "https://folhavitoria.com.br/eleicoes/casagrande-ganha-em-39-cidades-do-es-evair-em-38-e-os-dois-empatam-em-uma-veja-mapa",
+    "https://www.poder360.com.br/poder-eleicoes-2026/casagrande-e-evair-de-melo-sao-eleitos-ao-senado-pelo-espirito-santo/",
+    "https://www.metropoles.com/brasil/eleitos-senadores-espirito-santo"
+   ]
+  },
+  "GO": {
+   "nome": "Goiás",
+   "apurado": null,
+   "c": [
+    [
+     "Gustavo Gayer",
+     "PL",
+     24.53,
+     true
+    ],
+    [
+     "Gracinha Caiado",
+     "União",
+     21.83,
+     true
+    ],
+    [
+     "Zacharias Calil",
+     "MDB",
+     14.94,
+     false
+    ],
+    [
+     "Oséias Varão",
+     "PL",
+     10.13,
+     false
+    ],
+    [
+     "Vanderlan Cardoso",
+     "PSD",
+     9.48,
+     false
+    ],
+    [
+     "Gustavo Mendanha",
+     "PRD",
+     8.66,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": [
+    "https://www.congressoemfoco.com.br/noticia/122875/gustavo-gayer-e-gracinha-caiado-vencem-eleicao-para-o-senado-em-goias",
+    "https://www.band.com.br/politica/gustavo-gayer-e-gracinha-caiado-sao-eleitos-senadores-por-goias",
+    "https://www.brasildefato.com.br/2026/10/04/goias-gracinha-caiado-e-gustavo-gayer-sao-eleitos-senadores/",
+    "https://folhaz.com.br/politica/gayer-gracinha-eleitos-senadores-goias/"
+   ]
+  },
+  "MA": {
+   "nome": "Maranhão",
+   "apurado": 99.97,
+   "c": [
+    [
+     "André Fufuca",
+     "PP",
+     21.43,
+     true
+    ],
+    [
+     "Lahesio Bonfim",
+     "Novo",
+     20.61,
+     true
+    ],
+    [
+     "Roseana Sarney",
+     "MDB",
+     16.4,
+     false
+    ],
+    [
+     "Weverton Rocha",
+     "PDT",
+     15.21,
+     false
+    ],
+    [
+     "Eliziane Gama",
+     "PT",
+     9.75,
+     false
+    ]
+   ],
+   "obs": [
+    "Correção: os dados iniciais tinham Lahesio Bonfim em 1º (21,42) e André Fufuca em 2º (20,62). Todas as fontes dão Fufuca 21,43% e Lahesio 20,61% (99,97% apurado)."
+   ],
+   "fontes": [
+    "https://www.olhardireto.com.br/eleicoes/2026/resultados/senador/ma",
+    "https://www.congressoemfoco.com.br/noticia/122876/andre-fufuca-e-lahesio-bonfim-sao-eleitos-senadores-pelo-maranhao",
+    "https://www.itatiaia.com.br/politica/eleicoes/eleicoes-2026-fufuca-e-lahesio-bonfim-sao-eleitos-senadores-pelo-maranhao/",
+    "https://exame.com/brasil/resultado-senador-do-maranhao-2026-fufuca-e-lahesio-bonfim-sao-eleitos/"
+   ]
+  },
+  "MG": {
+   "nome": "Minas Gerais",
+   "apurado": 99.01,
+   "c": [
+    [
+     "Domingos Sávio",
+     "PL",
+     24.29,
+     true
+    ],
+    [
+     "Marília Campos",
+     "PT",
+     19.4,
+     true
+    ],
+    [
+     "Carlos Viana",
+     "PSD",
+     17.46,
+     false
+    ],
+    [
+     "Áurea Carolina",
+     "PSOL",
+     12.98,
+     false
+    ],
+    [
+     "Marcelo Aro",
+     "PP",
+     11.6,
+     false
+    ],
+    [
+     "Marco Antônio Superman",
+     "Novo",
+     9.24,
+     false
+    ],
+    [
+     "Aécio Neves",
+     "PSDB",
+     4.02,
+     false
+    ]
+   ],
+   "obs": [
+    "Valores com 99,01% das seções apuradas; o final de 100% não foi encontrado."
+   ],
+   "fontes": [
+    "https://exame.com/brasil/resultado-senador-de-minas-gerais-2026-domingos-savio-pl-e-marilia-campos-pt-sao-eleitos/",
+    "https://www.congressoemfoco.com.br/noticia/122849/domingos-savio-e-marilia-campos-sao-eleitos-senadores-por-minas-gerais"
+   ]
+  },
+  "MS": {
+   "nome": "Mato Grosso do Sul",
+   "apurado": null,
+   "c": [
+    [
+     "Reinaldo Azambuja",
+     "PL",
+     34.64,
+     true
+    ],
+    [
+     "Capitão Contar",
+     "PL",
+     32.82,
+     true
+    ],
+    [
+     "Vander Loubet",
+     "PT",
+     13.88,
+     false
+    ],
+    [
+     "Soraya Thronicke",
+     "PSB",
+     13.07,
+     false
+    ]
+   ],
+   "obs": [
+    "Partido de Soraya Thronicke citado apenas como “PSB” numa fonte."
+   ],
+   "fontes": [
+    "https://www12.senado.leg.br/radio/1/noticia/2026/10/04/reinaldo-azambuja-e-capitao-contar-sao-eleitos-senadores-pelo-mato-grosso-do-sul",
+    "https://www.poder360.com.br/poder-eleicoes-2026/azambuja-e-capitao-contar-sao-eleitos-ao-senado-por-mato-grosso-do-sul/",
+    "https://www.metropoles.com/brasil/senadores-eleitos-mato-grosso-do-sul",
+    "https://www.capitalnews.com.br/politica-e-poder/judiciario/reinaldo-azambuja-e-capitao-contar-sao-eleitos-senadores-por-mato-grosso-do-sul/447743"
+   ]
+  },
+  "MT": {
+   "nome": "Mato Grosso",
+   "apurado": null,
+   "c": [
+    [
+     "Mauro Mendes",
+     "União",
+     33.21,
+     true
+    ],
+    [
+     "Zé Medeiros",
+     "PL",
+     27.35,
+     true
+    ],
+    [
+     "Janaina Riva",
+     "MDB",
+     14.42,
+     false
+    ],
+    [
+     "Carlos Fávaro",
+     "PSD",
+     11.42,
+     false
+    ]
+   ],
+   "obs": [
+    "3º e 4º lugares não consolidados: Janaina Riva aparece entre 14,19% e 14,42%; Carlos Fávaro com valor parcial."
+   ],
+   "fontes": [
+    "https://ndmais.com.br/politica/eleicoes-2026-mato-grosso-resultado-senadores-eleitos/",
+    "https://www.juinanews.com.br/politica/mauro-mendes-e-ze-medeiros-sao-eleitos-senadores-por-mt-janaina-riva-fica-em-3-lugar/76427",
+    "https://jovempan.com.br/politica/mauro-mendes-e-ze-medeiros-sao-eleitos-senadores-por-mato-grosso/",
+    "https://exame.com/brasil/resultado-senador-do-mato-grosso-2026-mauro-mendes-uniao-e-ze-medeiros-pl-sao-eleitos/"
+   ]
+  },
+  "PA": {
+   "nome": "Pará",
+   "apurado": null,
+   "c": [
+    [
+     "Helder Barbalho",
+     "MDB",
+     26.1,
+     true
+    ],
+    [
+     "Chicão",
+     "União",
+     22.45,
+     true
+    ],
+    [
+     "Delegado Éder Mauro",
+     "PL",
+     22.26,
+     false
+    ],
+    [
+     "Zequinha Marinho",
+     "Podemos",
+     21.06,
+     false
+    ],
+    [
+     "Celso Sabino",
+     "PDT",
+     5.87,
+     false
+    ]
+   ],
+   "obs": [
+    "Chicão (União) virou sobre Delegado Éder Mauro (PL) no fim da apuração, por 16.641 votos. Alguns veículos publicaram Éder Mauro eleito com base em parcial."
+   ],
+   "fontes": [
+    "https://amp.dol.com.br/noticias/politica/eleicoes-2026/964617/chicao-e-eleito-senador-pelo-para-apos-virada-historia-na-votacao",
+    "https://diariodopara.com.br/eleicoes-2026/virada-historica-no-fim-chicao-passa-eder-mauro-e-e-eleito-senador-pelo-para/",
+    "https://diariodopoder.com.br/brasil-e-regioes/lsf-brasil/helder-e-chicao-sao-eleitos-senadores-pelo-para",
+    "https://correiodecarajas.com.br/helder-barbalho-e-chicao-sao-eleitos-senadores-da-republica-pelo-estado-do-para/"
+   ]
+  },
+  "PB": {
+   "nome": "Paraíba",
+   "apurado": null,
+   "c": [
+    [
+     "João Azevêdo",
+     "PSB",
+     32.5,
+     true
+    ],
+    [
+     "Veneziano Vital do Rêgo",
+     "MDB",
+     22.76,
+     true
+    ],
+    [
+     "Nabor Wanderley",
+     "Republicanos",
+     20.91,
+     false
+    ],
+    [
+     "Marcelo Queiroga",
+     "PL",
+     12.46,
+     false
+    ],
+    [
+     "Major Fábio",
+     "Novo",
+     7.69,
+     false
+    ],
+    [
+     "André Gadelha",
+     "MDB",
+     2.83,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": []
+  },
+  "PE": {
+   "nome": "Pernambuco",
+   "apurado": null,
+   "c": [
+    [
+     "Humberto Costa",
+     "PT",
+     27.16,
+     true
+    ],
+    [
+     "Marília Arraes",
+     "PDT",
+     24.97,
+     true
+    ],
+    [
+     "Mendonça Filho",
+     "PL",
+     18.61,
+     false
+    ],
+    [
+     "Eduardo da Fonte",
+     "PP",
+     13.83,
+     false
+    ],
+    [
+     "Túlio Gadêlha",
+     "PSD",
+     null,
+     false
+    ],
+    [
+     "Carlos Sant'anna",
+     "Novo",
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "5º lugar não resolvido entre Túlio Gadêlha (PSD) e Carlos Sant'anna (Novo); percentuais deles não encontrados."
+   ],
+   "fontes": [
+    "https://www.metropoles.com/brasil/eleitos-senadores-pernambuco",
+    "https://www.metropoles.com/eleicoes/2026/apuracao/senador/pe",
+    "https://www.gazetadopovo.com.br/eleicoes/2026/pernambuco/lista-dos-senadores-eleitos-em-pernambuco-nas-eleicoes-2026/"
+   ]
+  },
+  "PI": {
+   "nome": "Piauí",
+   "apurado": 99.56,
+   "c": [
+    [
+     "Marcelo Castro",
+     "MDB",
+     35.65,
+     true
+    ],
+    [
+     "Júlio César",
+     "PSD",
+     26.96,
+     true
+    ],
+    [
+     "Ciro Nogueira",
+     "PP",
+     24.68,
+     false
+    ],
+    [
+     "Tiago Junqueira",
+     "PL",
+     8.87,
+     false
+    ],
+    [
+     "Antônio Barros",
+     "Novo",
+     1.05,
+     false
+    ]
+   ],
+   "obs": [
+    "Valores com 99,56% das seções apuradas. Partido de Ciro Nogueira confirmado: PP."
+   ],
+   "fontes": [
+    "https://www.metropoles.com/brasil/ciro-nogueira-perde-eleicao-para-o-senado-no-piaui",
+    "https://portalodia.com/blogs/piaui/ciro-nogueira-perde-reeleicao-e-fica-sem-terceiro-mandato-no-senado-465822.html",
+    "https://180graus.com/super-manchete-foto/ciro-e-derrotado-no-piaui-e-marcelo-castro-e-julio-cesar-vencem-com-apoio-de-rafael-e-lula/"
+   ]
+  },
+  "PR": {
+   "nome": "Paraná",
+   "apurado": 99.98,
+   "c": [
+    [
+     "Filipe Barros",
+     "PL",
+     27.26,
+     true
+    ],
+    [
+     "Deltan Dallagnol",
+     "Novo",
+     25.14,
+     true
+    ],
+    [
+     "Alexandre Curi",
+     "Republicanos",
+     16.85,
+     false
+    ],
+    [
+     "Gleisi Hoffmann",
+     "PT",
+     13.35,
+     false
+    ],
+    [
+     "Dr. Rosinha",
+     "PT",
+     9.99,
+     false
+    ],
+    [
+     "Cristina Graeml",
+     "PSD",
+     6.39,
+     false
+    ]
+   ],
+   "obs": [
+    "Deltan Dallagnol concorreu com registro “deferido com recurso”. Em 03/10 um ministro do TSE anulou seus votos; em 04/10 a presidência do TSE suspendeu a decisão. O mandato depende do julgamento no plenário do TSE.",
+    "Valores com 99,98% das seções apuradas."
+   ],
+   "fontes": [
+    "https://exame.com/brasil/resultado-senador-do-parana-2026-filipe-barros-pl-e-deltan-dallagnol-novo-sao-eleitos/",
+    "https://www.congressoemfoco.com.br/amp/noticia/122880/filipe-barros-e-deltan-dallagnol-sao-eleitos-senadores-pelo-parana",
+    "https://www.opovo.com.br/noticias/politica/2026/10/04/kassio-reverte-decisao-contra-deltan-e-determina-que-nome-apareca-como-deferido-com-recurso.html",
+    "https://www.bemparana.com.br/eleicoes-2026/filipe-barros-e-deltan-dallagnol-sao-eleitos-senadores-pelo-parana/"
+   ]
+  },
+  "RJ": {
+   "nome": "Rio de Janeiro",
+   "apurado": null,
+   "c": [
+    [
+     "Carlos Portinho",
+     "PL",
+     26.77,
+     true
+    ],
+    [
+     "Carlos Jordy",
+     "PL",
+     24.56,
+     true
+    ],
+    [
+     "Benedita da Silva",
+     "PT",
+     20.22,
+     false
+    ],
+    [
+     "Pedro Paulo",
+     "PSD",
+     11.95,
+     false
+    ],
+    [
+     "Monica Benicio",
+     "PSOL",
+     9.66,
+     false
+    ],
+    [
+     "Marcelo Crivella",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": []
+  },
+  "RN": {
+   "nome": "Rio Grande do Norte",
+   "apurado": null,
+   "c": [
+    [
+     "Styvenson Valentim",
+     "Podemos",
+     29.25,
+     true
+    ],
+    [
+     "Samanda de Lula",
+     "PT",
+     17.63,
+     true
+    ],
+    [
+     "Zenaide Maia",
+     "PSD",
+     17.47,
+     false
+    ],
+    [
+     "Coronel Hélio",
+     "PL",
+     17.2,
+     false
+    ],
+    [
+     "Rafael Motta",
+     "PDT",
+     null,
+     false
+    ]
+   ],
+   "obs": [
+    "Valores de 100% (os dados iniciais, 29,29/17,76, eram parciais). Zenaide Maia ficou a 5.765 votos da vaga."
+   ],
+   "fontes": [
+    "https://exame.com/brasil/resultado-senador-no-rio-grande-do-norte-2026-styvenson-e-samanda-de-lula-sao-eleitos/",
+    "https://www12.senado.leg.br/radio/1/noticia/2026/10/05/styvenson-valentim-e-reeleito-e-samanda-de-lula-conquista-vaga-no-senado-pelo-rn",
+    "https://sbtnews.sbt.com.br/noticia/politica/rn-styvenson-e-samanda-de-lula-sao-eleitos-senadores",
+    "https://agorarn.com.br/politica/styvenson-e-samanda-senadores-rn/"
+   ]
+  },
+  "RO": {
+   "nome": "Rondônia",
+   "apurado": null,
+   "c": [
+    [
+     "Fernando Máximo",
+     "PL",
+     31.97,
+     true
+    ],
+    [
+     "Bruno Scheid",
+     "PL",
+     26.56,
+     true
+    ],
+    [
+     "Sílvia Cristina",
+     "PP",
+     17.03,
+     false
+    ],
+    [
+     "Mariana Carvalho",
+     "Republicanos",
+     11.81,
+     false
+    ]
+   ],
+   "obs": [
+    "Mariana Carvalho com ~98% apurado."
+   ],
+   "fontes": [
+    "https://www.brasilemfolhas.com.br/2026/10/pl-elege-dois-senadores-em-rondonia-com-100-das-urnas-apuradas/",
+    "https://www.rondoniadinamica.com/noticias/2026/10/fernando-maximo-e-bruno-scheid-sao-eleitos-senadores-por-rondonia,255709.shtml",
+    "https://www.metropoles.com/brasil/eleitos-senadores-rondonia",
+    "https://revistaoeste.com/politica/dupla-do-pl-e-eleita-para-o-senado-em-rondonia/"
+   ]
+  },
+  "RR": {
+   "nome": "Roraima",
+   "apurado": null,
+   "c": [
+    [
+     "Nicoletti",
+     "PL",
+     22.89,
+     true
+    ],
+    [
+     "Teresa Surita",
+     "MDB",
+     19.22,
+     true
+    ],
+    [
+     "Helena da Asatur",
+     "PSD",
+     17.23,
+     false
+    ],
+    [
+     "Chico Rodrigues",
+     "PSB",
+     13.38,
+     false
+    ],
+    [
+     "Hélio Negão",
+     "PL",
+     13.08,
+     false
+    ]
+   ],
+   "obs": [
+    "Correção: os dados iniciais (22,68/19,24) eram parciais; final Nicoletti 22,89%, Teresa Surita 19,22%. Hélio Negão (Helio Lopes, PL) 13,08% citado por uma única fonte."
+   ],
+   "fontes": [
+    "https://www.congressoemfoco.com.br/noticia/122790/roraima-elege-nicoletti-e-teresa-surita-para-o-senado",
+    "https://exame.com/brasil/eleicoes-para-senador-em-roraima-2026-nicoletti-e-teresa-surita-sao-eleitos/",
+    "https://timesbrasil.com.br/eleicoes-2026/decisao-2026-nicoletti-pl-e-teresa-surita-mdb-sao-eleitos-senadores-por-roraima/",
+    "https://www.nsctotal.com.br/politica/senadores-eleitos-2026-roraima"
+   ]
+  },
+  "RS": {
+   "nome": "Rio Grande do Sul",
+   "apurado": null,
+   "c": [
+    [
+     "Sanderson",
+     "PL",
+     30.11,
+     true
+    ],
+    [
+     "Marcel van Hattem",
+     "Novo",
+     30.08,
+     true
+    ],
+    [
+     "Manuela d'Ávila",
+     "PSOL",
+     17.07,
+     false
+    ],
+    [
+     "Paulo Pimenta",
+     "PT",
+     16.31,
+     false
+    ],
+    [
+     "Germano Rigotto",
+     "MDB",
+     3.65,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": []
+  },
+  "SC": {
+   "nome": "Santa Catarina",
+   "apurado": null,
+   "c": [
+    [
+     "Carol de Toni",
+     "PL",
+     33.46,
+     true
+    ],
+    [
+     "Carlos Bolsonaro",
+     "PL",
+     25.35,
+     true
+    ],
+    [
+     "Esperidião Amin",
+     "PP",
+     15.37,
+     false
+    ],
+    [
+     "Décio Lima",
+     "PT",
+     10.27,
+     false
+    ]
+   ],
+   "obs": [
+    "Esperidião Amin 15,37% (outras fontes: 15,31 a ~15,4)."
+   ],
+   "fontes": [
+    "https://ndmais.com.br/politica/carol-de-toni-e-eleita-senadora-mais-votada-da-historia-de-santa-catarina/",
+    "https://www.nsctotal.com.br/politica/esperidiao-amin-pp-nao-e-reeleito-senador-em-santa-catarina",
+    "https://exame.com/brasil/resultado-em-santa-catarina-carol-de-toni-e-carlos-bolsonaro-sao-eleitos-para-o-senado/",
+    "https://www.gazetadopovo.com.br/eleicoes/2026/carol-de-toni-carlos-bolsonaro-vencem-senado-sc/"
+   ]
+  },
+  "SE": {
+   "nome": "Sergipe",
+   "apurado": null,
+   "c": [
+    [
+     "Rogério Carvalho",
+     "PT",
+     21.91,
+     true
+    ],
+    [
+     "Delegado Alessandro",
+     "MDB",
+     17.13,
+     true
+    ],
+    [
+     "Delegado André David",
+     "Republicanos",
+     16.23,
+     false
+    ],
+    [
+     "André Moura",
+     "União",
+     16.19,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": [
+    "https://ndmais.com.br/politica/rogerio-carvalho-e-alessandro-vieira-sao-reeleitos-para-o-senado-em-sergipe/",
+    "https://www.otempo.com.br/eleicoes/2026/senadores/2026/10/4/eleicoes-2026-veja-quem-lidera-a-disputa-para-senador-em-sergipe",
+    "https://revistaoeste.com/politica/sergipe-elege-rogerio-carvalho-pt-e-delegado-alessandro-mdb-para-o-senado/",
+    "https://www12.senado.leg.br/noticias/materias/2026/10/04/sergipe-reelege-rogerio-carvalho-e-alessandro-vieira"
+   ]
+  },
+  "SP": {
+   "nome": "São Paulo",
+   "apurado": null,
+   "c": [
+    [
+     "Guilherme Derrite",
+     "PP",
+     30.59,
+     true
+    ],
+    [
+     "André do Prado",
+     "PL",
+     29.28,
+     true
+    ],
+    [
+     "Simone Tebet",
+     "PSB",
+     19.23,
+     false
+    ],
+    [
+     "Marina Silva",
+     "Rede",
+     18.12,
+     false
+    ],
+    [
+     "Ricardo Salles",
+     null,
+     null,
+     false
+    ],
+    [
+     "Soninha Francine",
+     null,
+     null,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": [
+    "https://www.tre-sp.jus.br/comunicacao/noticias/2026/Outubro/eleicoes-2026-guilherme-derrite-pp-e-andre-do-prado-pl-sao-eleitos-senadores-por-sao-paulo"
+   ]
+  },
+  "TO": {
+   "nome": "Tocantins",
+   "apurado": null,
+   "c": [
+    [
+     "Eduardo Gomes",
+     "PL",
+     27.22,
+     true
+    ],
+    [
+     "Alexandre Guimarães",
+     "MDB",
+     19.16,
+     true
+    ],
+    [
+     "Eli Borges",
+     "Republicanos",
+     16.44,
+     false
+    ],
+    [
+     "Gaguim",
+     "União",
+     15.45,
+     false
+    ]
+   ],
+   "obs": [],
+   "fontes": [
+    "https://www.poder360.com.br/poder-eleicoes-2026/eduardo-gomes-e-alexandre-guimaraes-sao-eleitos-ao-senado-pelo-to/",
+    "https://timesbrasil.com.br/eleicoes-2026/to-eduardo-gomes-e-alexandre-guimaraes-eleitos-ao-senado/",
+    "https://sbtnews.sbt.com.br/noticia/eleicoes/eduardo-gomes-e-guimaraes-sao-eleitos-senadores-no-tocantins",
+    "https://www12.senado.leg.br/radio/1/noticia/2026/10/04/tocantins-reelege-eduardo-gomes-e-elege-alexandre-guimaraes-para-o-senado"
+   ]
+  }
+ }
+}
